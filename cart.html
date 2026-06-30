@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop Now — NISRAA Premium Hair Care</title>
+  <meta name="description" content="Order NISRAA premium hair care products. Simple, fast, secure checkout via BCL Bayar Cash." />
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#6C4323" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="NISRAA" />
+  <link rel="apple-touch-icon" href="/images/icon-192.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Order Now — NISRAA Hair Care" />
+  <meta property="og:description" content="Secure checkout via BCL Bayar Cash. FPX, Card & e-Wallet accepted." />
+  <meta property="og:url" content="https://www.nisraa.com/cart.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- DNS Prefetch & Preconnect -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+  <link rel="dns-prefetch" href="//bcl.my" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="preconnect" href="https://bcl.my" crossorigin />
+  <!-- Preload critical CSS -->
+  <link rel="preload" href="css/style.css" as="style" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome async (non-blocking) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" /></noscript>
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    /* ── ORDER PAGE ── */
+    .order-page {
+      min-height: 80vh;
+      background: var(--bg);
+      padding: 48px 0 80px;
+    }
+    .order-hero {
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 0 20px;
+    }
+    .order-hero .eyebrow-tag { display: inline-flex; margin-bottom: 14px; }
+    .order-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: var(--primary);
+      margin: 0 0 10px;
+    }
+    .order-hero p {
+      color: #6b5a47;
+      font-size: 15px;
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* ── Products Grid ── */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto 40px;
+      padding: 0 20px;
+    }
+
+    /* ── Product Card ── */
+    .order-product-card {
+      background: #fff;
+      border: 1.5px solid #e8ddd0;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(108,67,35,0.07);
+      transition: box-shadow 0.2s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .order-product-card:hover {
+      box-shadow: 0 8px 32px rgba(108,67,35,0.14);
+      transform: translateY(-2px);
+    }
+    .order-product-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block;
+    }
+    .order-product-body {
+      padding: 18px 20px 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      gap: 8px;
+    }
+    .order-product-badge-row {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .order-badge {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 100px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .order-badge.popular { background: var(--primary); color: #fff; }
+    .order-badge.save    { background: #fee2e2; color: #dc2626; }
+    .order-product-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #2c1a0e;
+      line-height: 1.3;
+      margin: 0;
+    }
+    .order-product-bm {
+      font-size: 11px;
+      font-weight: 400;
+      color: #8a7a5a;
+      font-family: 'Inter', sans-serif;
+    }
+    .order-product-desc {
+      font-size: 13px;
+      color: #6b5a47;
+      margin: 0;
+      line-height: 1.5;
+    }
+    .order-free-gift {
+      font-size: 12px;
+      color: #15803d;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .order-price-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 4px;
+    }
+    .order-price {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+    .order-price-orig {
+      font-size: 13px;
+      color: #bbb;
+      text-decoration: line-through;
+    }
+
+    /* ── BIG Checkout Button ── */
+    .checkout-now-wrap {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .btn-checkout-now {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--primary) 0%, #a0622a 100%);
+      color: #fff;
+      font-size: 17px;
+      font-weight: 700;
+      padding: 18px 48px;
+      border-radius: 100px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 6px 28px rgba(108,67,35,0.30);
+      transition: opacity 0.2s, transform 0.15s;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .btn-checkout-now:hover { opacity: 0.88; transform: translateY(-2px); }
+    .btn-checkout-now:active { transform: translateY(0); }
+    .checkout-note {
+      margin-top: 12px;
+      font-size: 12.5px;
+      color: #999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    /* ── Trust Strip ── */
+    .trust-strip {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px 28px;
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid #ede8df;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 12.5px;
+      color: #6b5a47;
+      font-weight: 500;
+    }
+    .trust-item i { color: var(--primary); font-size: 14px; }
+
+    /* ── BCL Payment Modal ── */
+    .bcl-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.65);
+      z-index: 99999;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      box-sizing: border-box;
+      animation: fadeIn 0.3s ease;
+    }
+    .bcl-overlay.open { display: flex; }
+    @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+    .bcl-modal {
+      background: #fff;
+      border-radius: 20px;
+      width: 100%;
+      max-width: 560px;
+      max-height: 92vh;
+      overflow-y: auto;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+      animation: slideUp 0.35s cubic-bezier(0.34,1.4,0.64,1);
+      position: relative;
+      -webkit-overflow-scrolling: touch;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to   { transform: translateY(0);    opacity: 1; }
+    }
+
+    .bcl-modal-header {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      z-index: 10;
+      padding: 20px 24px 16px;
+      border-bottom: 1px solid #f0ebe3;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .bcl-modal-header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .bcl-icon {
+      width: 42px;
+      height: 42px;
+      min-width: 42px;
+      background: linear-gradient(135deg, var(--primary), #a0622a);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 18px;
+    }
+    .bcl-modal-title { font-size: 15px; font-weight: 700; color: #2c1a0e; margin: 0; }
+    .bcl-modal-sub   { font-size: 11.5px; color: #999; margin: 0; }
+
+    .bcl-close-btn {
+      width: 34px;
+      height: 34px;
+      min-width: 34px;
+      border-radius: 50%;
+      background: #f5f0ea;
+      border: none;
+      cursor: pointer;
+      font-size: 20px;
+      color: #6b5a47;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .bcl-close-btn:hover { background: #ede8df; }
+
+    /* ── BCL Form Container — KEY FIX for mobile ── */
+    .bcl-form-container {
+      padding: 20px 20px 24px;
+      box-sizing: border-box;
+      width: 100%;
+    }
+    #bcl-payment-form {
+      width: 100% !important;
+      box-sizing: border-box;
+    }
+    /* Force BCL iframe to be fully responsive */
+    #bcl-payment-form iframe,
+    #bcl-payment-form > * {
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      border: none !important;
+    }
+
+    .bcl-secure-note {
+      text-align: center;
+      font-size: 11.5px;
+      color: #aaa;
+      padding: 0 20px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    /* ── Mobile tweaks ── */
+    @media (max-width: 480px) {
+      .order-hero h1 { font-size: 1.6rem; }
+      .products-grid { grid-template-columns: 1fr; gap: 16px; padding: 0 16px; }
+      .checkout-now-wrap { padding: 0 16px; }
+      .bcl-overlay { padding: 10px; }
+      .bcl-modal {
+        max-width: 100%;
+        border-radius: 16px;
+        max-height: 95vh;
+      }
+      .bcl-modal-header { padding: 16px 16px 14px; }
+      .bcl-form-container { padding: 16px 12px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="announcement-bar">
+    <p>🏥 Official NISRAA Website &nbsp;·&nbsp; Better Value &nbsp;·&nbsp; Exclusive Gift (Tonic Worth RM35) &nbsp;·&nbsp; Rewards for Repeat Purchases</p>
+    <button onclick="this.parentElement.style.display='none'" style="background:none;border:none;color:inherit;cursor:pointer;font-size:16px;padding:0 8px;opacity:0.7;">&times;</button>
+  </div>
+
+  <header class="header scrolled" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="images/logo-nisraa.png" alt="NISRAA — Professional Hair Technology" class="logo-img on-light" />
+      </a>
+      <nav class="nav-desktop">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="why-nisraa.html" class="nav-link">Why NISRAA</a>
+        <a href="hair-solutions.html" class="nav-link">Hair Solutions</a>
+        <a href="reviews.html" class="nav-link">Testimonials</a>
+        <a href="rewards.html" class="nav-link">Rewards</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="affiliate.html" class="nav-link">Jom Jadi Affiliate</a>
+      </nav>
+      <div class="header-actions">
+        <a href="#" class="header-icon" title="My Account"><i class="fas fa-user"></i></a>
+        <a href="shop.html" class="header-icon active" title="Shop Now"><i class="fas fa-lock"></i></a>
+        <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="nav-mobile" id="mobileNav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="shop.html" class="nav-link">Shop</a>
+      <a href="why-nisraa.html" class="nav-link">Why NISRAA</a>
+      <a href="hair-solutions.html" class="nav-link">Hair Solutions</a>
+      <a href="reviews.html" class="nav-link">Testimonials</a>
+      <a href="rewards.html" class="nav-link">Rewards</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+      <a href="affiliate.html" class="nav-link">Jom Jadi Affiliate</a>
+      <a href="shop.html" class="btn btn-primary mt-1">Shop Now</a>
+    </nav>
+  </header>
+
+  <!-- ============================================================ -->
+  <!-- ORDER PAGE -->
+  <!-- ============================================================ -->
+  <main class="order-page">
+
+    <!-- Hero -->
+    <div class="order-hero">
+      <div class="eyebrow-tag"><i class="fas fa-lock" style="margin-right:6px;font-size:10px;"></i> Shop Now</div>
+      <h1>Choose Your NISRAA Product</h1>
+      <p>Browse our products below, then tap <strong>Checkout Now</strong> to pay securely via BCL Bayar Cash — FPX, card &amp; e-wallet accepted.</p>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="products-grid">
+
+      <!-- Full Treatment Set -->
+      <div class="order-product-card">
+        <img src="images/products/full-treatment-set.jpg" alt="NISRAA Full Treatment Set" class="order-product-img" loading="eager" />
+        <div class="order-product-body">
+          <div class="order-product-badge-row">
+            <span class="order-badge popular">Most Popular</span>
+            <span class="order-badge save">Save 63%</span>
+          </div>
+          <h3 class="order-product-name">
+            NISRAA Full Treatment Set
+            <span class="order-product-bm"><br>(NISRAA Set Rawatan Rambut Gugur)</span>
+          </h3>
+          <p class="order-product-desc">Shampoo 250ml + Conditioner 250ml + Free Tonic 70ml + Gift Box</p>
+          <div class="order-free-gift"><i class="fas fa-gift"></i> Free Strengthening Tonic 50ml (Worth RM35)</div>
+          <div class="order-price-row">
+            <span class="order-price">RM 109.90</span>
+            <span class="order-price-orig">RM 269.00</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trial Set -->
+      <div class="order-product-card">
+        <img src="images/products/trial-set.jpg" alt="NISRAA Trial Set" class="order-product-img" loading="lazy" />
+        <div class="order-product-body">
+          <div class="order-product-badge-row">
+            <span class="order-badge save">Save 62%</span>
+          </div>
+          <h3 class="order-product-name">NISRAA Trial Set</h3>
+          <p class="order-product-desc">Shampoo 80ml + Conditioner 80ml + Free Tonic 40ml</p>
+          <div class="order-free-gift"><i class="fas fa-gift"></i> Free Strengthening Tonic 50ml (Worth RM35)</div>
+          <div class="order-price-row">
+            <span class="order-price">RM 57.90</span>
+            <span class="order-price-orig">RM 129.00</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tonic 70ml -->
+      <div class="order-product-card">
+        <img src="images/products/tonic-70ml.jpg" alt="NISRAA Strengthening Tonic 70ml" class="order-product-img" loading="lazy" />
+        <div class="order-product-body">
+          <div class="order-product-badge-row">
+            <span class="order-badge save">Save 51%</span>
+          </div>
+          <h3 class="order-product-name">NISRAA Strengthening Tonic 70ml</h3>
+          <p class="order-product-desc">Targeted scalp &amp; root support</p>
+          <div class="order-price-row">
+            <span class="order-price">RM 45.90</span>
+            <span class="order-price-orig">RM 89.90</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tonic 150ml -->
+      <div class="order-product-card">
+        <img src="images/products/tonic-150ml.jpg" alt="NISRAA Strengthening Tonic 150ml" class="order-product-img" loading="lazy" />
+        <div class="order-product-body">
+          <div class="order-product-badge-row">
+            <span class="order-badge save">Save 52%</span>
+          </div>
+          <h3 class="order-product-name">NISRAA Strengthening Tonic 150ml</h3>
+          <p class="order-product-desc">Larger size, better value per ml</p>
+          <div class="order-free-gift"><i class="fas fa-gift"></i> Free Strengthening Tonic 50ml (Worth RM35)</div>
+          <div class="order-price-row">
+            <span class="order-price">RM 69.90</span>
+            <span class="order-price-orig">RM 129.90</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Shampoo -->
+      <div class="order-product-card">
+        <img src="images/products/shampoo-250ml.jpg" alt="NISRAA Treatment Shampoo 250ml" class="order-product-img" loading="lazy" />
+        <div class="order-product-body">
+          <div class="order-product-badge-row">
+            <span class="order-badge save">Save 41%</span>
+          </div>
+          <h3 class="order-product-name">NISRAA Treatment Shampoo 250ml</h3>
+          <p class="order-product-desc">pH-balanced, SLS-free treatment shampoo</p>
+          <div class="order-free-gift"><i class="fas fa-gift"></i> Free Strengthening Tonic 50ml (Worth RM35)</div>
+          <div class="order-price-row">
+            <span class="order-price">RM 58.90</span>
+            <span class="order-price-orig">RM 99.00</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conditioner -->
+      <div class="order-product-card">
+        <img src="images/products/conditioner-250ml.jpg" alt="NISRAA Treatment Conditioner 250ml" class="order-product-img" loading="lazy" />
+        <div class="order-product-body">
+          <div class="order-product-badge-row">
+            <span class="order-badge save">Save 41%</span>
+          </div>
+          <h3 class="order-product-name">NISRAA Treatment Conditioner 250ml</h3>
+          <p class="order-product-desc">Complement to the treatment routine</p>
+          <div class="order-free-gift"><i class="fas fa-gift"></i> Free Strengthening Tonic 50ml (Worth RM35)</div>
+          <div class="order-price-row">
+            <span class="order-price">RM 58.90</span>
+            <span class="order-price-orig">RM 99.00</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /products-grid -->
+
+    <!-- Checkout Button -->
+    <div class="checkout-now-wrap">
+      <button class="btn-checkout-now" onclick="openBCL()">
+        <i class="fas fa-lock"></i> Checkout Now
+      </button>
+      <p class="checkout-note">
+        <i class="fas fa-shield-alt" style="color:var(--primary);"></i>
+        Secure payment via BCL Bayar Cash &nbsp;·&nbsp; FPX / Card / e-Wallet
+      </p>
+      <div class="trust-strip">
+        <span class="trust-item"><i class="fas fa-certificate"></i> KKM Approved</span>
+        <span class="trust-item"><i class="fas fa-moon"></i> Halal-Certified</span>
+        <span class="trust-item"><i class="fas fa-leaf"></i> SLS / SLES Free</span>
+        <span class="trust-item"><i class="fas fa-gift"></i> Free Gift RM35</span>
+        <span class="trust-item"><i class="fas fa-truck"></i> Nationwide Delivery</span>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ============================================================ -->
+  <!-- BCL PAYMENT MODAL -->
+  <!-- ============================================================ -->
+  <div class="bcl-overlay" id="bclOverlay">
+    <div class="bcl-modal" id="bclModal">
+
+      <!-- Sticky Header -->
+      <div class="bcl-modal-header">
+        <div class="bcl-modal-header-left">
+          <div class="bcl-icon"><i class="fas fa-lock"></i></div>
+          <div>
+            <p class="bcl-modal-title">Secure Checkout</p>
+            <p class="bcl-modal-sub">Powered by BCL Bayar Cash</p>
+          </div>
+        </div>
+        <button class="bcl-close-btn" onclick="closeBCL()" aria-label="Close">&times;</button>
+      </div>
+
+      <!-- BCL Embedded Form -->
+      <div class="bcl-form-container">
+        <div id="bcl-payment-form" data-url="https://nisraapharmaceutics.bcl.my/embed/form/nisraawebsite"></div>
+      </div>
+
+      <p class="bcl-secure-note">
+        <i class="fas fa-shield-alt" style="color:var(--primary);"></i>
+        Your payment is encrypted &amp; processed securely
+      </p>
+
+    </div>
+  </div>
+
+  <!-- BCL Script — loaded once globally -->
+  <script src="https://bcl.my/js/bc-encrypted-payment-embed.js"></script>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo footer-logo">
+          <img src="images/logo-nisraa-original.png" alt="NISRAA" class="logo-img footer-logo-img" />
+        </a>
+        <p class="footer-tagline">Premium treatment-based hair care formulated by doctor, pharmacist, and chemist.</p>
+        <div class="footer-certifications">
+          <span class="cert-tag"><i class="fas fa-certificate"></i> KKM Approved</span>
+          <span class="cert-tag"><i class="fas fa-moon"></i> Halal-Certified</span>
+          <span class="cert-tag"><i class="fas fa-leaf"></i> SLS-Free</span>
+        </div>
+      </div>
+      <div class="footer-nav-group">
+        <h5>Shop</h5>
+        <a href="shop.html#full-treatment-set">Full Treatment Set</a>
+        <a href="shop.html#trial-set-card">Trial Set</a>
+        <a href="shop.html#tonic">Strengthening Tonic</a>
+        <a href="shop.html">Shop Now</a>
+      </div>
+      <div class="footer-nav-group">
+        <h5>Brand</h5>
+        <a href="why-nisraa.html">Why NISRAA</a>
+        <a href="reviews.html">Testimonials</a>
+        <a href="rewards.html">Rewards</a>
+        <a href="affiliate.html">Jom Jadi Affiliate</a>
+      </div>
+      <div class="footer-nav-group">
+        <h5>Follow Us</h5>
+        <a href="https://my.shp.ee/AhV6HKEr" target="_blank" rel="noopener"><i class="fas fa-star"></i> Shopee</a>
+        <a href="https://www.tiktok.com/@nisraapharmaceutics" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i> TikTok</a>
+        <a href="https://vt.tiktok.com/ZSH4KBJXu/" target="_blank" rel="noopener"><i class="fas fa-fire"></i> Viral Post</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2025 NISRAA. All rights reserved.</p>
+        <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/60147592082?text=Hi%20NISRAA!%20I%27d%20like%20to%20order%20your%20products." target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat with NISRAA on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Chat with us</span>
+  </a>
+
+  <script src="js/main.js" defer></script>
+  <script>
+    /* ── BCL Modal Open / Close ── */
+    function openBCL() {
+      document.getElementById('bclOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeBCL() {
+      document.getElementById('bclOverlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    /* Close when clicking dark backdrop */
+    document.getElementById('bclOverlay').addEventListener('click', function(e) {
+      if (e.target === this) closeBCL();
+    });
+    /* Close on Escape key */
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeBCL();
+    });
+  </script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js')
+          .then(reg => console.log('[NISRAA SW] Registered:', reg.scope))
+          .catch(err => console.warn('[NISRAA SW] Failed:', err));
+      });
+    }
+  </script>
+</body>
+</html>

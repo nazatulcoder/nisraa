@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jom Jadi Affiliate — Jana Income Dengan NISRAA</title>
+  <meta name="description" content="Jana income tinggi dengan promosikan produk rambut NISRAA. Dapatkan 15–25% komisen setiap jualan + bonus tier. Tiada modal, tiada stok, tiada risiko." />
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#6C4323" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="NISRAA" />
+  <link rel="apple-touch-icon" href="/images/icon-192.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Jom Jadi Affiliate — Jana Income Dengan NISRAA" />
+  <meta property="og:description" content="Dapatkan 15–25% komisen setiap jualan. Tiada modal, tiada stok, tiada risiko." />
+  <meta property="og:url" content="https://www.nisraa.com/affiliate.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- DNS Prefetch & Preconnect -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+  <link rel="dns-prefetch" href="//www.genspark.ai" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <!-- Preload critical CSS -->
+  <link rel="preload" href="css/style.css" as="style" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Font Awesome async (non-blocking) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" /></noscript>
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    /* ═══════════════════════════════════════════════════════
+       JOM JADI AFFILIATE — PAGE STYLES
+    ═══════════════════════════════════════════════════════ */
+
+    /* ── HERO ── */
+    .jja-hero {
+      background: linear-gradient(135deg, #1a0e05 0%, #2C1A0E 40%, #4a2e18 80%, #3a2210 100%);
+      padding: 100px 0 90px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .jja-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 30%, rgba(196,154,108,0.22) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .jja-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, #C49A6C, transparent);
+    }
+    .jja-hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #2C1A0E;
+      background: linear-gradient(135deg, #C49A6C, #d4aa7d);
+      border: none;
+      padding: 10px 22px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+      box-shadow: 0 4px 18px rgba(196,154,108,0.45);
+    }
+    .jja-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 6vw, 4.2rem);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+    }
+    .jja-hero h1 span { color: #C49A6C; }
+    .jja-hero-sub {
+      font-size: clamp(15px, 2vw, 18px);
+      color: rgba(255,255,255,0.75);
+      max-width: 640px;
+      margin: 0 auto 30px;
+      line-height: 1.75;
+    }
+
+    /* No-risk strip */
+    .jja-norisks {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 38px;
+    }
+    .jja-norisk-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.14);
+      color: rgba(255,255,255,0.82);
+      font-size: 13px;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 100px;
+    }
+    .jja-norisk-pill i { color: #C49A6C; font-size: 12px; }
+
+    /* Hero CTAs */
+    .jja-hero-ctas {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    .jja-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #C49A6C, #9E7245);
+      color: #fff;
+      font-size: 15.5px;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 16px 34px;
+      border-radius: 100px;
+      box-shadow: 0 8px 28px rgba(196,154,108,0.38);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .jja-btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 36px rgba(196,154,108,0.48);
+    }
+    .jja-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: rgba(255,255,255,0.82);
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 16px 28px;
+      border-radius: 100px;
+      border: 1px solid rgba(255,255,255,0.25);
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .jja-btn-secondary:hover {
+      border-color: #C49A6C;
+      color: #C49A6C;
+    }
+
+    /* Trust stats row */
+    .jja-stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 52px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .jja-stat-item { text-align: center; }
+    .jja-stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #C49A6C;
+      line-height: 1;
+    }
+    .jja-stat-label {
+      font-size: 11.5px;
+      color: rgba(255,255,255,0.52);
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    /* ── SECTIONS SHARED ── */
+    .jja-section {
+      padding: 80px 0;
+    }
+    .jja-section.bg-light { background: #fdf9f4; }
+    .jja-section.bg-dark {
+      background: linear-gradient(135deg, #2C1A0E, #3a2210);
+      color: #fff;
+    }
+    .jja-section.bg-mid { background: #f5ede0; }
+
+    .jja-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #C49A6C;
+      margin-bottom: 14px;
+    }
+    .jja-section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.9rem, 4vw, 3rem);
+      font-weight: 700;
+      color: #2C1A0E;
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+    .jja-section-title.light { color: #fff; }
+    .jja-section-sub {
+      font-size: 15.5px;
+      color: #6b4d30;
+      line-height: 1.75;
+      max-width: 640px;
+      margin-bottom: 50px;
+    }
+    .jja-section-sub.light { color: rgba(255,255,255,0.68); }
+
+    /* ── KELEBIHAN CARDS ── */
+    .jja-benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 900px) { .jja-benefits-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .jja-benefits-grid { grid-template-columns: 1fr; } }
+
+    .jja-benefit-card {
+      background: #fff;
+      border: 1px solid #EDE4D3;
+      border-radius: 20px;
+      padding: 32px 26px;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .jja-benefit-card.alt {
+      background: #f5ede0;
+      border-color: #dfc9a8;
+    }
+    .jja-benefit-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(44,26,14,0.10);
+    }
+    .jja-benefit-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #C49A6C22, #C49A6C11);
+      border: 1px solid rgba(196,154,108,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      font-size: 22px;
+      color: #C49A6C;
+    }
+    .jja-benefit-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #2C1A0E;
+      margin-bottom: 10px;
+      line-height: 1.35;
+    }
+    .jja-benefit-body {
+      font-size: 13.5px;
+      color: #6b4d30;
+      line-height: 1.75;
+    }
+    .jja-benefit-card--img {
+      grid-column: span 1;
+    }
+    .jja-benefit-card-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+      margin-top: 16px;
+      object-fit: cover;
+      box-shadow: 0 3px 14px rgba(44,26,14,0.10);
+    }
+
+    /* ── NISRAA USP ── */
+    .jja-usp-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .jja-usp-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      background: #fff;
+      border: 1px solid #EDE4D3;
+      border-radius: 16px;
+      padding: 26px 28px;
+      transition: box-shadow 0.25s;
+    }
+    .jja-usp-item.alt {
+      background: #f5ede0;
+      border-color: #dfc9a8;
+    }
+    .jja-usp-item:hover {
+      box-shadow: 0 8px 32px rgba(44,26,14,0.08);
+    }
+    /* USP items with image — switch to grid */
+    .jja-usp-item--img {
+      display: grid;
+      grid-template-columns: 46px 1fr auto;
+      align-items: center;
+      gap: 20px;
+    }
+    .jja-usp-item--img .jja-usp-item-body { flex: 1; }
+    /* Reverse: image on left after number */
+    .jja-usp-item--reverse {
+      grid-template-columns: 46px auto 1fr;
+    }
+    .jja-usp-item--reverse .jja-usp-img-wrap { order: 1; }
+    .jja-usp-item--reverse .jja-usp-item-body { order: 2; }
+    @media (max-width: 760px) {
+      .jja-usp-item--img,
+      .jja-usp-item--reverse {
+        grid-template-columns: 46px 1fr;
+        grid-template-rows: auto auto;
+      }
+      .jja-usp-item--img .jja-usp-img-wrap,
+      .jja-usp-item--img .jja-usp-img-duo,
+      .jja-usp-item--reverse .jja-usp-img-wrap {
+        grid-column: 1 / -1;
+        order: 3 !important;
+      }
+      .jja-usp-item--reverse .jja-usp-item-body { order: 2 !important; }
+    }
+    .jja-usp-num {
+      min-width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #C49A6C, #9E7245);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #fff;
+      flex-shrink: 0;
+      align-self: start;
+    }
+    .jja-usp-content-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #2C1A0E;
+      margin-bottom: 7px;
+    }
+    .jja-usp-content-body {
+      font-size: 13.5px;
+      color: #6b4d30;
+      line-height: 1.75;
+    }
+    /* USP image containers */
+    .jja-usp-img-wrap {
+      flex-shrink: 0;
+      width: 240px;
+    }
+    .jja-usp-img-duo {
+      flex-shrink: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      width: 340px;
+    }
+    @media (max-width: 760px) {
+      .jja-usp-img-duo {
+        grid-template-columns: 1fr !important;
+        width: 100% !important;
+      }
+    }
+    .jja-usp-img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      object-fit: cover;
+      display: block;
+      box-shadow: 0 4px 18px rgba(44,26,14,0.10);
+    }
+    @media (max-width: 1000px) {
+      .jja-usp-img-wrap { width: 180px; }
+      .jja-usp-img-duo { width: 260px; }
+    }
+    @media (max-width: 760px) {
+      .jja-usp-img-wrap { width: 100%; }
+      .jja-usp-img-duo { width: 100%; grid-template-columns: 1fr; }
+    }
+    /* Komisyen image */
+    .jja-komisyen-img-wrap {
+      margin-bottom: 24px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 6px 24px rgba(44,26,14,0.10);
+    }
+    .jja-komisyen-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 16px;
+    }
+
+    /* ── INCOME CALCULATOR ── */
+    .jja-calc-wrap {
+      max-width: 680px;
+      margin: 0 auto;
+      background: #fff;
+      border: 1px solid #EDE4D3;
+      border-radius: 24px;
+      padding: 44px 44px 36px;
+      box-shadow: 0 20px 60px rgba(44,26,14,0.10);
+    }
+    @media (max-width: 560px) { .jja-calc-wrap { padding: 28px 20px 24px; } }
+    .jja-calc-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #2C1A0E;
+      margin-bottom: 6px;
+    }
+    .jja-calc-sub {
+      font-size: 13.5px;
+      color: #9a7c60;
+      margin-bottom: 30px;
+    }
+    .jja-calc-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #9a7c60;
+      margin-bottom: 8px;
+    }
+    .jja-calc-range {
+      width: 100%;
+      -webkit-appearance: none;
+      appearance: none;
+      height: 6px;
+      border-radius: 3px;
+      background: linear-gradient(90deg, #C49A6C var(--pct, 0%), #EDE4D3 var(--pct, 0%));
+      outline: none;
+      margin-bottom: 6px;
+    }
+    .jja-calc-range::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #C49A6C, #9E7245);
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(196,154,108,0.5);
+    }
+    .jja-calc-range-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      color: #b09070;
+      margin-bottom: 28px;
+    }
+    .jja-calc-results {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    @media (max-width: 500px) { .jja-calc-results { grid-template-columns: 1fr; } }
+    .jja-calc-card {
+      background: #fdf9f4;
+      border: 1px solid #EDE4D3;
+      border-radius: 14px;
+      padding: 18px 16px;
+      text-align: center;
+    }
+    .jja-calc-card.highlight {
+      background: linear-gradient(135deg, #C49A6C, #9E7245);
+      border-color: transparent;
+    }
+    .jja-calc-card-label {
+      font-size: 10.5px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #9a7c60;
+      margin-bottom: 8px;
+    }
+    .jja-calc-card.highlight .jja-calc-card-label { color: rgba(255,255,255,0.75); }
+    .jja-calc-card-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #2C1A0E;
+      line-height: 1;
+    }
+    .jja-calc-card.highlight .jja-calc-card-value { color: #fff; }
+    .jja-calc-note {
+      font-size: 12px;
+      color: #b09070;
+      text-align: center;
+      font-style: italic;
+    }
+
+    /* ── TIER TABLE ── */
+    .jja-tier-intro {
+      background: rgba(196,154,108,0.08);
+      border: 1px solid rgba(196,154,108,0.25);
+      border-radius: 14px;
+      padding: 20px 22px;
+      margin-bottom: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .jja-tier-intro-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14px;
+      color: #2C1A0E;
+      line-height: 1.65;
+    }
+    .jja-tier-intro-item i {
+      color: #C49A6C;
+      margin-top: 3px;
+      flex-shrink: 0;
+      width: 16px;
+      text-align: center;
+    }
+    .jja-tier-intro-item span { flex: 1; }
+    @media (max-width: 600px) {
+      .jja-tier-intro { padding: 16px 16px; gap: 14px; }
+      .jja-tier-intro-item { font-size: 13.5px; gap: 10px; }
+    }
+
+    .jja-table-wrap {
+      overflow-x: auto;
+      border-radius: 16px;
+      border: 1px solid #EDE4D3;
+      box-shadow: 0 8px 30px rgba(44,26,14,0.07);
+    }
+    .jja-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      min-width: 500px;
+    }
+    .jja-table thead th {
+      background: linear-gradient(135deg, #2C1A0E, #4a2e18);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 16px 20px;
+      text-align: left;
+    }
+    .jja-table thead th:first-child { border-radius: 0; }
+    .jja-table tbody tr:nth-child(even) { background: #fdf9f4; }
+    .jja-table tbody td {
+      padding: 16px 20px;
+      color: #2C1A0E;
+      border-bottom: 1px solid #EDE4D3;
+      font-weight: 500;
+    }
+    .jja-table tbody tr:last-child td { border-bottom: none; }
+    .jja-table tbody td strong { color: #C49A6C; }
+    .jja-table .tier-top {
+      background: linear-gradient(135deg, rgba(196,154,108,0.15), rgba(196,154,108,0.08)) !important;
+    }
+    .jja-table .tier-top td { font-weight: 700; }
+    .jja-bonus-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #16a34a;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 100px;
+    }
+    .jja-bonus-none {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #f3f4f6;
+      color: #9ca3af;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 100px;
+    }
+
+    /* ── HOW IT WORKS (Steps) ── */
+    .jja-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .jja-steps::before {
+      content: '';
+      position: absolute;
+      left: 24px;
+      top: 48px;
+      bottom: 24px;
+      width: 2px;
+      background: linear-gradient(180deg, #C49A6C, rgba(196,154,108,0.1));
+    }
+    .jja-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      padding-bottom: 36px;
+      position: relative;
+    }
+    .jja-step:last-child { padding-bottom: 0; }
+    .jja-step-num {
+      min-width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #C49A6C, #9E7245);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #fff;
+      flex-shrink: 0;
+      box-shadow: 0 4px 16px rgba(196,154,108,0.35);
+      position: relative;
+      z-index: 1;
+    }
+    .jja-step-content {
+      background: #fff;
+      border: 1px solid #EDE4D3;
+      border-radius: 16px;
+      padding: 22px 24px;
+      flex: 1;
+    }
+    .jja-step-title {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: #2C1A0E;
+      margin-bottom: 8px;
+    }
+    .jja-step-body {
+      font-size: 13.5px;
+      color: #6b4d30;
+      line-height: 1.75;
+    }
+    .jja-step-body a {
+      color: #C49A6C;
+      font-weight: 600;
+    }
+
+    /* ── MASIH RAGU ── */
+    .jja-doubts-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-bottom: 48px;
+    }
+    @media (max-width: 900px) { .jja-doubts-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .jja-doubts-grid { grid-template-columns: 1fr; } }
+
+    .jja-doubt-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 18px;
+      padding: 30px 24px;
+    }
+    .jja-doubt-card.alt {
+      background: #c49a6c;
+      border-color: #d4aa7d;
+    }
+    .jja-doubt-card.alt .jja-doubt-icon {
+      color: #2C1A0E;
+    }
+    .jja-doubt-card.alt .jja-doubt-body {
+      color: #2C1A0E;
+    }
+    .jja-doubt-icon {
+      font-size: 28px;
+      color: #C49A6C;
+      margin-bottom: 16px;
+    }
+    .jja-doubt-body {
+      font-size: 14px;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.8;
+    }
+
+    /* ── FINAL CTA ── */
+    .jja-final-cta {
+      text-align: center;
+      padding-top: 20px;
+    }
+    .jja-cta-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 3.5vw, 2.4rem);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+    .jja-cta-tagline span { color: #C49A6C; }
+    .jja-cta-body {
+      font-size: 15px;
+      color: rgba(255,255,255,0.68);
+      margin-bottom: 32px;
+    }
+    .jja-cta-reg-note {
+      margin-top: 18px;
+      font-size: 12.5px;
+      color: rgba(255,255,255,0.45);
+    }
+    .jja-cta-reg-note strong { color: rgba(255,255,255,0.65); }
+
+    /* ── MOBILE STICKY BAR ── */
+    .jja-sticky-bar {
+      display: none;
+    }
+    @media (max-width: 700px) {
+      .jja-sticky-bar {
+        display: flex;
+        position: fixed;
+        bottom: 0; left: 0; right: 0;
+        background: #1a0e05;
+        border-top: 1px solid rgba(196,154,108,0.2);
+        z-index: 900;
+        padding: 10px 12px;
+        gap: 10px;
+      }
+      .jja-sticky-btn-main {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background: linear-gradient(135deg, #C49A6C, #9E7245);
+        color: #fff;
+        text-decoration: none;
+        font-size: 13.5px;
+        font-weight: 700;
+        padding: 12px;
+        border-radius: 12px;
+      }
+      .jja-sticky-btn-sec {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        color: rgba(255,255,255,0.7);
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 12px 14px;
+        border-radius: 12px;
+        border: 1px solid rgba(255,255,255,0.15);
+        white-space: nowrap;
+      }
+      body { padding-bottom: 68px; }
+    }
+
+    /* ── DIVIDER ── */
+    .jja-divider {
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #C49A6C, #9E7245);
+      border-radius: 2px;
+      margin-bottom: 18px;
+    }
+    .jja-divider.center { margin-left: auto; margin-right: auto; }
+
+    /* Active nav link */
+    .nav-link.jja-active {
+      color: #C49A6C !important;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       HEADER / NAV
+  ══════════════════════════════════════════ -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="images/logo-nisraa-white.png" alt="NISRAA — Professional Hair Technology" class="logo-img" />
+      </a>
+      <nav class="nav-desktop">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="why-nisraa.html" class="nav-link">Why NISRAA</a>
+        <a href="hair-solutions.html" class="nav-link">Hair Solutions</a>
+        <a href="reviews.html" class="nav-link">Testimonials</a>
+        <a href="rewards.html" class="nav-link">Rewards</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="affiliate.html" class="nav-link jja-active">Jom Jadi Affiliate</a>
+      </nav>
+      <div class="header-actions">
+        <a href="#" class="header-icon" title="My Account"><i class="fas fa-user"></i></a>
+        
+        <a href="shop.html" class="btn btn-primary btn-sm">Shop Now</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="nav-mobile" id="mobileNav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="shop.html" class="nav-link">Shop</a>
+      <a href="why-nisraa.html" class="nav-link">Why NISRAA</a>
+      <a href="hair-solutions.html" class="nav-link">Hair Solutions</a>
+      <a href="reviews.html" class="nav-link">Testimonials</a>
+      <a href="rewards.html" class="nav-link">Rewards</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+      <a href="affiliate.html" class="nav-link jja-active">Jom Jadi Affiliate</a>
+      
+      <a href="https://bcl.my/affiliate/login" class="btn btn-primary mt-1" target="_blank" rel="noopener">Daftar Affiliate</a>
+    </nav>
+  </header>
+
+  <!-- ══════════════════════════════════════════
+       HERO SECTION
+  ══════════════════════════════════════════ -->
+  <section class="jja-hero">
+    <div class="container" style="position:relative;z-index:1;">
+
+      <div class="jja-hero-eyebrow">
+        <i class="fas fa-star"></i>
+        Program Affiliate NISRAA — Jana Income Dari Rumah
+      </div>
+
+      <h1>
+        Jana Income Tinggi<br />
+        Dengan Promosikan<br />
+        <span>Produk Rambut NISRAA</span>
+      </h1>
+
+      <p class="jja-hero-sub">
+        Dapatkan <strong style="color:#C49A6C;">15–25% komisen</strong> bagi setiap jualan yang anda hasilkan, serta bonus tambahan mengikut tier jualan. Sesuai untuk anda yang nak mula buat side income atau nak tambah pendapatan dengan produk rambut yang orang memang cari.
+      </p>
+
+      <!-- No-risk pills -->
+      <div class="jja-norisks">
+        <span class="jja-norisk-pill"><i class="fas fa-check-circle"></i> Tidak Perlu Modal</span>
+        <span class="jja-norisk-pill"><i class="fas fa-check-circle"></i> Tidak Perlu Urus Stok</span>
+        <span class="jja-norisk-pill"><i class="fas fa-check-circle"></i> Tiada Risiko</span>
+        <span class="jja-norisk-pill"><i class="fas fa-check-circle"></i> Tidak Perlu Bina Brand</span>
+      </div>
+
+      <div class="jja-hero-ctas">
+        <a href="https://bcl.my/affiliate/login" target="_blank" rel="noopener" class="jja-btn-primary">
+          <i class="fas fa-handshake"></i> Daftar Affiliate Sekarang
+        </a>
+
+      </div>
+
+      <!-- Trust stats -->
+      <div class="jja-stats-row">
+        <div class="jja-stat-item">
+          <div class="jja-stat-num">15–25%</div>
+          <div class="jja-stat-label">Komisen Per Sale</div>
+        </div>
+        <div class="jja-stat-item">
+          <div class="jja-stat-num">97%</div>
+          <div class="jja-stat-label">Review Positif</div>
+        </div>
+        <div class="jja-stat-item">
+          <div class="jja-stat-num">RM25K+</div>
+          <div class="jja-stat-label">Potensi / Bulan</div>
+        </div>
+        <div class="jja-stat-item">
+          <div class="jja-stat-num">0</div>
+          <div class="jja-stat-label">Risiko</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════
+       KELEBIHAN JADI AFFILIATE
+  ══════════════════════════════════════════ -->
+  <section class="jja-section bg-light" id="kelebihan">
+    <div class="container">
+      <div class="jja-eyebrow"><i class="fas fa-gem"></i> Kelebihan Anda</div>
+      <div class="jja-divider"></div>
+      <h2 class="jja-section-title">Kelebihan Jadi Affiliate NISRAA</h2>
+      <p class="jja-section-sub">Kenapa ribuan affiliate pilih NISRAA berbanding platform lain? Ini sebabnya.</p>
+
+      <div class="jja-benefits-grid">
+
+        <div class="jja-benefit-card">
+          <div class="jja-benefit-icon"><i class="fas fa-percent"></i></div>
+          <div class="jja-benefit-title">15–25% Komisen + Bonus Tier</div>
+          <p class="jja-benefit-body">Dapat income untuk setiap pembelian melalui link anda dan bonus tambahan bila capai tahap jualan tertentu. Affiliate yang konsisten menikmati ganjaran yang lebih besar.</p>
+        </div>
+
+        <div class="jja-benefit-card alt">
+          <div class="jja-benefit-icon"><i class="fas fa-bullseye"></i></div>
+          <div class="jja-benefit-title">Landing Page Lebih Berkesan dari TikTok & Shopee</div>
+          <p class="jja-benefit-body">Di TikTok Shop & Shopee, customer nampak banyak "related products" — senang compare harga, jadi sales susah. Landing Page NISRAA fokus kepada satu sahaja, lebih mudah convert.</p>
+        </div>
+
+        <div class="jja-benefit-card">
+          <div class="jja-benefit-icon"><i class="fas fa-trophy"></i></div>
+          <div class="jja-benefit-title">Komisen Lebih Tinggi, Persaingan Lebih Rendah</div>
+          <p class="jja-benefit-body">Kebanyakan affiliate TikTok/Shopee dapat 5–10% sahaja. NISRAA tawarkan bermula 15% ke atas. Peluang content anda convert lebih besar kerana platform FB, IG & Threads masih belum sesak.</p>
+        </div>
+
+        <div class="jja-benefit-card alt">
+          <div class="jja-benefit-icon"><i class="fas fa-star"></i></div>
+          <div class="jja-benefit-title">Brand Dah Ada Trust & 97% Review Positif</div>
+          <p class="jja-benefit-body">NISRAA bukan brand baru. Dijual di Shopee & TikTok dengan 97% review positif. Customer boleh semak sendiri — ini kurangkan keraguan dan tingkatkan keyakinan untuk membeli.</p>
+        </div>
+
+        <div class="jja-benefit-card">
+          <div class="jja-benefit-icon"><i class="fas fa-fire"></i></div>
+          <div class="jja-benefit-title">Produk Demand Tinggi</div>
+          <p class="jja-benefit-body">Produk rambut sentiasa relevan — rambut gugur, rambut rosak, botak, masalah kulit kepala. Ramai pengguna aktif mencari solusi setiap hari, menjadikan promosi lebih mudah.</p>
+        </div>
+
+        <div class="jja-benefit-card alt">
+          <div class="jja-benefit-icon"><i class="fas fa-sync-alt"></i></div>
+          <div class="jja-benefit-title">Peluang Repeat Buyer</div>
+          <p class="jja-benefit-body">Produk rambut digunakan dalam rutin harian. Bila customer sudah serasi dengan NISRAA, peluang repeat order lebih tinggi — bermaksud komisen anda berterusan.</p>
+        </div>
+
+        <div class="jja-benefit-card">
+          <div class="jja-benefit-icon"><i class="fas fa-user-friends"></i></div>
+          <div class="jja-benefit-title">Sesuai untuk Beginner</div>
+          <p class="jja-benefit-body">Content creator, dropshipper, seller, agent, student, suri rumah, pekerja makan gaji — semuanya boleh mula. Tiada perlu modal, tiada perlu bina produk sendiri.</p>
+        </div>
+
+        <div class="jja-benefit-card alt">
+          <div class="jja-benefit-icon"><i class="fas fa-graduation-cap"></i></div>
+          <div class="jja-benefit-title">Training Disediakan</div>
+          <p class="jja-benefit-body">Anda tak perlu takut kalau belum pernah jadi affiliate. Training disediakan untuk bantu anda faham produk, cara positioning, dan cara promosikan NISRAA dengan lebih yakin.</p>
+        </div>
+
+        <div class="jja-benefit-card jja-benefit-card--img">
+          <div class="jja-benefit-icon"><i class="fas fa-gift"></i></div>
+          <div class="jja-benefit-title">Harga Promo + Free Gift Eksklusif</div>
+          <p class="jja-benefit-body">Landing page affiliate NISRAA menawarkan harga promo dan free gift eksklusif yang tidak ditawarkan di Shopee atau TikTok — membuatkan customer lebih tertarik beli melalui link anda.</p>
+          <img src="https://www.genspark.ai/api/files/s/ngBFo9TU" alt="Exclusive Free Gift NISRAA" class="jja-benefit-card-img" />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════
+       KENAPA NISRAA — USP LIST
+  ══════════════════════════════════════════ -->
+  <section class="jja-section bg-light" id="usp">
+    <div class="container">
+      <div class="jja-eyebrow"><i class="fas fa-award"></i> USP NISRAA</div>
+      <div class="jja-divider"></div>
+      <h2 class="jja-section-title">5 Sebab Kenapa NISRAA Lebih Mudah Dijual</h2>
+      <p class="jja-section-sub">Faktor-faktor ini menjadikan promosi NISRAA lebih berkesan berbanding brand lain di pasaran.</p>
+
+      <div class="jja-usp-list">
+
+        <div class="jja-usp-item jja-usp-item--img">
+          <div class="jja-usp-num">1</div>
+          <div class="jja-usp-item-body">
+            <div class="jja-usp-content-title">NISRAA Ialah Produk Treatment, Bukan Sekadar Kosmetik Biasa</div>
+            <p class="jja-usp-content-body">Kebanyakan brand dijual atas janji rambut nampak lembut, wangi, atau cantik di permukaan. NISRAA datang dengan positioning yang jauh lebih kuat — ia dibina sebagai treatment-based hair care system. Bila anda promosikan NISRAA, anda bukan jual "shampoo biasa" — anda jual <em>solusi yang fokus kepada pemulihan struktur dalaman rambut</em>.</p>
+          </div>
+          <div class="jja-usp-img-wrap">
+            <img src="https://www.genspark.ai/api/files/s/lB1rWmns" alt="NISRAA Produk Rawatan Treatment" class="jja-usp-img" />
+          </div>
+        </div>
+
+        <div class="jja-usp-item alt">
+          <div class="jja-usp-num">2</div>
+          <div>
+            <div class="jja-usp-content-title">Diformulasi Oleh Doktor, Pharmacist dan Chemist</div>
+            <p class="jja-usp-content-body">Angle yang sangat kuat dari segi kepercayaan. NISRAA diformulasi oleh doctor, pharmacist, dan chemist — jadi customer lebih mudah nampak bahawa produk ini melalui pendekatan yang lebih saintifik dan lebih berautoriti, bukan sekadar produk biasa-biasa.</p>
+          </div>
+        </div>
+
+        <div class="jja-usp-item jja-usp-item--img jja-usp-item--reverse">
+          <div class="jja-usp-num">3</div>
+          <div class="jja-usp-item-body">
+            <div class="jja-usp-content-title">Bond-Building Technology — USP Yang Sangat Kuat</div>
+            <p class="jja-usp-content-body">Salah satu kekuatan terbesar NISRAA ialah penggunaan bond-building technology yang membantu menyokong pembentukan keratin bond di bahagian dalam struktur rambut. Teknologi ini tiada di Malaysia, diimport dari luar negara. Ini menjadikan NISRAA ada USP yang jelas, kuat, dan sukar ditandingi. Dalam bahasa marketing, ini ialah <strong>blue ocean angle</strong>.</p>
+          </div>
+          <div class="jja-usp-img-wrap">
+            <img src="https://www.genspark.ai/api/files/s/uF7n62qM" alt="Bond Building Technology NISRAA" class="jja-usp-img" />
+          </div>
+        </div>
+
+        <div class="jja-usp-item jja-usp-item--img alt">
+          <div class="jja-usp-num">4</div>
+          <div class="jja-usp-item-body">
+            <div class="jja-usp-content-title">Sesuai Untuk Rawatan Pelbagai Masalah — Market Lebih Luas</div>
+            <p class="jja-usp-content-body">NISRAA diformulasi sebagai sistem rawatan rambut yang komprehensif meliputi batang rambut, kulit kepala, dan akar rambut. Ia menyelesaikan pelbagai masalah sekaligus — rambut gugur, rambut menipis, kelemumur, kulit kepala gatal, rambut kering, frizzy hair, postpartum hair shedding, dan gangguan hormon. Satu brand, banyak masalah — market anda lebih luas.</p>
+          </div>
+          <div class="jja-usp-img-duo">
+            <img src="https://www.genspark.ai/api/files/s/l7vdXhiL" alt="Rawatan Lengkap NISRAA" class="jja-usp-img" />
+            <img src="https://www.genspark.ai/api/files/s/QrbSkBu1" alt="Rawatan Pelbagai Masalah Rambut NISRAA" class="jja-usp-img" />
+          </div>
+        </div>
+
+        <div class="jja-usp-item">
+          <div class="jja-usp-num">5</div>
+          <div>
+            <div class="jja-usp-content-title">Training Disediakan — Anda Tidak Keseorangan</div>
+            <p class="jja-usp-content-body">Anda tak perlu takut kalau belum pernah jadi affiliate atau belum mahir tentang ilmu rambut. Training disediakan untuk bantu anda faham produk, cara positioning, dan cara promosikan NISRAA dengan lebih yakin. Yang penting, <em>anda cuma perlu mula dan ikut guideline yang telah disediakan.</em></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════
+       INCOME CALCULATOR + TIER TABLE
+  ══════════════════════════════════════════ -->
+  <section class="jja-section bg-mid" id="komisen">
+    <div class="container">
+      <div style="text-align:center;">
+        <div class="jja-eyebrow" style="justify-content:center;"><i class="fas fa-calculator"></i> Potensi Pendapatan</div>
+        <div class="jja-divider center"></div>
+        <h2 class="jja-section-title" style="text-align:center;">Berapa Anda Boleh Jana Sebagai Affiliate NISRAA?</h2>
+        <p class="jja-section-sub" style="text-align:center;margin:0 auto 48px;">Masukkan unjuran sales sebulan dan lihat potensi pendapatan anda secara real-time.</p>
+      </div>
+
+      <!-- Calculator -->
+      <div class="jja-calc-wrap">
+        <div class="jja-calc-title">Kalkulator Komisen Affiliate</div>
+        <p class="jja-calc-sub">Gerakkan slider untuk unjurkan pendapatan bulanan dan tahunan anda.</p>
+
+        <div class="jja-calc-label">Jumlah Jualan Sebulan: <strong id="calcSalesDisplay">RM 5,000</strong></div>
+        <input type="range" class="jja-calc-range" id="calcRange" min="0" max="100000" step="1000" value="5000"
+          oninput="updateCalc(this.value)" />
+        <div class="jja-calc-range-labels">
+          <span>RM 0</span>
+          <span>RM 25,000</span>
+          <span>RM 50,000</span>
+          <span>RM 75,000</span>
+          <span>RM 100,000</span>
+        </div>
+
+        <div class="jja-calc-results">
+          <div class="jja-calc-card">
+            <div class="jja-calc-card-label">Komisen / Bulan</div>
+            <div class="jja-calc-card-value" id="calcMonthly">RM 750</div>
+          </div>
+          <div class="jja-calc-card">
+            <div class="jja-calc-card-label">Bonus Tier</div>
+            <div class="jja-calc-card-value" id="calcBonus">–</div>
+          </div>
+          <div class="jja-calc-card highlight">
+            <div class="jja-calc-card-label">Jumlah / Tahun</div>
+            <div class="jja-calc-card-value" id="calcYearly">RM 9,000</div>
+          </div>
+        </div>
+
+        <p class="jja-calc-note">* Pengiraan berdasarkan komisen Level 2 (20%) + bonus mengikut tier. Level 1 (15%) untuk jualan terkumpul bawah RM3,000.</p>
+      </div>
+
+      <!-- Commission Structure Table -->
+      <div style="margin-top:56px;">
+        <div style="text-align:center;margin-bottom:28px;">
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:700;color:#2C1A0E;margin-bottom:8px;">Struktur Komisen & Bonus Tambahan</h3>
+          <p style="font-size:14px;color:#6b4d30;">Lagi tinggi prestasi anda, lagi besar bonus anda.</p>
+        </div>
+
+        <div class="jja-tier-intro">
+          <div class="jja-tier-intro-item">
+            <i class="fas fa-circle"></i>
+            <span>Mulakan perjalanan anda dengan komisen <strong>15% bagi setiap jualan (Level 1)</strong></span>
+          </div>
+          <div class="jja-tier-intro-item">
+            <i class="fas fa-rocket"></i>
+            <span>Apabila jumlah jualan terkumpul mencapai <strong>RM3,000</strong>, kadar komisen dinaikkan kepada <strong>20% (Level 2)</strong></span>
+          </div>
+          <div class="jja-tier-intro-item">
+            <i class="fas fa-star"></i>
+            <span>Pada Level 2, kadar <strong>20% kekal</strong> dan anda tidak perlu capai RM3,000 setiap bulan</span>
+          </div>
+          <div class="jja-tier-intro-item">
+            <i class="fas fa-gift"></i>
+            <span>Selain itu, berpeluang menerima <strong>bonus komisen tambahan</strong> apabila mencapai target jualan tertentu</span>
+          </div>
+        </div>
+
+        <p style="font-size:13px;color:#9a7c60;margin-bottom:16px;font-style:italic;">Contoh pengiraan untuk affiliate yang telah mencapai Level 2:</p>
+
+        <!-- Struktur Komisen Visual -->
+        <div class="jja-komisyen-img-wrap">
+          <img src="https://www.genspark.ai/api/files/s/oAq7059e" alt="Struktur Komisyen Affiliate NISRAA" class="jja-komisyen-img" />
+        </div>
+
+        <div class="jja-table-wrap">
+          <table class="jja-table">
+            <thead>
+              <tr>
+                <th>Sales / Bulan</th>
+                <th>Komisyen (20%)</th>
+                <th>Bonus Tier</th>
+                <th>Jumlah Income / Bulan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Bawah RM10,000</td>
+                <td>Bawah RM2,000</td>
+                <td><span class="jja-bonus-none">Tiada</span></td>
+                <td><strong>Bawah RM2,000</strong></td>
+              </tr>
+              <tr>
+                <td><strong>RM10K – RM50K</strong></td>
+                <td>RM2K – RM10K</td>
+                <td><span class="jja-bonus-badge"><i class="fas fa-plus"></i> +2% dari sales</span></td>
+                <td><strong style="color:#C49A6C;">RM2.2K – RM11K</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Lebih RM50K</strong></td>
+                <td>Lebih RM10K</td>
+                <td><span class="jja-bonus-badge"><i class="fas fa-plus"></i> +3% dari sales</span></td>
+                <td><strong style="color:#C49A6C;">Lebih RM11.5K</strong></td>
+              </tr>
+              <tr class="tier-top">
+                <td><strong>Lebih RM100K 🔥</strong></td>
+                <td>Lebih RM20K</td>
+                <td><span class="jja-bonus-badge" style="background:#C49A6C;"><i class="fas fa-crown"></i> +5% dari sales</span></td>
+                <td><strong style="color:#C49A6C;font-size:16px;">Lebih RM25K</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════
+       CARA IA BERFUNGSI (5 STEPS)
+  ══════════════════════════════════════════ -->
+  <section class="jja-section bg-light" id="cara-berfungsi">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:52px;">
+        <div class="jja-eyebrow" style="justify-content:center;"><i class="fas fa-map-signs"></i> Prosesnya Mudah</div>
+        <div class="jja-divider center"></div>
+        <h2 class="jja-section-title" style="text-align:center;">Macam Mana Affiliate NISRAA Berfungsi</h2>
+        <p class="jja-section-sub" style="text-align:center;margin:0 auto;">Prosesnya mudah dan sesuai untuk mereka yang nak terus bermula.</p>
+      </div>
+
+      <div class="jja-steps">
+
+        <div class="jja-step">
+          <div class="jja-step-num">1</div>
+          <div class="jja-step-content">
+            <div class="jja-step-title">Daftar Sebagai Affiliate NISRAA</div>
+            <p class="jja-step-body">Lengkapkan pendaftaran anda dan sertai program affiliate. Klik butang <strong>"Daftar Sekarang"</strong> di bawah, kemudian isikan di bahagian <strong>"Sign Up For An Account"</strong> dalam platform affiliate NISRAA.</p>
+          </div>
+        </div>
+
+        <div class="jja-step">
+          <div class="jja-step-num">2</div>
+          <div class="jja-step-content">
+            <div class="jja-step-title">Pihak Kami Akan Menghubungi Anda</div>
+            <p class="jja-step-body">Kami akan menghubungi anda dalam masa <strong>1–2 hari</strong> untuk memberikan link affiliate dan bahan promosi yang disediakan untuk mula membuat hebahan.<br><br>Jika masih tiada pihak yang menghubungi anda dalam masa 2 hari, sila hubungi <a href="tel:0133439312">013-3439312</a> untuk membuat pengesahan.</p>
+          </div>
+        </div>
+
+        <div class="jja-step">
+          <div class="jja-step-num">3</div>
+          <div class="jja-step-content">
+            <div class="jja-step-title">Promosikan Kepada Audiens Anda</div>
+            <p class="jja-step-body">Boleh guna <strong>content, review, story, post, video</strong> atau direct sharing kepada prospek yang sesuai. Nikmati kebebasan pilih platform yang paling sesuai dengan gaya anda — Facebook, Instagram, Threads, WhatsApp, TikTok dan lain-lain.</p>
+          </div>
+        </div>
+
+        <div class="jja-step">
+          <div class="jja-step-num">4</div>
+          <div class="jja-step-content">
+            <div class="jja-step-title">Jana Komisen Daripada Setiap Sale</div>
+            <p class="jja-step-body">Setiap pembelian yang berjaya melalui link anda akan memberi anda komisen. Track sales anda secara real-time dalam dashboard affiliate dan terima bayaran mengikut jadual pembayaran.</p>
+          </div>
+        </div>
+
+        <div class="jja-step">
+          <div class="jja-step-num">5</div>
+          <div class="jja-step-content">
+            <div class="jja-step-title">Capai Tier dan Unlock Bonus</div>
+            <p class="jja-step-body">Bila prestasi anda meningkat, anda berpeluang menikmati <strong>bonus tambahan mengikut tier</strong>. Dari Level 1 (15%) → Level 2 (20%) + bonus sehingga +5% daripada sales — semuanya bergantung kepada prestasi anda.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align:center;margin-top:48px;">
+        <a href="https://bcl.my/affiliate/login" target="_blank" rel="noopener" class="jja-btn-primary">
+          <i class="fas fa-handshake"></i> Daftar Sekarang — Percuma
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════
+       MASIH RASA RAGU
+  ══════════════════════════════════════════ -->
+  <section class="jja-section bg-dark" id="ragu">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:48px;">
+        <div class="jja-eyebrow" style="color:rgba(196,154,108,0.9);justify-content:center;"><i class="fas fa-question-circle"></i> Masih Rasa Ragu?</div>
+        <div class="jja-divider center"></div>
+        <h2 class="jja-section-title light" style="text-align:center;">Masih Rasa Ragu Nak Mula?</h2>
+        <p class="jja-section-sub light" style="text-align:center;margin:0 auto 48px;">Normal untuk rasa ragu sebelum bermula. Tapi inilah sebab kenapa Affiliate NISRAA berbaloi untuk dicuba.</p>
+      </div>
+
+      <div class="jja-doubts-grid">
+        <div class="jja-doubt-card">
+          <div class="jja-doubt-icon"><i class="fas fa-graduation-cap"></i></div>
+          <p class="jja-doubt-body">Anda tak perlu jadi pakar sales untuk bermula. Yang penting, anda faham cara untuk tarik perhatian orang kepada produk yang relevan dengan keperluan mereka.</p>
+        </div>
+        <div class="jja-doubt-card alt">
+          <div class="jja-doubt-icon"><i class="fas fa-chart-line"></i></div>
+          <p class="jja-doubt-body">Kalau anda serius nak cari peluang income tambahan, lebih baik mula dengan sistem yang sudah ada produk, sudah ada demand, dan sudah ada struktur ganjaran yang jelas.</p>
+        </div>
+        <div class="jja-doubt-card">
+          <div class="jja-doubt-icon"><i class="fas fa-clock"></i></div>
+          <p class="jja-doubt-body">Anda tak perlu tunggu "cukup pandai" baru nak mula. Ramai orang tak berjaya bukan sebab tak mampu, tetapi sebab terlalu lama tunggu masa yang sempurna.</p>
+        </div>
+      </div>
+
+      <!-- Final CTA -->
+      <div class="jja-final-cta">
+        <div class="jja-cta-tagline">
+          Anda tak perlu tunggu semuanya sempurna.<br />
+          <span>Anda hanya perlu mula.</span>
+        </div>
+        <p class="jja-cta-body">Ribuan affiliates sudah mula jana income bersama NISRAA. Giliran anda pula.</p>
+        <a href="https://bcl.my/affiliate/login" target="_blank" rel="noopener" class="jja-btn-primary" style="font-size:17px;padding:18px 42px;">
+          <i class="fas fa-handshake"></i> Daftar Affiliate Sekarang
+        </a>
+        <p class="jja-cta-reg-note">
+          Cara Pendaftaran: Klik butang di atas → pilih <strong>"Sign Up For An Account"</strong> → isikan detail anda.<br />
+          Soalan? Hubungi kami di <a href="tel:0133439312" style="color:#C49A6C;font-weight:600;">013-3439312</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo footer-logo">
+          <img src="images/logo-nisraa.png" alt="NISRAA" class="logo-img" />
+        </a>
+        <p class="footer-tagline">Premium treatment-based hair care formulated by doctor, pharmacist, and chemist.</p>
+        <div class="footer-certifications">
+          <span class="cert-tag"><i class="fas fa-certificate"></i> KKM Approved</span>
+          <span class="cert-tag"><i class="fas fa-moon"></i> Halal-Certified</span>
+        </div>
+      </div>
+      <div class="footer-nav-group">
+        <h5>Shop</h5>
+        <a href="shop.html#trial-set-card">Trial Set</a>
+        <a href="shop.html#full-treatment-set">Full Treatment Set</a>
+        <a href="shop.html#tonic-shampoo-set">Tonic + Shampoo Set</a>
+      </div>
+      <div class="footer-nav-group">
+        <h5>Affiliate</h5>
+        <a href="affiliate.html">Jom Jadi Affiliate</a>
+        <a href="rewards.html">Loyalty Rewards</a>
+        
+      </div>
+      <div class="footer-nav-group">
+        <h5>Follow Us</h5>
+        <a href="https://my.shp.ee/9WEKjfuv" target="_blank" rel="noopener"><i class="fas fa-star"></i> Shopee</a>
+        <a href="https://www.tiktok.com/@nisraapharmaceutics" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i> TikTok</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2025 NISRAA. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky Bar -->
+  <div class="jja-sticky-bar">
+    <a href="https://bcl.my/affiliate/login" target="_blank" rel="noopener" class="jja-sticky-btn-main">
+      <i class="fas fa-handshake"></i> Daftar Affiliate Sekarang
+    </a>
+    <a href="index.html" class="jja-sticky-btn-sec">
+      <i class="fas fa-home"></i> Home
+    </a>
+  </div>
+
+  <script src="js/main.js" defer></script>
+
+  <script>
+    /* ── Income Calculator ── */
+    function updateCalc(val) {
+      val = parseInt(val, 10);
+      const range = document.getElementById('calcRange');
+      const pct = (val / 100000) * 100;
+      range.style.setProperty('--pct', pct + '%');
+
+      document.getElementById('calcSalesDisplay').textContent = 'RM ' + val.toLocaleString('en-MY');
+
+      // Determine commission rate
+      let rate = 0.20; // Level 2 base
+      let bonusRate = 0;
+      let bonusLabel = '–';
+
+      if (val >= 100000) {
+        bonusRate = 0.05;
+        bonusLabel = '+5% bonus';
+      } else if (val >= 50000) {
+        bonusRate = 0.03;
+        bonusLabel = '+3% bonus';
+      } else if (val >= 10000) {
+        bonusRate = 0.02;
+        bonusLabel = '+2% bonus';
+      }
+
+      const monthly = val * (rate + bonusRate);
+      const yearly = monthly * 12;
+
+      document.getElementById('calcMonthly').textContent = 'RM ' + monthly.toLocaleString('en-MY', {minimumFractionDigits: 0, maximumFractionDigits: 0});
+      document.getElementById('calcBonus').textContent = bonusRate > 0 ? bonusLabel : '–';
+      document.getElementById('calcYearly').textContent = 'RM ' + yearly.toLocaleString('en-MY', {minimumFractionDigits: 0, maximumFractionDigits: 0});
+    }
+
+    // Init on load
+    document.addEventListener('DOMContentLoaded', function() {
+      updateCalc(5000);
+    });
+  </script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js')
+          .then(reg => console.log('[NISRAA SW] Registered:', reg.scope))
+          .catch(err => console.warn('[NISRAA SW] Failed:', err));
+      });
+    }
+  </script>
+</body>
+</html>
