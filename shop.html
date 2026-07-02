@@ -40,6 +40,352 @@
   <style>
     /* ── Shop Page Override Styles ── */
 
+    /* ════════════════════════════════════════════
+       JULY SPECIAL — PAGE-TOP MEGA BANNER
+       ════════════════════════════════════════════ */
+    .july-promo-banner {
+      position: relative;
+      overflow: hidden;
+      background: #000;
+      padding: 0;
+      border-top: 5px solid #FFD700;
+      border-bottom: 5px solid #FFD700;
+    }
+    /* Deep dark-gold gradient base */
+    .july-promo-banner::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg,
+        #0a0500 0%,
+        #1f0d00 25%,
+        #0a0500 50%,
+        #1f0d00 75%,
+        #0a0500 100%);
+      background-size: 400% 400%;
+      animation: bannerGradient 8s ease infinite;
+      z-index: 0;
+    }
+    @keyframes bannerGradient {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    /* Gold shimmer sweep */
+    .july-promo-banner::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -150%; width: 80%; height: 100%;
+      background: linear-gradient(105deg,
+        transparent 30%,
+        rgba(255,215,0,0.28) 50%,
+        transparent 70%);
+      animation: bannerShimmer 3.5s ease-in-out infinite;
+      z-index: 1;
+      pointer-events: none;
+    }
+    @keyframes bannerShimmer {
+      0%   { left: -150%; }
+      100% { left: 200%; }
+    }
+    .july-promo-inner {
+      position: relative; z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      padding: 40px 24px 36px;
+    }
+    /* TOP LABEL */
+    .july-promo-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(90deg, #FFD700, #FFF176, #FFD700);
+      background-size: 200% auto;
+      animation: goldShine 2.5s linear infinite;
+      color: #000;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      padding: 8px 24px;
+      border-radius: 100px;
+      text-transform: uppercase;
+      box-shadow: 0 0 28px rgba(255,215,0,0.7), 0 0 60px rgba(255,215,0,0.3);
+    }
+    @keyframes goldShine {
+      0%   { background-position: 0% center; }
+      100% { background-position: 200% center; }
+    }
+    /* MAIN HEADLINE */
+    .july-promo-headline {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(2rem, 5.5vw, 3.6rem);
+      font-weight: 900;
+      color: #FFD700;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+      text-align: center;
+      text-transform: uppercase;
+      text-shadow:
+        2px 2px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        0 0 30px rgba(255,215,0,0.6),
+        0 4px 24px rgba(0,0,0,0.9);
+    }
+    .july-promo-headline .gold-word {
+      color: #FFF176;
+      -webkit-text-fill-color: #FFF176;
+      text-shadow:
+        2px 2px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        0 0 40px rgba(255,215,0,0.8);
+    }
+    /* SUBTEXT */
+    .july-promo-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(15px, 2.2vw, 20px);
+      color: #FFD700;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-align: center;
+      text-shadow: 1px 1px 0 #000, 0 2px 8px rgba(0,0,0,0.9);
+    }
+    /* STAT PILLS ROW */
+    .july-promo-pills {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 4px;
+    }
+    .july-pill {
+      background: rgba(255,215,0,0.12);
+      border: 1.5px solid rgba(255,215,0,0.55);
+      color: #FFD700;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      padding: 8px 18px;
+      border-radius: 100px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      letter-spacing: 0.04em;
+      backdrop-filter: blur(8px);
+      text-shadow: 1px 1px 0 #000;
+      transition: all 0.2s;
+    }
+    .july-pill i { font-size: 12px; color: #FFD700; }
+    .pulse-pill {
+      background: rgba(255,215,0,0.2);
+      border-color: #FFD700;
+      color: #FFF176;
+      animation: pillGlow 2s ease-in-out infinite;
+    }
+    @keyframes pillGlow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(255,215,0,0.6); }
+      50%       { box-shadow: 0 0 0 10px rgba(255,215,0,0); }
+    }
+    /* CTA BUTTON */
+    .july-promo-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(90deg, #FFD700, #FFF176, #FFD700);
+      background-size: 200% auto;
+      animation: goldShine 2.5s linear infinite, ctaPulse 2s ease-in-out infinite;
+      color: #000;
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-weight: 900;
+      padding: 16px 40px;
+      border-radius: 100px;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-top: 4px;
+      transition: transform 0.2s;
+      box-shadow: 0 0 0 0 rgba(255,215,0,0.7), 0 4px 20px rgba(0,0,0,0.5);
+    }
+    .july-promo-cta:hover { transform: scale(1.05); }
+    @keyframes ctaPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(255,215,0,0.7), 0 4px 20px rgba(0,0,0,0.5); }
+      50%       { box-shadow: 0 0 0 16px rgba(255,215,0,0), 0 4px 20px rgba(0,0,0,0.5); }
+    }
+    .july-promo-fire {
+      display: inline-block;
+      animation: fireWobble 1s ease-in-out infinite alternate;
+    }
+    @keyframes fireWobble {
+      from { transform: scale(1) rotate(-8deg); }
+      to   { transform: scale(1.2) rotate(8deg); }
+    }
+
+    /* ════════════════════════════════════════════
+       JULY SPECIAL — PER-PRODUCT BANNER
+       ════════════════════════════════════════════ */
+    .prod-promo-banner-wrap {
+      position: relative;
+      overflow: hidden;
+      border-radius: 14px;
+      background: #080400;
+      margin-bottom: 18px;
+      border: 2px solid rgba(255,215,0,0.65);
+      box-shadow:
+        0 0 0 3px rgba(255,215,0,0.12),
+        0 8px 32px rgba(0,0,0,0.5),
+        inset 0 1px 0 rgba(255,215,0,0.25);
+      animation: prodBannerGlow 3s ease-in-out infinite;
+    }
+    @keyframes prodBannerGlow {
+      0%, 100% { box-shadow: 0 0 0 3px rgba(255,215,0,0.12), 0 8px 32px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,215,0,0.25); }
+      50%       { box-shadow: 0 0 0 5px rgba(255,215,0,0.35), 0 8px 40px rgba(255,215,0,0.2), inset 0 1px 0 rgba(255,215,0,0.35); }
+    }
+    .prod-promo-banner-wrap::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(120deg,
+        #0a0500 0%,
+        #1a0900 40%,
+        #0a0500 100%);
+      z-index: 0;
+    }
+    /* shimmer sweep on product banner */
+    .prod-promo-banner-wrap::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -200%; width: 80%; height: 100%;
+      background: linear-gradient(105deg,
+        transparent 30%,
+        rgba(255,215,0,0.22) 50%,
+        transparent 70%);
+      animation: prodBannerShimmer 4s ease-in-out infinite;
+      z-index: 1;
+      pointer-events: none;
+    }
+    @keyframes prodBannerShimmer {
+      0%   { left: -200%; }
+      100% { left: 200%; }
+    }
+    .prod-promo-banner-inner {
+      position: relative; z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 18px 20px 16px;
+      text-align: center;
+    }
+    .prod-promo-eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #FFD700;
+      text-shadow: 1px 1px 0 #000;
+      opacity: 1;
+    }
+    .prod-promo-title {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(15px, 3vw, 21px);
+      font-weight: 900;
+      color: #FFD700;
+      letter-spacing: 0.02em;
+      line-height: 1.2;
+      text-transform: uppercase;
+      text-shadow:
+        2px 2px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        0 0 20px rgba(255,215,0,0.5);
+    }
+    .prod-promo-title .prod-gold {
+      color: #FFF176;
+      -webkit-text-fill-color: #FFF176;
+      text-shadow:
+        2px 2px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        0 0 30px rgba(255,215,0,0.8);
+    }
+    .prod-promo-sub-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 2px;
+    }
+    .prod-promo-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: rgba(255,215,0,0.15);
+      border: 1.5px solid rgba(255,215,0,0.55);
+      color: #FFD700;
+      font-size: 11.5px;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 100px;
+      letter-spacing: 0.05em;
+      text-shadow: 1px 1px 0 #000;
+    }
+    .prod-promo-tag i { font-size: 10px; color: #FFD700; }
+    .prod-promo-stock {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: #ff6b6b;
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-shadow: 1px 1px 0 #000;
+      animation: stockBlink 1.8s ease-in-out infinite;
+    }
+    .prod-promo-stock::before {
+      content: '';
+      width: 7px; height: 7px;
+      background: #ff6b6b;
+      border-radius: 50%;
+      animation: stockBlink 1.8s ease-in-out infinite;
+      box-shadow: 0 0 8px #ff6b6b;
+    }
+    @keyframes stockBlink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.4; }
+    }
+
+    /* Promo badge inside page hero */
+    .shop-hero-promo-note {
+      margin-bottom: 8px !important;
+    }
+    .shop-hero-promo-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #fbbf24, #f59e0b);
+      color: #7c2d12;
+      font-size: 13px;
+      font-weight: 800;
+      padding: 7px 20px;
+      border-radius: 100px;
+      letter-spacing: 0.03em;
+      box-shadow: 0 3px 16px rgba(251,191,36,0.45);
+      animation: heroBadgePop 2.5s ease-in-out infinite;
+    }
+    @keyframes heroBadgePop {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.04); }
+    }
+
     /* Page Hero */
     .shop-page-hero {
       background: linear-gradient(135deg, #1C0F06 0%, #3A1F0B 60%, #2A1508 100%);
@@ -743,11 +1089,49 @@
     <a href="#full-treatment-set" class="fomo-cta">Grab Yours <i class="fas fa-arrow-right"></i></a>
   </div>
 
+  <!-- ── JULY PROMO MEGA BANNER ── -->
+  <div class="july-promo-banner" id="july-promo-banner">
+    <div class="july-promo-inner">
+
+      <!-- TOP BADGE -->
+      <div class="july-promo-badge">
+        <span class="july-promo-fire">🔥</span>
+        July Special · Website Launch Promo
+        <span class="july-promo-fire">🔥</span>
+      </div>
+
+      <!-- MAIN HEADLINE -->
+      <div class="july-promo-headline">
+        <span class="gold-word">UNBEATABLE</span> PROMO PRICES —<br>LIMITED STOCK ONLY!
+      </div>
+
+      <!-- SUB LINE -->
+      <div class="july-promo-sub">
+        Exclusive prices available on this website only · While stocks last
+      </div>
+
+      <!-- STAT PILLS -->
+      <div class="july-promo-pills">
+        <span class="july-pill"><i class="fas fa-tag"></i> Up to 63% Off</span>
+        <span class="july-pill pulse-pill"><i class="fas fa-fire"></i> Selling Fast</span>
+        <span class="july-pill"><i class="fas fa-shield-alt"></i> KKM Approved</span>
+        <span class="july-pill"><i class="fas fa-gift"></i> Free Gift Included</span>
+      </div>
+
+      <!-- CTA -->
+      <a href="#full-treatment-set" class="july-promo-cta">
+        <i class="fas fa-bolt"></i> Shop Now — Grab Your Deal
+      </a>
+
+    </div>
+  </div>
+
   <!-- ── PAGE HERO ── -->
   <section class="shop-page-hero">
     <div class="container">
       <div class="eyebrow-tag" style="display:inline-flex;margin-bottom:16px;">Official Website Store</div>
       <h1>Choose Your NISRAA Routine</h1>
+      <p class="shop-hero-promo-note"><span class="shop-hero-promo-badge">🏷️ JULY SPECIAL WEBSITE LAUNCHING PROMO! LIMITED STOCK AVAILABLE!</span></p>
       <p>Pharmacy-grade hair care, formulated by a doctor, pharmacist &amp; chemist. Every set supports stronger, healthier hair from within.</p>
       <div class="shop-hero-trust">
         <span><i class="fas fa-certificate"></i> KKM Approved</span>
@@ -773,6 +1157,17 @@
 
         <!-- Content -->
         <div class="featured-content">
+          <div class="prod-promo-banner-wrap">
+            <div class="prod-promo-banner-inner">
+              <div class="prod-promo-eyebrow">🔥 July Special · Website Launch Promo</div>
+              <div class="prod-promo-title"><span class="prod-gold">PROMO PRICE</span> — Limited Stock!</div>
+              <div class="prod-promo-sub-row">
+                <span class="prod-promo-tag"><i class="fas fa-tag"></i> Save 63%</span>
+                <span class="prod-promo-tag"><i class="fas fa-gift"></i> Free Gift</span>
+                <span class="prod-promo-stock"><i class="fas fa-exclamation-circle"></i> Almost Gone</span>
+              </div>
+            </div>
+          </div>
           <p class="featured-eyebrow">Our Flagship Product</p>
           <h2 class="featured-title">NISRAA Full Treatment Set <span style="display:block;font-size:0.55em;font-weight:500;color:#8a7a5a;letter-spacing:0.01em;margin-top:4px;">(NISRAA Set Rawatan Rambut Gugur)</span></h2>
           <div class="featured-sold-row">
@@ -797,7 +1192,7 @@
           </div>
 
           <div class="featured-price-row">
-            <span class="featured-price">RM 109.90</span>
+            <span class="featured-price">RM 99.90</span>
             <span class="featured-price-orig">RM 269.00</span>
             <span class="featured-save-pill">Save 63%</span>
           </div>
@@ -971,11 +1366,22 @@
         <div class="featured-img-wrap">
           <img src="https://www.genspark.ai/api/files/s/3rR0twnc" alt="NISRAA Set Tonic 150ml + Shampoo 250ml" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;" />
           <span class="featured-badge-overlay">✦ Ideal for Short &amp; Thinning Hair</span>
-          <span class="featured-savings-overlay">Save 56%</span>
+          <span class="featured-savings-overlay">Save 63%</span>
         </div>
 
         <!-- Content -->
         <div class="featured-content">
+          <div class="prod-promo-banner-wrap">
+            <div class="prod-promo-banner-inner">
+              <div class="prod-promo-eyebrow">🔥 July Special · Website Launch Promo</div>
+              <div class="prod-promo-title"><span class="prod-gold">PROMO PRICE</span> — Limited Stock!</div>
+              <div class="prod-promo-sub-row">
+                <span class="prod-promo-tag"><i class="fas fa-tag"></i> Save 63%</span>
+                <span class="prod-promo-tag"><i class="fas fa-shield-alt"></i> Website Only</span>
+                <span class="prod-promo-stock"><i class="fas fa-exclamation-circle"></i> Almost Gone</span>
+              </div>
+            </div>
+          </div>
           <p class="featured-eyebrow">Targeted Treatment Set</p>
           <h2 class="featured-title">NISRAA Set Tonic 150ml + Shampoo 250ml</h2>
           <div class="featured-sold-row">
@@ -998,9 +1404,9 @@
           </div>
 
           <div class="featured-price-row">
-            <span class="featured-price">RM 117.90</span>
+            <span class="featured-price">RM 99.90</span>
             <span class="featured-price-orig">RM 269.00</span>
-            <span class="featured-save-pill">Save 56%</span>
+            <span class="featured-save-pill">Save 63%</span>
           </div>
 
           <div class="featured-cta-row">
@@ -1108,9 +1514,20 @@
           <div class="prod-img-wrap">
             <img src="https://www.genspark.ai/api/files/s/1rKdKEdl" alt="NISRAA Trial Set" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;" />
             <span class="prod-card-badge warm">Best for First-Time Users</span>
-            <span class="prod-save-badge">Save 62%</span>
+            <span class="prod-save-badge">Save 57%</span>
           </div>
           <div class="prod-body">
+            <div class="prod-promo-banner-wrap">
+              <div class="prod-promo-banner-inner">
+                <div class="prod-promo-eyebrow">🔥 July Special · Website Launch Promo</div>
+                <div class="prod-promo-title"><span class="prod-gold">PROMO PRICE</span> — Limited Stock!</div>
+                <div class="prod-promo-sub-row">
+                  <span class="prod-promo-tag"><i class="fas fa-tag"></i> Save 57%</span>
+                  <span class="prod-promo-tag"><i class="fas fa-star"></i> Best Starter</span>
+                  <span class="prod-promo-stock"><i class="fas fa-exclamation-circle"></i> Almost Gone</span>
+                </div>
+              </div>
+            </div>
             <h3 class="prod-name">NISRAA Trial Set</h3>
             <div class="prod-sold-row">
               <span class="prod-star-row"><span class="stars">★★★★★</span> <span class="rating-num">5.0</span></span>
@@ -1124,7 +1541,7 @@
               <span style="color:#15803d;font-weight:600;font-size:12px;"><i class="fas fa-star" style="color:#16a34a;"></i> FREE Strengthening Tonic 50ml <span style="font-size:10px;background:#dcfce7;color:#15803d;padding:1px 7px;border-radius:100px;font-weight:700;">Website Exclusive!</span> <span style="font-size:11px;background:#fee2e2;color:#dc2626;padding:2px 8px;border-radius:100px;font-weight:800;border:1px solid #fca5a5;letter-spacing:0.01em;">Worth RM35!</span></span>
             </div>
             <div class="prod-price-row">
-              <span class="prod-price">RM 57.90</span>
+              <span class="prod-price">RM 55.90</span>
               <span class="prod-orig">RM 129.00</span>
             </div>
             <button onclick="openBCL()" class="prod-btn primary"><i class="fas fa-lock"></i> Checkout</button>
@@ -1271,9 +1688,20 @@
           <div class="prod-img-wrap">
             <img src="https://www.genspark.ai/api/files/s/vLPXC1w1" alt="NISRAA Strengthening Tonic 150ml" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;" />
             <span class="prod-card-badge neutral">Larger Size</span>
-            <span class="prod-save-badge">Save 52%</span>
+            <span class="prod-save-badge">Save 49%</span>
           </div>
           <div class="prod-body">
+            <div class="prod-promo-banner-wrap">
+              <div class="prod-promo-banner-inner">
+                <div class="prod-promo-eyebrow">🔥 July Special · Website Launch Promo</div>
+                <div class="prod-promo-title"><span class="prod-gold">PROMO PRICE</span> — Limited Stock!</div>
+                <div class="prod-promo-sub-row">
+                  <span class="prod-promo-tag"><i class="fas fa-tag"></i> Save 49%</span>
+                  <span class="prod-promo-tag"><i class="fas fa-bolt"></i> Website Only</span>
+                  <span class="prod-promo-stock"><i class="fas fa-exclamation-circle"></i> Almost Gone</span>
+                </div>
+              </div>
+            </div>
             <h3 class="prod-name">NISRAA Strengthening Tonic 150ml</h3>
             <div class="prod-sold-row">
               <span class="prod-star-row"><span class="stars">★★★★★</span> <span class="rating-num">5.0</span></span>
@@ -1282,7 +1710,7 @@
             <p class="prod-desc">For users who want a longer routine with better value per ml. Same powerful formula, bigger bottle.</p>
             <div style="font-size:12px;color:#15803d;font-weight:600;margin-bottom:8px;"><i class="fas fa-star" style="color:#16a34a;"></i> FREE Strengthening Tonic 50ml <span style="font-size:10px;background:#dcfce7;color:#15803d;padding:1px 7px;border-radius:100px;font-weight:700;">Website Exclusive!</span> <span style="font-size:11px;background:#fee2e2;color:#dc2626;padding:2px 8px;border-radius:100px;font-weight:800;border:1px solid #fca5a5;letter-spacing:0.01em;">Worth RM35!</span></div>
             <div class="prod-price-row" style="margin-top: auto; padding-top: 14px;">
-              <span class="prod-price">RM 69.90</span>
+              <span class="prod-price">RM 65.90</span>
               <span class="prod-orig">RM 129.90</span>
             </div>
             <button onclick="openBCL()" class="prod-btn primary"><i class="fas fa-lock"></i> Checkout</button>
@@ -1392,15 +1820,25 @@
             <span class="prod-save-badge">Save 50%</span>
           </div>
           <div class="prod-body">
+            <div class="prod-promo-banner-wrap">
+              <div class="prod-promo-banner-inner">
+                <div class="prod-promo-eyebrow">🔥 July Special · Website Launch Promo</div>
+                <div class="prod-promo-title"><span class="prod-gold">PROMO PRICE</span> — Limited Stock!</div>
+                <div class="prod-promo-sub-row">
+                  <span class="prod-promo-tag"><i class="fas fa-tag"></i> Save 50%</span>
+                  <span class="prod-promo-tag"><i class="fas fa-leaf"></i> SLS-Free</span>
+                  <span class="prod-promo-stock"><i class="fas fa-exclamation-circle"></i> Almost Gone</span>
+                </div>
+              </div>
+            </div>
             <h3 class="prod-name">NISRAA Treatment Shampoo 250ml</h3>
             <div class="prod-sold-row">
               <span class="prod-star-row"><span class="stars">★★★★★</span> <span class="rating-num">4.9</span></span>
               <span class="prod-sold-badge"><i class="fas fa-fire"></i> 6.9k sold online</span>
             </div>
             <p class="prod-desc">A gentle, pH-balanced shampoo free from SLS/SLES, designed as part of the NISRAA strengthening routine.</p>
-            <div style="font-size:12px;color:#15803d;font-weight:600;margin-bottom:8px;"><i class="fas fa-star" style="color:#16a34a;"></i> FREE Strengthening Tonic 50ml <span style="font-size:10px;background:#dcfce7;color:#15803d;padding:1px 7px;border-radius:100px;font-weight:700;">Website Exclusive!</span> <span style="font-size:11px;background:#fee2e2;color:#dc2626;padding:2px 8px;border-radius:100px;font-weight:800;border:1px solid #fca5a5;letter-spacing:0.01em;">Worth RM35!</span></div>
             <div class="prod-price-row" style="margin-top: auto; padding-top: 14px;">
-              <span class="prod-price">RM 55.90</span>
+              <span class="prod-price">RM 49.90</span>
               <span class="prod-orig">RM 99.00</span>
             </div>
             <button onclick="openBCL()" class="prod-btn primary"><i class="fas fa-lock"></i> Checkout</button>
@@ -1480,15 +1918,25 @@
             <span class="prod-save-badge">Save 50%</span>
           </div>
           <div class="prod-body">
+            <div class="prod-promo-banner-wrap">
+              <div class="prod-promo-banner-inner">
+                <div class="prod-promo-eyebrow">🔥 July Special · Website Launch Promo</div>
+                <div class="prod-promo-title"><span class="prod-gold">PROMO PRICE</span> — Limited Stock!</div>
+                <div class="prod-promo-sub-row">
+                  <span class="prod-promo-tag"><i class="fas fa-tag"></i> Save 50%</span>
+                  <span class="prod-promo-tag"><i class="fas fa-leaf"></i> SLS-Free</span>
+                  <span class="prod-promo-stock"><i class="fas fa-exclamation-circle"></i> Almost Gone</span>
+                </div>
+              </div>
+            </div>
             <h3 class="prod-name">NISRAA Treatment Conditioner 250ml</h3>
             <div class="prod-sold-row">
               <span class="prod-star-row"><span class="stars">★★★★★</span> <span class="rating-num">4.9</span></span>
               <span class="prod-sold-badge"><i class="fas fa-fire"></i> 5.5k sold online</span>
             </div>
             <p class="prod-desc">Complements the NISRAA treatment routine — leaving hair smoother, softer, and healthier after every wash.</p>
-            <div style="font-size:12px;color:#15803d;font-weight:600;margin-bottom:8px;"><i class="fas fa-star" style="color:#16a34a;"></i> FREE Strengthening Tonic 50ml <span style="font-size:10px;background:#dcfce7;color:#15803d;padding:1px 7px;border-radius:100px;font-weight:700;">Website Exclusive!</span> <span style="font-size:11px;background:#fee2e2;color:#dc2626;padding:2px 8px;border-radius:100px;font-weight:800;border:1px solid #fca5a5;letter-spacing:0.01em;">Worth RM35!</span></div>
             <div class="prod-price-row" style="margin-top: auto; padding-top: 14px;">
-              <span class="prod-price">RM 55.90</span>
+              <span class="prod-price">RM 49.90</span>
               <span class="prod-orig">RM 99.00</span>
             </div>
             <button onclick="openBCL()" class="prod-btn primary"><i class="fas fa-lock"></i> Checkout</button>
