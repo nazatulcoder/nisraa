@@ -467,6 +467,9 @@
     }
     @media (max-width: 900px) {
       .featured-inner { grid-template-columns: 1fr; gap: 32px; }
+      /* Set 2: image above title on mobile */
+      #nisraa-set-2 .featured-img-wrap { order: 1 !important; }
+      #nisraa-set-2 .featured-content  { order: 2 !important; }
     }
 
     /* Image side */
@@ -1551,7 +1554,7 @@
 
         <!-- Image -->
         <div class="featured-img-wrap" style="order:2;">
-          <img src="images/set2-product.png" alt="NISRAA Set 2 Shampoo 250ml + Tonic 70ml" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;" />
+          <img src="https://www.genspark.ai/api/files/s/OEX6Q93R" alt="NISRAA Set 2 Shampoo 250ml + Tonic 70ml" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;" />
           <span class="featured-badge-overlay">✦ Double Cleanse · Maximum Volume</span>
           <span class="featured-savings-overlay">Save 50%</span>
         </div>
@@ -2385,7 +2388,7 @@
 
     // Init all sliders on load
     document.addEventListener('DOMContentLoaded', function() {
-      ['fts','tss','ts','t70','t150','sh','cd'].forEach(id => {
+      ['fts','tss','s2','ts','t70','t150','sh','cd'].forEach(id => {
         if (document.getElementById(`carousel-${id}`)) initSlider(id);
       });
     });
