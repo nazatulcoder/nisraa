@@ -1065,25 +1065,52 @@
       display: flex; align-items: center; justify-content: center; gap: 6px;
     }
 
-    /* ── BCL Payment Modal — Force full-width responsive ── */
+    /* ── BCL Payment Modal ── */
+    #bclOverlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.65);
+      overflow-y: auto;
+    }
+    #bclModal {
+      width: 100%;
+      min-height: 100vh;
+      min-height: 100dvh;
+      background: #fff;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+    @media (min-width: 600px) {
+      #bclOverlay {
+        display: none;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 32px 16px;
+      }
+      #bclModal {
+        border-radius: 20px;
+        width: min(560px, 100%);
+        margin: 0 auto;
+        min-height: auto;
+      }
+    }
     #bcl-payment-form {
       width: 100% !important;
       min-width: 0 !important;
       box-sizing: border-box !important;
     }
-    #bcl-payment-form iframe,
-    #bcl-payment-form > * {
-      width: 100% !important;
-      max-width: 100% !important;
-      min-width: 0 !important;
-      box-sizing: border-box !important;
-      border: none !important;
+    #bcl-payment-form iframe {
       display: block !important;
+      width: 100% !important;
+      min-width: 0 !important;
+      border: none !important;
     }
-    @media (max-width: 480px) {
-      #bclOverlay { padding: 10px !important; }
-      #bclModal   { border-radius: 16px !important; max-height: 95vh !important; }
-    }
+
+
   </style>
 </head>
 <body>
@@ -2565,8 +2592,6 @@
 
 
   <script src="js/main.js" defer></script>
-  <script src="js/cart.js" defer></script>
-
 
   <script>
     /* ── REVIEW SLIDER ENGINE ── */
@@ -2665,8 +2690,8 @@
   <!-- ══════════════════════════════════
        BCL BAYAR CASH PAYMENT MODAL
   ══════════════════════════════════ -->
-  <div id="bclOverlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.65);z-index:99999;align-items:center;justify-content:center;padding:16px;box-sizing:border-box;">
-    <div id="bclModal" style="background:#fff;border-radius:20px;width:min(560px,100%);max-width:560px;max-height:92vh;overflow-y:auto;overflow-x:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.4);position:relative;-webkit-overflow-scrolling:touch;box-sizing:border-box;">
+  <div id="bclOverlay">
+    <div id="bclModal">
 
       <!-- Header -->
       <div style="position:sticky;top:0;background:#fff;z-index:10;padding:18px 20px 14px;border-bottom:1px solid #f0ebe3;display:flex;align-items:center;justify-content:space-between;">
@@ -2683,11 +2708,11 @@
       </div>
 
       <!-- BCL Form -->
-      <div style="padding:20px;box-sizing:border-box;width:100%;overflow:hidden;">
+      <div style="padding:16px 20px 20px;box-sizing:border-box;width:100%;">
         <div id="bcl-payment-form" data-url="https://nisraapharmaceutics.bcl.my/embed/form/nisraawebsite" style="width:100%;min-width:0;box-sizing:border-box;"></div>
       </div>
 
-      <p style="text-align:center;font-size:11px;color:#aaa;padding:0 20px 20px;"><i class="fas fa-shield-alt" style="color:#6C4323;"></i> Your payment is encrypted &amp; processed securely</p>
+      <p style="text-align:center;font-size:11px;color:#aaa;padding:0 20px 24px;"><i class="fas fa-shield-alt" style="color:#6C4323;"></i> Your payment is encrypted &amp; processed securely</p>
     </div>
   </div>
 
@@ -2695,13 +2720,27 @@
   <script>
     function openBCL() {
       var o = document.getElementById('bclOverlay');
-      o.style.display = 'flex';
+      var isMobile = window.innerWidth < 600;
+      if (isMobile) {
+        o.style.display = 'block';
+        o.style.alignItems = '';
+        o.style.justifyContent = '';
+        o.style.padding = '0';
+      } else {
+        o.style.display = 'flex';
+        o.style.alignItems = 'flex-start';
+        o.style.justifyContent = 'center';
+        o.style.padding = '32px 16px';
+      }
       document.body.style.overflow = 'hidden';
+      o.scrollTop = 0;
     }
+
     function closeBCL() {
       document.getElementById('bclOverlay').style.display = 'none';
       document.body.style.overflow = '';
     }
+
     document.getElementById('bclOverlay').addEventListener('click', function(e) {
       if (e.target === this) closeBCL();
     });
