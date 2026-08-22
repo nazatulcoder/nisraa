@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sales Page — NISRAA Professional Hair Care</title>
+  <meta name="description" content="Order NISRAA Professional Hair Care products securely. Pharmacy-grade hair care formulated by a doctor, pharmacist & chemist." />
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#6C4323" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="NISRAA" />
+  <link rel="apple-touch-icon" href="/images/icon-192.png" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" /></noscript>
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    /* ── Sales Page specific styles ── */
+    .sales-hero {
+      background: linear-gradient(135deg, #2c1a0e 0%, #6C4323 60%, #a0622a 100%);
+      padding: 48px 20px 32px;
+      text-align: center;
+      color: #fff;
+    }
+    .sales-hero-eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #d4a96a;
+      margin-bottom: 10px;
+    }
+    .sales-hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 5vw, 44px);
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 12px;
+      line-height: 1.15;
+    }
+    .sales-hero-subtitle {
+      font-size: 14px;
+      color: rgba(255,255,255,0.75);
+      margin: 0 0 20px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .sales-trust-pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .sales-trust-pill {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 100px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    /* ── Embed wrapper ── */
+    .sales-embed-section {
+      background: #faf7f4;
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .sales-embed-wrap {
+      width: 100%;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .sales-embed-frame {
+      width: 100%;
+      flex: 1;
+      border: none;
+      min-height: 100vh;
+      display: block;
+      background: #fff;
+    }
+    /* ── Fallback message if iframe blocked ── */
+    .sales-fallback {
+      display: none;
+      text-align: center;
+      padding: 48px 20px;
+      color: #6b5a47;
+    }
+    .sales-fallback a {
+      display: inline-block;
+      margin-top: 16px;
+      background: linear-gradient(135deg,#6C4323,#a0622a);
+      color: #fff;
+      padding: 14px 32px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+    }
+    /* ── Secure badge bar ── */
+    .sales-secure-bar {
+      background: #fff;
+      border-top: 1px solid #f0ebe3;
+      text-align: center;
+      padding: 14px 20px;
+      font-size: 12px;
+      color: #aaa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .sales-secure-bar i { color: #6C4323; }
+  </style>
+</head>
+<body>
+
+  <!-- ── HEADER ── -->
+  <header class="header scrolled" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="images/logo-nisraa.png" alt="NISRAA — Professional Hair Technology" class="logo-img on-light" />
+      </a>
+
+      <nav class="nav-desktop">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="why-nisraa.html" class="nav-link">Why NISRAA</a>
+        <a href="hair-solutions.html" class="nav-link">Hair Solutions</a>
+        <a href="reviews.html" class="nav-link">Testimonials</a>
+        <a href="rewards.html" class="nav-link">Rewards</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="sales.html" class="nav-link active">Sales Page</a>
+        <a href="affiliate.html" class="nav-link">Jom Jadi Affiliate</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="shop.html" class="btn btn-primary btn-sm">Shop Now</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- MOBILE NAV -->
+    <nav class="nav-mobile" id="mobileNav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="shop.html" class="nav-link">Shop</a>
+      <a href="why-nisraa.html" class="nav-link">Why NISRAA</a>
+      <a href="hair-solutions.html" class="nav-link">Hair Solutions</a>
+      <a href="reviews.html" class="nav-link">Testimonials</a>
+      <a href="rewards.html" class="nav-link">Rewards</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+      <a href="sales.html" class="nav-link active">Sales Page</a>
+      <a href="affiliate.html" class="nav-link">Jom Jadi Affiliate</a>
+      <a href="shop.html" class="btn btn-primary mt-1">Shop Now</a>
+    </nav>
+  </header>
+
+  <!-- ── SALES HERO ── -->
+  <section class="sales-hero">
+    <p class="sales-hero-eyebrow"><i class="fas fa-lock"></i> &nbsp;Secure Order Page</p>
+    <h1 class="sales-hero-title">Order NISRAA Hair Care</h1>
+    <p class="sales-hero-subtitle">Complete your order below. Payments are encrypted &amp; processed securely via BCL Bayar Cash.</p>
+    <div class="sales-trust-pills">
+      <span class="sales-trust-pill"><i class="fas fa-certificate"></i> KKM Approved</span>
+      <span class="sales-trust-pill"><i class="fas fa-moon"></i> Halal Certified</span>
+      <span class="sales-trust-pill"><i class="fas fa-shield-alt"></i> Secure Payment</span>
+      <span class="sales-trust-pill"><i class="fas fa-truck"></i> Fast Delivery</span>
+      <span class="sales-trust-pill"><i class="fas fa-gift"></i> Free Gift Included</span>
+    </div>
+  </section>
+
+  <!-- ── BCL EMBED ── -->
+  <section class="sales-embed-section">
+    <div class="sales-embed-wrap">
+      <iframe
+        class="sales-embed-frame"
+        src="https://nisraapharmaceutics.bcl.my/form/nisraaprofessionalhaircare"
+        title="NISRAA Order Form — BCL Bayar Cash"
+        allowpaymentrequest
+        allow="payment"
+        loading="eager"
+        id="salesFrame"
+      ></iframe>
+      <!-- Fallback if iframe is blocked -->
+      <div class="sales-fallback" id="salesFallback">
+        <i class="fas fa-exclamation-circle" style="font-size:36px;color:#d4a96a;display:block;margin-bottom:12px;"></i>
+        <p>Unable to load the order form directly.<br>Please click the button below to order.</p>
+        <a href="https://nisraapharmaceutics.bcl.my/form/nisraaprofessionalhaircare" target="_blank" rel="noopener">
+          <i class="fas fa-lock"></i> &nbsp;Order Now via BCL
+        </a>
+      </div>
+    </div>
+    <div class="sales-secure-bar">
+      <i class="fas fa-shield-alt"></i>
+      Your payment is encrypted &amp; processed securely by BCL Bayar Cash
+    </div>
+  </section>
+
+  <!-- ── WHATSAPP FLOAT ── -->
+  <a href="https://wa.me/60147592082?text=Hi%20NISRAA!%20I%27d%20like%20to%20ask%20about%20your%20products." target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat with NISRAA on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Chat with us</span>
+  </a>
+
+  <!-- ── MOBILE STICKY BAR ── -->
+  <div class="mobile-sticky-bar" role="navigation" aria-label="Quick actions">
+    <a href="sales.html" class="sticky-btn primary"><i class="fas fa-lock"></i><span>Order Now</span></a>
+    <a href="shop.html" class="sticky-btn secondary"><i class="fas fa-box-open"></i><span>Products</span></a>
+    <a href="index.html" class="sticky-btn secondary"><i class="fas fa-home"></i><span>Home</span></a>
+  </div>
+
+  <script src="js/main.js" defer></script>
+  <script>
+    // If iframe fails to load, show fallback button
+    var frame = document.getElementById('salesFrame');
+    var fallback = document.getElementById('salesFallback');
+    frame.addEventListener('error', function() {
+      frame.style.display = 'none';
+      fallback.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
