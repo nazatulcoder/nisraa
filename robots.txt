@@ -1,0 +1,8 @@
+# robots.txt — NISRAA Pharmaceutics
+# https://www.nisraa.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.nisraa.com/sitemap.xml
