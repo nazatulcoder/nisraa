@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NISRAA – Base64 Image Extractor Tool</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', sans-serif; background: #0f0f0f; color: #eee; padding: 30px 20px; }
+  h1 { color: #d4af37; font-size: 1.5rem; margin-bottom: 6px; }
+  .subtitle { color: #888; font-size: 0.9rem; margin-bottom: 30px; }
+  .card { background: #1a1a1a; border: 1px solid #333; border-radius: 12px; padding: 24px; margin-bottom: 20px; }
+  .card h2 { font-size: 1rem; color: #d4af37; margin-bottom: 12px; }
+  textarea { width: 100%; height: 120px; background: #111; border: 1px solid #444; border-radius: 8px; color: #eee; padding: 12px; font-size: 0.85rem; font-family: monospace; resize: vertical; }
+  .btn { display: inline-block; padding: 12px 28px; background: #d4af37; color: #000; border: none; border-radius: 8px; font-weight: 700; font-size: 0.95rem; cursor: pointer; margin-top: 12px; }
+  .btn:hover { background: #f0cc55; }
+  .btn-dl { background: #2a7a2a; color: #fff; margin-left: 10px; font-size: 0.8rem; padding: 8px 16px; }
+  .btn-dl:hover { background: #3a9a3a; }
+  #status { margin-top: 16px; padding: 12px 16px; border-radius: 8px; font-size: 0.9rem; display: none; }
+  .status-ok { background: #1a3a1a; border: 1px solid #2a7a2a; color: #7aff7a; }
+  .status-err { background: #3a1a1a; border: 1px solid #7a2a2a; color: #ff7a7a; }
+  .img-list { list-style: none; margin-top: 16px; }
+  .img-item { background: #111; border: 1px solid #333; border-radius: 8px; padding: 16px; margin-bottom: 12px; }
+  .img-item .img-name { font-weight: 700; color: #d4af37; font-size: 0.95rem; margin-bottom: 6px; }
+  .img-item .img-size { color: #888; font-size: 0.8rem; margin-bottom: 8px; }
+  .img-item img { max-width: 120px; max-height: 120px; object-fit: cover; border-radius: 6px; display: block; margin-bottom: 10px; }
+  .replace-info { background: #0d1a2e; border: 1px solid #1a4a7a; border-radius: 6px; padding: 10px; margin-top: 8px; }
+  .replace-info p { font-size: 0.78rem; color: #7ab3ff; margin-bottom: 4px; }
+  .replace-info code { font-size: 0.75rem; color: #aad4ff; word-break: break-all; background: #06101c; padding: 4px 8px; border-radius: 4px; display: block; margin-top: 4px; }
+  .step { counter-increment: step; }
+  .step-num { display: inline-block; width: 28px; height: 28px; background: #d4af37; color: #000; border-radius: 50%; text-align: center; line-height: 28px; font-weight: 700; font-size: 0.85rem; margin-right: 8px; flex-shrink: 0; }
+  .step-row { display: flex; align-items: flex-start; margin-bottom: 10px; }
+  .step-text { font-size: 0.88rem; color: #ccc; padding-top: 4px; }
+  .highlight { color: #d4af37; font-weight: 600; }
+  #download-all-btn { display: none; }
+  .progress-bar { width: 100%; height: 6px; background: #333; border-radius: 3px; margin-top: 10px; overflow: hidden; }
+  .progress-fill { height: 100%; background: #d4af37; border-radius: 3px; transition: width 0.3s; width: 0%; }
+  .warning-box { background: #2a1a00; border: 1px solid #7a5000; border-radius: 8px; padding: 14px; margin-bottom: 20px; font-size: 0.87rem; color: #ffcc66; }
+  .warning-box strong { color: #ffd700; }
+</style>
+</head>
+<body>
+
+<h1>🛠️ NISRAA – Base64 Image Extractor</h1>
+<p class="subtitle">Tool khas untuk extract gambar dari belinisraa.html dan kecikkan saiz fail</p>
+
+<div class="warning-box">
+  <strong>⚠️ Cara guna:</strong><br>
+  1. Buka <code>belinisraa.html</code> dalam text editor (Notepad++, VS Code, dll)<br>
+  2. Select ALL (Ctrl+A) → Copy (Ctrl+C)<br>
+  3. Paste dalam kotak di bawah → Klik "Extract Images"<br>
+  4. Download semua gambar → Upload ke folder <code>images/</code> dalam projek ini
+</div>
+
+<div class="card">
+  <h2>📋 Langkah 1 – Paste HTML dari belinisraa.html</h2>
+  <textarea id="htmlInput" placeholder="Paste keseluruhan content belinisraa.html di sini..."></textarea>
+  <br>
+  <button class="btn" onclick="extractImages()">🔍 Extract Images</button>
+  <div id="status"></div>
+  <div class="progress-bar" id="progressBar" style="display:none"><div class="progress-fill" id="progressFill"></div></div>
+</div>
+
+<div class="card" id="resultsCard" style="display:none">
+  <h2>📦 Langkah 2 – Download Semua Gambar</h2>
+  <p style="color:#aaa; font-size:0.85rem; margin-bottom:14px">Download setiap gambar dan upload ke folder <span class="highlight">images/</span> dalam projek NISRAA.</p>
+  <button class="btn" id="download-all-btn" onclick="downloadAll()">⬇️ Download Semua Gambar</button>
+  <ul class="img-list" id="imgList"></ul>
+</div>
+
+<div class="card" id="instructCard" style="display:none">
+  <h2>📝 Langkah 3 – Ganti dalam belinisraa.html</h2>
+  <p style="color:#aaa; font-size:0.85rem; margin-bottom:14px">Selepas upload gambar, beritahu assistant untuk replace strings berikut:</p>
+  <div id="replaceInstructions"></div>
+  <div style="margin-top:20px; padding:14px; background:#1a2a1a; border:1px solid #3a5a3a; border-radius:8px;">
+    <p style="color:#7aff7a; font-size:0.88rem;">✅ Selepas semua diganti, saiz <code>belinisraa.html</code> akan turun dari <strong>~2.27MB → ~30KB</strong> — jimat lebih 98% kredit!</p>
+  </div>
+</div>
+
+<script>
+let extractedImages = [];
+
+function extractImages() {
+  const html = document.getElementById('htmlInput').value.trim();
+  const statusEl = document.getElementById('status');
+  
+  if (!html) {
+    statusEl.style.display = 'block';
+    statusEl.className = 'status-err';
+    statusEl.textContent = '❌ Sila paste content HTML dulu!';
+    return;
+  }
+
+  statusEl.style.display = 'block';
+  statusEl.className = 'status-ok';
+  statusEl.textContent = '🔍 Sedang scan HTML...';
+
+  const progressBar = document.getElementById('progressBar');
+  const progressFill = document.getElementById('progressFill');
+  progressBar.style.display = 'block';
+  progressFill.style.width = '10%';
+
+  setTimeout(() => {
+    try {
+      // Find all base64 image data URIs
+      const regex = /data:image\/(webp|jpeg|jpg|png|gif);base64,[A-Za-z0-9+/=]+/g;
+      const matches = [...new Set(html.match(regex) || [])];
+      
+      progressFill.style.width = '40%';
+
+      if (matches.length === 0) {
+        statusEl.className = 'status-err';
+        statusEl.textContent = '❌ Tiada base64 image jumpa. Pastikan HTML di-paste dengan betul.';
+        progressBar.style.display = 'none';
+        return;
+      }
+
+      extractedImages = matches.map((dataUri, index) => {
+        const mimeMatch = dataUri.match(/data:image\/(\w+);base64,/);
+        const ext = mimeMatch ? mimeMatch[1] : 'webp';
+        const name = `nisraa-img-${String(index + 1).padStart(2, '0')}.${ext}`;
+        const sizeBytes = Math.round((dataUri.length - dataUri.indexOf(',') - 1) * 0.75);
+        const sizeKB = (sizeBytes / 1024).toFixed(1);
+        return { dataUri, name, ext, sizeKB, index: index + 1 };
+      });
+
+      progressFill.style.width = '70%';
+      renderResults();
+      progressFill.style.width = '100%';
+      
+      statusEl.className = 'status-ok';
+      statusEl.textContent = `✅ Jumpa ${matches.length} gambar! Scroll ke bawah untuk download.`;
+      
+      setTimeout(() => { progressBar.style.display = 'none'; }, 1000);
+
+    } catch (e) {
+      statusEl.className = 'status-err';
+      statusEl.textContent = '❌ Error: ' + e.message;
+      progressBar.style.display = 'none';
+    }
+  }, 100);
+}
+
+function renderResults() {
+  const resultsCard = document.getElementById('resultsCard');
+  const instructCard = document.getElementById('instructCard');
+  const imgList = document.getElementById('imgList');
+  const replaceInstructions = document.getElementById('replaceInstructions');
+  const dlAllBtn = document.getElementById('download-all-btn');
+
+  resultsCard.style.display = 'block';
+  instructCard.style.display = 'block';
+  dlAllBtn.style.display = 'inline-block';
+  imgList.innerHTML = '';
+  replaceInstructions.innerHTML = '';
+
+  extractedImages.forEach(img => {
+    // Preview
+    const li = document.createElement('li');
+    li.className = 'img-item';
+    
+    const preview = document.createElement('img');
+    preview.src = img.dataUri;
+    preview.alt = img.name;
+    
+    const nameEl = document.createElement('div');
+    nameEl.className = 'img-name';
+    nameEl.textContent = `📷 ${img.name}`;
+    
+    const sizeEl = document.createElement('div');
+    sizeEl.className = 'img-size';
+    sizeEl.textContent = `Saiz: ~${img.sizeKB} KB`;
+    
+    const dlBtn = document.createElement('button');
+    dlBtn.className = 'btn btn-dl';
+    dlBtn.textContent = `⬇️ Download ${img.name}`;
+    dlBtn.onclick = () => downloadImage(img);
+    
+    li.appendChild(preview);
+    li.appendChild(nameEl);
+    li.appendChild(sizeEl);
+    li.appendChild(dlBtn);
+    imgList.appendChild(li);
+
+    // Replace instructions
+    const replaceDiv = document.createElement('div');
+    replaceDiv.className = 'replace-info';
+    replaceDiv.innerHTML = `
+      <p><strong style="color:#d4af37">Gambar ${img.index}: ${img.name}</strong> (~${img.sizeKB} KB)</p>
+      <p>Ganti <code>${img.dataUri.substring(0, 60)}...</code></p>
+      <p>→ Dengan: <code style="color:#7aff7a">images/${img.name}</code></p>
+    `;
+    replaceInstructions.appendChild(replaceDiv);
+  });
+}
+
+function downloadImage(img) {
+  const a = document.createElement('a');
+  a.href = img.dataUri;
+  a.download = img.name;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+
+function downloadAll() {
+  extractedImages.forEach((img, i) => {
+    setTimeout(() => downloadImage(img), i * 500);
+  });
+}
+</script>
+</body>
+</html>

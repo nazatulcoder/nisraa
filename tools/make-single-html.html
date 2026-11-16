@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Make single-file belinisraa.html</title>
+<style>
+  body{font:15px/1.6 system-ui,sans-serif;max-width:760px;margin:0 auto;padding:24px;color:#1a120c;background:#faf7f2}
+  h1{font-size:22px;color:#1a3a2e;margin:0 0 6px}
+  p{margin:6px 0}
+  .box{background:#fff;border:1px solid #e3d9c8;border-radius:14px;padding:16px;margin:16px 0}
+  button,a.dl{display:inline-block;background:#1a3a2e;color:#fff;border:0;border-radius:10px;padding:12px 20px;font-size:15px;font-weight:700;cursor:pointer;text-decoration:none}
+  a.dl{background:#c9a96e;color:#1a120c;font-size:17px;padding:14px 24px;margin-top:10px}
+  a.dl[hidden]{display:none}
+  pre{white-space:pre-wrap;word-break:break-word;font:12.5px/1.55 ui-monospace,Menlo,monospace;background:#f3ece2;border-radius:10px;padding:12px;margin:10px 0 0}
+  .ok{color:#15803d;font-weight:800}.bad{color:#b91c1c;font-weight:800}
+  label{display:block;margin:8px 0}
+</style>
+</head>
+<body>
+<h1>Make single-file belinisraa.html</h1>
+<p>Puts all the local images (currently 12) inside the HTML, so you get ONE file that needs no <code>images/</code> folder.</p>
+
+<div class="box">
+  <label><input type="checkbox" id="compress"> Make the file smaller (convert images to WebP, 92% quality). Leave OFF to keep the original PNG quality exactly.</label>
+  <button id="go" type="button">Build single file</button>
+  <div><a class="dl" id="dl" hidden>Download belinisraa-single.html</a></div>
+  <pre id="log">Starting…</pre>
+</div>
+
+<p style="font-size:13px;color:#564636">Open this page from the website (preview or live URL), not by double-clicking the file on your computer, otherwise the browser blocks reading the images.</p>
+
+<script>
+(function () {
+  var logEl = document.getElementById('log');
+  var dl = document.getElementById('dl');
+  var lines = [];
+  function log(t, cls) { lines.push(cls ? '<span class="' + cls + '">' + t + '</span>' : t); logEl.innerHTML = lines.join('\n'); }
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+  function kb(n) { return (n / 1024 / 1024).toFixed(2) + ' MB'; }
+
+  function blobToDataURL(blob) {
+    return new Promise(function (res, rej) {
+      var r = new FileReader();
+      r.onload = function () { res(r.result); };
+      r.onerror = function () { rej(r.error); };
+      r.readAsDataURL(blob);
+    });
+  }
+  function toWebP(blob) {
+    return new Promise(function (res, rej) {
+      var url = URL.createObjectURL(blob), im = new Image();
+      im.onload = function () {
+        var c = document.createElement('canvas');
+        c.width = im.naturalWidth; c.height = im.naturalHeight;
+        c.getContext('2d').drawImage(im, 0, 0);
+        c.toBlob(function (b) { URL.revokeObjectURL(url); b ? res(b) : rej(new Error('webp failed')); }, 'image/webp', 0.92);
+      };
+      im.onerror = function () { rej(new Error('decode failed')); };
+      im.src = url;
+    });
+  }
+
+  async function build() {
+    lines = []; dl.hidden = true;
+    document.getElementById('go').disabled = true;
+    var compress = document.getElementById('compress').checked;
+    try {
+      log('Reading ../belinisraa.html …');
+      var resp = await fetch('../belinisraa.html', { cache: 'no-store' });
+      if (!resp.ok) throw new Error('belinisraa.html: HTTP ' + resp.status);
+      var html = await resp.text();
+      log('HTML size: ' + kb(html.length));
+
+      // 1. drop the unused old-popup base64 comment (61 KB, not displayed)
+      html = html.replace(/<!--old-popup-image-data[\s\S]*?-->/g, '');
+
+      // 2. find every local image reference
+      var re = /(["'])(images\/[A-Za-z0-9_\-.\/]+?\.(?:png|jpe?g|webp|gif|svg))\1/g;
+      var found = {}, m;
+      while ((m = re.exec(html))) found[m[2]] = true;
+      var paths = Object.keys(found);
+      log('Local images found: ' + paths.length);
+
+      var map = {}, failed = [], total = 0;
+      for (var i = 0; i < paths.length; i++) {
+        var p = paths[i];
+        try {
+          var r = await fetch('../' + p, { cache: 'no-store' });
+          if (!r.ok) throw new Error('HTTP ' + r.status);
+          var b = await r.blob();
+          var before = b.size;
+          if (compress && /\.png$/i.test(p)) { b = await toWebP(b); }
+          map[p] = await blobToDataURL(b);
+          total += b.size;
+          log('  OK  ' + p + '  (' + Math.round(before / 1024) + ' KB' + (compress ? ' -> ' + Math.round(b.size / 1024) + ' KB' : '') + ')');
+        } catch (e) {
+          failed.push(p);
+          log('  FAIL ' + p + ' — ' + e.message, 'bad');
+        }
+      }
+      if (failed.length) throw new Error('Missing images: ' + failed.join(', '));
+
+      // 3. replace references
+      var out = html.replace(re, function (all, q, p) { return q + map[p] + q; });
+      log('Embedded ' + paths.length + ' images (' + kb(total) + ' of image data).');
+
+      // 4. verify in a hidden iframe
+      log('Verifying the new file …');
+      var blob = new Blob([out], { type: 'text/html;charset=utf-8' });
+      var left = (out.match(/["']images\//g) || []).length;
+      var fr = document.createElement('iframe');
+      fr.style.cssText = 'position:absolute;left:-9999px;width:420px;height:600px';
+      document.body.appendChild(fr);
+      await new Promise(function (res) { fr.onload = res; fr.srcdoc = out; });
+      await new Promise(function (res) { setTimeout(res, 1500); });
+      var d = fr.contentDocument;
+      var imgs = [].slice.call(d.querySelectorAll('img'));
+      var eager = imgs.filter(function (x) { return !x.getAttribute('data-src') && x.getAttribute('src'); });
+      var broken = [];
+      for (var e2 = 0; e2 < eager.length; e2++) {
+        var sv = eager[e2].getAttribute('src');
+        if (sv.indexOf('data:image/gif') === 0) continue;
+        var okE = await new Promise(function (res) { var t = new Image(); t.onload = function () { res(t.naturalWidth > 0); }; t.onerror = function () { res(false); }; t.src = sv; });
+        if (!okE) broken.push(eager[e2]);
+      }
+      var lazy = imgs.filter(function (x) { return x.getAttribute('data-src'); });
+      var lazyBad = 0;
+      for (var k = 0; k < lazy.length; k++) {
+        var ok = await new Promise(function (res) { var t = new Image(); t.onload = function () { res(true); }; t.onerror = function () { res(false); }; t.src = lazy[k].getAttribute('data-src'); });
+        if (!ok) lazyBad++;
+      }
+      var poolSrc = out.match(/src=["']data:image\/(?:png|webp|jpeg)/g) || [];
+      fr.remove();
+
+      log('Remaining "images/" references: ' + left, left ? 'bad' : 'ok');
+      log('Images in the page: ' + imgs.length + ' | not loading: ' + broken.length + ' | lazy images unreadable: ' + lazyBad,
+          (broken.length || lazyBad) ? 'bad' : 'ok');
+      var pass = !left && !broken.length && !lazyBad;
+      log(pass ? 'RESULT: ALL IMAGES OK. File size ' + kb(blob.size) : 'RESULT: PROBLEM FOUND', pass ? 'ok' : 'bad');
+
+      if (pass) {
+        dl.href = URL.createObjectURL(blob);
+        dl.download = 'belinisraa-single.html';
+        dl.textContent = 'Download belinisraa-single.html (' + kb(blob.size) + ')';
+        dl.hidden = false;
+      }
+      window.__result = { pass: pass, size: blob.size, images: imgs.length, left: left, broken: broken.length, lazyBad: lazyBad };
+    } catch (e) {
+      log('ERROR: ' + esc(e.message), 'bad');
+      window.__result = { pass: false, error: e.message };
+    }
+    document.getElementById('go').disabled = false;
+    var rd = document.createElement('div'); rd.id = 'ready'; document.body.appendChild(rd);
+  }
+
+  document.getElementById('go').addEventListener('click', build);
+  build();
+})();
+</script>
+</body>
+</html>

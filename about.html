@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About NISRAA — Pharmacy-Grade Hair Repair by a Doctor, Pharmacist &amp; Chemist</title>
+  <meta name="description" content="About NISRAA: a pharmacy-grade bond-repair hair care system built by a pharmacist who lived through hair loss. FiberHance™ technology, KKM approved, Halal-certified. Story, science, ingredients and FAQ." />
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#6C4323" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="NISRAA" />
+  <link rel="apple-touch-icon" href="/images/icon-192.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="About NISRAA — Pharmacy-Grade Hair Repair" />
+  <meta property="og:description" content="Built by a pharmacist who lived through hair loss. Formulated by a doctor, pharmacist &amp; chemist. KKM approved, Halal-certified." />
+  <meta property="og:url" content="https://www.nisraa.com/about.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="preload" href="css/style.css" as="style" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&family=DM+Sans:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" /></noscript>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ═══════════════════════════════════════════
+       ABOUT NISRAA — combined page (Home + About + Why NISRAA + FAQ)
+       All custom classes prefixed ab-
+       ═══════════════════════════════════════════ */
+    :root { --hdr: 68px; }
+    .ab-sec { padding: 72px 0; }
+    .ab-sec.alt { background: var(--bg-alt); }
+    .ab-sec.white { background: #fff; }
+    .ab-anchor { scroll-margin-top: 120px; }
+    .ab-head { text-align: center; max-width: 720px; margin: 0 auto 40px; }
+    .ab-head h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.8rem, 4.2vw, 2.7rem);
+      font-weight: 700; line-height: 1.18; color: var(--primary); margin-bottom: 12px;
+    }
+    .ab-head p { font-size: 15.5px; color: var(--text-secondary); line-height: 1.7; }
+
+    /* ── HERO ── */
+    .ab-hero {
+      background: linear-gradient(135deg, #2c1a0e 0%, #5a2d10 60%, #3b1f0a 100%);
+      padding: 72px 0 60px; text-align: center; color: #fff;
+    }
+    .ab-hero .eyebrow-tag { background: rgba(255,255,255,0.1); color: #e8c87a; }
+    .ab-hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2.1rem, 5.6vw, 3.6rem);
+      font-weight: 700; line-height: 1.12; margin: 0 auto 18px; max-width: 820px;
+    }
+    .ab-hero h1.ab-hero-title {
+      font-family: 'DM Sans', 'Inter', sans-serif;
+      font-size: clamp(25px, 6.4vw, 78px);
+      font-weight: 800; line-height: 1.1; letter-spacing: 0.02em;
+      text-transform: uppercase; color: #F3D3A0;
+      background: linear-gradient(180deg, #E3B77C 0%, #F3D3A0 38%, #FFFFFF 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      max-width: 1120px; margin: 0 auto 26px;
+      filter: drop-shadow(0 3px 14px rgba(0,0,0,0.45));
+    }
+    .ab-hero h1.ab-hero-title .quote { font-style: normal; }
+    .ab-hero-sub {
+      font-size: clamp(15px, 2.2vw, 17.5px); color: rgba(255,255,255,0.82);
+      max-width: 640px; margin: 0 auto 26px; line-height: 1.7;
+    }
+    .ab-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 30px; }
+    .ab-chips span {
+      font-size: 12.5px; font-weight: 600; color: rgba(255,255,255,0.9);
+      background: rgba(255,255,255,0.09); border: 1px solid rgba(255,255,255,0.18);
+      padding: 7px 14px; border-radius: 100px; display: inline-flex; align-items: center; gap: 7px;
+    }
+    .ab-chips i { color: #e8c87a; font-size: 11px; }
+    .ab-hero-cta { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+
+    /* ── STATS STRIP ── */
+    .ab-stats { background: #fff; border-bottom: 1px solid var(--border-light); }
+    .ab-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+    .ab-stat { padding: 24px 12px; text-align: center; border-right: 1px solid var(--border-light); }
+    .ab-stat:last-child { border-right: 0; }
+    .ab-stat strong {
+      display: block; font-family: var(--font-heading); font-size: 2.1rem;
+      font-weight: 700; line-height: 1; color: var(--primary); margin-bottom: 6px;
+    }
+    .ab-stat span { font-size: 12.5px; color: var(--text-secondary); line-height: 1.4; display: block; }
+
+    /* Wide monitors (1400px+): scale hero text, chips and stats up so they do not look small in a wide layout */
+    @media (min-width: 1400px) {
+      .ab-hero { padding: 88px 0 76px; }
+      .ab-hero-sub { max-width: 860px; font-size: 19px; }
+      .ab-chips span { font-size: 14.5px; padding: 9px 18px; }
+      .ab-stat { padding: 30px 16px; }
+      .ab-stat strong { font-size: 2.5rem; }
+      .ab-stat span { font-size: 14.5px; }
+    }
+
+    /* ── STICKY TABS ── */
+    .ab-tabs {
+      position: sticky; top: var(--hdr); z-index: 900;
+      background: rgba(253,250,245,0.97); backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--border);
+    }
+    .ab-tabs-inner {
+      display: flex; gap: 6px; overflow-x: auto; padding: 10px 24px;
+      max-width: var(--max-width); margin: 0 auto; scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+    .ab-tabs-inner::-webkit-scrollbar { display: none; }
+    .ab-tab {
+      flex: 0 0 auto; font-size: 13px; font-weight: 600; color: var(--text-secondary);
+      padding: 8px 16px; border-radius: 100px; border: 1px solid transparent;
+      white-space: nowrap; transition: var(--transition);
+    }
+    .ab-tab:hover { color: var(--primary); background: var(--bg-alt); }
+    .ab-tab.active { background: var(--primary); color: #fff; }
+    @media (min-width: 1000px) { .ab-tabs-inner { justify-content: center; } }
+
+    /* ── COMPARISON ── */
+    .ab-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 900px; margin: 0 auto; }
+    .ab-cmp { border-radius: 18px; padding: 28px 26px; }
+    .ab-cmp.old { background: #fff4f0; border: 1px solid #ffd5c2; }
+    .ab-cmp.new { background: linear-gradient(135deg, #3b1f0a, #5a2d10); color: #fff; border: 1px solid #5a2d10; }
+    .ab-cmp h3 { font-size: 16px; font-weight: 700; margin-bottom: 14px; display: flex; align-items: center; gap: 9px; }
+    .ab-cmp.old h3 { color: #b93a00; }
+    .ab-cmp.new h3 { color: #e8c87a; }
+    .ab-cmp ul { display: flex; flex-direction: column; gap: 10px; }
+    .ab-cmp li { font-size: 14px; line-height: 1.55; display: flex; gap: 10px; align-items: flex-start; }
+    .ab-cmp.old li { color: #7a3520; }
+    .ab-cmp.new li { color: rgba(255,255,255,0.92); }
+    .ab-cmp li i { margin-top: 4px; font-size: 12px; flex-shrink: 0; }
+    .ab-cmp.old li i { color: #c84b00; }
+    .ab-cmp.new li i { color: #e8c87a; }
+    .ab-figure { max-width: 900px; margin: 30px auto 0; border-radius: 18px; overflow: hidden; box-shadow: var(--shadow-md); background: #fff; }
+    .ab-figure img { width: 100%; display: block; }
+
+    /* ── TRIPLE ACTION ── */
+    .ab-triple { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 40px; }
+    .ab-card {
+      background: #fff; border: 1px solid var(--border-light); border-radius: 18px;
+      padding: 30px 24px; text-align: center; box-shadow: var(--shadow-sm);
+    }
+    .ab-card-icon {
+      width: 56px; height: 56px; border-radius: 16px; margin: 0 auto 16px;
+      background: linear-gradient(135deg, #6C4323, #9E7245); color: #fff;
+      display: flex; align-items: center; justify-content: center; font-size: 22px;
+    }
+    .ab-card h4 { font-family: var(--font-heading); font-size: 1.3rem; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .ab-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.65; }
+
+    /* ── SCIENCE ── */
+    .ab-award {
+      display: grid; grid-template-columns: repeat(3, 1fr); background: var(--primary);
+      border-radius: 16px; margin-bottom: 44px; overflow: hidden;
+    }
+    .ab-award-item { display: flex; gap: 14px; align-items: center; padding: 20px 24px; border-right: 1px solid rgba(255,255,255,0.14); }
+    .ab-award-item:last-child { border-right: 0; }
+    .ab-award-item i { font-size: 26px; color: var(--accent); flex-shrink: 0; }
+    .ab-award-item strong { display: block; font-size: 14px; color: #fff; }
+    .ab-award-item span { font-size: 12px; color: rgba(255,255,255,0.65); }
+    .ab-sci { display: grid; grid-template-columns: 1.05fr 1fr; gap: 44px; align-items: start; }
+    .ab-sci h3 { font-family: var(--font-heading); font-size: 2rem; font-weight: 700; color: var(--primary); margin-bottom: 14px; }
+    .ab-sci p { font-size: 15px; line-height: 1.8; color: var(--text); margin-bottom: 14px; }
+    .ab-quote-box {
+      background: var(--bg-alt); border-left: 4px solid var(--accent); border-radius: 12px;
+      padding: 16px 18px; font-size: 13.5px; font-style: italic; color: var(--text-secondary); line-height: 1.65; margin-top: 8px;
+    }
+    .ab-video { border-radius: 16px; overflow: hidden; background: #fff; box-shadow: var(--shadow-md); margin-top: 18px; }
+    .ab-video-label { padding: 11px 16px; font-size: 13px; font-weight: 700; color: var(--primary); display: flex; gap: 8px; align-items: center; border-bottom: 1px solid var(--border-light); }
+    .ab-vwrap { position: relative; aspect-ratio: 16 / 9; background: #000; }
+    .ab-vwrap.tall { aspect-ratio: 9 / 16; }
+    .yt-facade { position: absolute; inset: 0; cursor: pointer; display: block; }
+    .yt-facade img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .yt-play-btn {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      width: 60px; height: 60px; border-radius: 50%; background: rgba(255,255,255,0.93);
+      color: var(--primary); display: flex; align-items: center; justify-content: center;
+      font-size: 22px; pointer-events: none;
+    }
+    .ab-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 44px; }
+    .ab-step { background: #fff; border: 1px solid var(--border-light); border-radius: 16px; padding: 24px 22px; position: relative; }
+    .ab-step-num { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; color: var(--accent-dark); margin-bottom: 8px; }
+    .ab-step h4 { font-family: var(--font-heading); font-size: 1.3rem; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+    .ab-step p { font-size: 13.5px; color: var(--text-secondary); line-height: 1.65; }
+
+    /* ── MID CTA ── */
+    .ab-cta-band { background: linear-gradient(135deg, #3b1f0a, #5a2d10); padding: 44px 0; text-align: center; color: #fff; }
+    .ab-cta-band h2 { font-family: var(--font-heading); font-size: clamp(1.5rem, 3.4vw, 2.2rem); font-weight: 700; margin-bottom: 8px; }
+    .ab-cta-band p { color: rgba(255,255,255,0.78); font-size: 15px; margin-bottom: 20px; }
+
+    /* ── CONCERNS ── */
+    .ab-concerns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .ab-concern {
+      display: flex; gap: 16px; align-items: flex-start; background: #fff;
+      border: 1px solid var(--border-light); border-radius: 16px; padding: 20px;
+      box-shadow: var(--shadow-sm); transition: var(--transition);
+    }
+    .ab-concern:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--accent); }
+    .ab-concern-icon {
+      width: 46px; height: 46px; border-radius: 50%; flex-shrink: 0;
+      background: var(--bg-alt); color: var(--primary);
+      display: flex; align-items: center; justify-content: center; font-size: 18px;
+    }
+    .ab-concern h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .ab-concern p { font-size: 13px; color: var(--text-secondary); line-height: 1.55; }
+    /* concerns — visual cards (from Hair Solutions) */
+    .ab-hs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px; }
+    .ab-hs-card { background: #fff; border: 1px solid var(--border-light); border-radius: 18px; overflow: hidden; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; transition: var(--transition); }
+    .ab-hs-card:hover { box-shadow: var(--shadow-md); border-color: var(--accent); }
+    .ab-hs-img { background: #f7f2ea; }
+    .ab-hs-img img { width: 100%; height: auto; display: block; }
+    .ab-hs-title { display: flex; align-items: center; gap: 12px; padding: 18px 22px 0; }
+    .ab-hs-title .ab-concern-icon { width: 40px; height: 40px; font-size: 16px; }
+    .ab-hs-title h3 { font-family: var(--font-heading); font-size: 1.4rem; font-weight: 700; color: var(--primary); line-height: 1.2; margin: 0; }
+    .ab-hs-why { margin: 14px 22px 0; background: var(--primary); color: #fff; border-radius: 12px; padding: 12px 15px; font-size: 13.5px; line-height: 1.6; }
+    .ab-hs-why b { display: block; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #e8c87a; margin-bottom: 3px; }
+    .ab-hs-body { padding: 16px 22px 22px; display: flex; flex-direction: column; flex: 1; }
+    .ab-hs-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+    .ab-hs-list { list-style: none; padding: 0; margin: 0 0 16px; display: flex; flex-direction: column; gap: 9px; }
+    .ab-hs-list li { display: flex; gap: 10px; align-items: flex-start; font-size: 13.5px; line-height: 1.55; color: var(--text-secondary); }
+    .ab-hs-list li i { flex-shrink: 0; width: 20px; height: 20px; border-radius: 50%; background: var(--bg-alt); color: var(--primary); font-size: 10px; display: flex; align-items: center; justify-content: center; margin-top: 1px; }
+    .ab-hs-list li strong { color: var(--text); }
+    .ab-hs-cta { margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap; }
+    .ab-hs-cta .btn { padding: 10px 18px; font-size: 13.5px; }
+    @media (max-width: 760px) { .ab-hs-grid { grid-template-columns: 1fr; gap: 20px; } .ab-hs-title h3 { font-size: 1.25rem; } }
+    .ab-center-cta { text-align: center; margin-top: 34px; }
+    .ab-center-cta small { display: block; margin-top: 12px; font-size: 13px; color: var(--text-light); }
+
+    /* ── PROOF ── */
+    .ab-videos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 44px; }
+    .ab-vcard { background: #fff; border-radius: 14px; overflow: hidden; border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); }
+    .ab-vcard .ab-video-label { font-size: 12.5px; }
+    .ab-sub { font-size: 14px; font-weight: 700; color: var(--primary); margin: 0 0 12px; display: flex; align-items: center; gap: 8px; }
+    .ab-scroll {
+      display: flex; gap: 14px; overflow-x: auto; padding: 4px 2px 16px;
+      scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+    }
+    .ab-scroll img {
+      flex: 0 0 auto; width: 230px; height: auto; border-radius: 14px; scroll-snap-align: start;
+      border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); background: #fff;
+    }
+    /* platform proof cards (TikTok / Shopee) */
+    .ab-plat { display: flex; align-items: center; gap: 26px; background: #fff; border: 1px solid var(--border-light); border-radius: 18px; padding: 20px 26px; box-shadow: var(--shadow-sm); margin: 0 0 18px; }
+    .ab-plat-logo { flex: 0 0 auto; width: 170px; padding: 16px 10px; border: 2px solid #111; border-radius: 16px; display: flex; align-items: center; justify-content: center; gap: 9px; font-weight: 800; font-size: 22px; color: #111; letter-spacing: -0.02em; background: #fff; }
+    .ab-plat-logo i { font-size: 34px; }
+    .ab-plat-logo.tt i { color: #111; text-shadow: 2px 2px 0 #25f4ee, -2px -2px 0 #fe2c55; }
+    .ab-plat-logo.sp i { color: #ee4d2d; }
+    .ab-plat-logo.sp { color: #ee4d2d; border-color: #ee4d2d; }
+    .ab-plat-logo small { display: block; font-size: 12px; font-weight: 700; letter-spacing: 0; line-height: 1.1; }
+    .ab-plat-info { flex: 1; min-width: 0; }
+    .ab-plat-shop { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-dark, #a67c4e); margin-bottom: 2px; }
+    .ab-plat-name { font-family: var(--font-heading); font-size: clamp(1.25rem, 2.6vw, 1.7rem); font-weight: 700; color: var(--primary); line-height: 1.2; margin: 0 0 14px; }
+    .ab-plat-stats { display: flex; flex-wrap: wrap; gap: 10px 28px; }
+    .ab-plat-stat b { display: block; font-family: var(--font-heading); font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 700; color: #b8893f; line-height: 1.1; }
+    .ab-plat-stat b .stars { color: #f5a623; font-size: 0.7em; letter-spacing: 2px; }
+    .ab-plat-stat span { font-size: 12.5px; font-weight: 600; color: var(--text-secondary); }
+    a.ab-plat { text-decoration: none; color: inherit; cursor: pointer; transition: var(--transition); }
+    a.ab-plat:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: var(--accent); }
+    .ab-plat-side { flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+    .ab-plat-go { display: inline-flex; align-items: center; gap: 8px; background: var(--primary); color: #fff; font-size: 13.5px; font-weight: 700; padding: 10px 20px; border-radius: 100px; white-space: nowrap; transition: var(--transition); }
+    a.ab-plat:hover .ab-plat-go { background: var(--accent-dark, #a67c4e); }
+    a.ab-plat:hover .ab-plat-go i { transform: translateX(3px); }
+    .ab-plat-go i { transition: transform 0.2s; font-size: 11px; }
+    .ab-plat-badge { align-self: center; display: inline-flex; align-items: center; gap: 7px; background: linear-gradient(135deg, #f7e3a6, #e8c87a); color: #5a3a10; font-size: 13px; font-weight: 800; padding: 8px 16px; border-radius: 100px; letter-spacing: 0.02em; }
+    @media (max-width: 640px) {
+      .ab-plat { flex-direction: column; text-align: center; padding: 20px 16px; gap: 16px; }
+      .ab-plat-stats { justify-content: center; }
+      .ab-plat-side { width: 100%; }
+      .ab-plat-go { width: 100%; justify-content: center; }
+      .ab-plat-logo { width: 100%; max-width: 220px; }
+    }
+    .ab-proof-links { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 18px; }
+    .ab-foot { text-align: center; font-size: 12.5px; color: var(--text-light); margin-top: 18px; }
+
+    /* ── STORY ── */
+    .ab-story { display: grid; grid-template-columns: 340px 1fr; gap: 56px; align-items: start; max-width: min(1060px, 100%); margin: 0 auto; }
+    @media (min-width: 1400px) { .ab-story { max-width: 100%; grid-template-columns: 400px 1fr; gap: 72px; } }
+    .ab-founder { position: sticky; top: calc(var(--hdr) + 70px); }
+    .ab-founder-card { border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-lg); position: relative; background: var(--bg-alt); }
+    .ab-founder-card img { width: 100%; height: auto; display: block; }
+    .ab-founder-plate { position: absolute; left: 0; right: 0; bottom: 0; padding: 36px 18px 16px; background: linear-gradient(to top, rgba(42,16,6,0.92), transparent); }
+    .ab-founder-plate strong { display: block; color: #fff; font-size: 14.5px; line-height: 1.3; }
+    .ab-founder-plate span { color: var(--accent-light); font-size: 12.5px; }
+    .ab-creds { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+    .ab-cred { display: flex; gap: 10px; align-items: center; background: #fff; border: 1px solid var(--border-light); border-radius: 10px; padding: 10px 14px; font-size: 12.5px; color: var(--text-secondary); }
+    .ab-cred i { color: var(--primary); width: 16px; text-align: center; flex-shrink: 0; }
+    .ab-story h2 { font-family: var(--font-heading); font-size: clamp(1.8rem, 3.6vw, 2.6rem); font-weight: 700; color: var(--primary); line-height: 1.2; margin-bottom: 24px; }
+    .ab-timeline { border-left: 2px solid var(--border); padding-left: 26px; margin: 0 0 28px 6px; display: flex; flex-direction: column; gap: 26px; }
+    .ab-beat { position: relative; }
+    .ab-beat::before {
+      content: ''; position: absolute; left: -34px; top: 4px; width: 14px; height: 14px;
+      border-radius: 50%; background: var(--primary); border: 3px solid var(--bg-alt); box-shadow: 0 0 0 2px var(--primary);
+    }
+    .ab-beat-tag { display: inline-block; font-size: 10.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--primary); background: #fff; padding: 3px 10px; border-radius: 100px; margin-bottom: 6px; }
+    .ab-beat h4 { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 5px; }
+    .ab-beat p { font-size: 14px; color: var(--text-secondary); line-height: 1.75; }
+    .ab-pull { background: linear-gradient(135deg, #3b1f0a, #5a2d10); border-radius: 16px; padding: 24px 26px; margin-bottom: 8px; border-left: 4px solid #c49a3c; }
+    .ab-pull p { font-family: var(--font-heading); font-style: italic; font-size: 1.2rem; color: #fff; line-height: 1.6; margin-bottom: 8px; }
+    .ab-pull cite { font-size: 12px; color: rgba(255,255,255,0.6); font-style: normal; font-weight: 600; }
+    .ab-team { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: min(1060px, 100%); margin: 48px auto 0; }
+    @media (min-width: 1400px) { .ab-team { max-width: 100%; gap: 22px; } }
+    .ab-team-card { background: #fff; border: 1px solid var(--border-light); border-radius: 16px; padding: 22px 18px; text-align: center; }
+    .ab-team-card i { font-size: 22px; color: var(--primary); width: 52px; height: 52px; border-radius: 50%; background: var(--bg-alt); display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; }
+    .ab-team-card h4 { font-size: 14.5px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .ab-team-card p { font-size: 12.5px; color: var(--text-secondary); line-height: 1.5; }
+
+    /* ── INGREDIENTS & SAFETY ── */
+    .ab-ing { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .ab-ing .ab-card { text-align: left; padding: 22px 20px; }
+    .ab-ing .ab-card-icon { width: 44px; height: 44px; font-size: 18px; margin: 0 0 12px; border-radius: 12px; }
+    .ab-ing .ab-card h4 { font-size: 1.1rem; }
+    .ab-ing .ab-card p { font-size: 13px; }
+    .ab-safety { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
+    .ab-safe { background: #fff; border: 1.5px solid var(--accent-light); border-radius: 16px; padding: 22px 20px; display: flex; gap: 14px; align-items: flex-start; }
+    .ab-safe i { font-size: 22px; color: var(--primary); margin-top: 2px; flex-shrink: 0; }
+    .ab-safe h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .ab-safe p { font-size: 13px; color: var(--text-secondary); line-height: 1.55; }
+
+    /* ── BUY DIRECT + DISTRIBUTOR ── */
+    .ab-perks { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .ab-perk { background: #fff; border: 1px solid var(--border-light); border-radius: 18px; padding: 26px 22px; position: relative; }
+    .ab-perk.gold { border: 2px solid var(--accent); box-shadow: var(--shadow-md); }
+    .ab-perk-badge { position: absolute; top: -12px; left: 20px; background: var(--primary); color: #fff; font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em; padding: 4px 12px; border-radius: 100px; }
+    .ab-perk i { font-size: 24px; color: var(--primary); margin-bottom: 12px; display: block; }
+    .ab-perk h4 { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .ab-perk p { font-size: 13.5px; color: var(--text-secondary); line-height: 1.6; }
+    .ab-dist {
+      display: flex; gap: 18px; align-items: flex-start; background: #fff; border: 1.5px solid var(--border);
+      border-radius: 18px; padding: 24px 28px; max-width: 520px; margin: 40px auto 0; box-shadow: var(--shadow-sm);
+    }
+    .ab-dist-icon { width: 50px; height: 50px; flex-shrink: 0; border-radius: 50%; background: linear-gradient(135deg, var(--primary), #a0622a); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+    .ab-dist small { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-dark); }
+    .ab-dist h3 { font-size: 16px; font-weight: 700; color: var(--text); margin: 2px 0 6px; }
+    .ab-dist p { font-size: 13.5px; color: var(--text-secondary); line-height: 1.55; }
+    .ab-dist a { display: inline-flex; gap: 7px; align-items: center; margin-top: 6px; font-weight: 700; color: var(--primary); font-size: 15px; }
+
+    /* ── FAQ ── */
+    .ab-faq-wrap { max-width: 820px; margin: 0 auto; }
+    .ab-faq-group { margin-bottom: 34px; }
+    .ab-faq-group > .ab-sub { font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent-dark); }
+    .ab-faq-wrap .faq-answer p { font-size: 14.5px; line-height: 1.75; color: var(--text-secondary); margin-bottom: 10px; }
+    .ab-faq-wrap .faq-answer .fa-label { display: block; font-weight: 700; color: var(--primary); font-size: 13.5px; margin: 6px 0 2px; }
+    .ab-faq-wrap .faq-answer .fa-note { display: block; font-size: 13px; font-weight: 600; color: var(--primary); background: var(--bg-alt); border-radius: 10px; padding: 10px 14px; margin-top: 8px; }
+    .ab-faq-help { text-align: center; margin-top: 10px; font-size: 14px; color: var(--text-secondary); }
+    .ab-faq-help a { color: var(--primary); font-weight: 700; text-decoration: underline; }
+
+    /* ── BEST OF BEAUTY 2026 AWARD ── */
+    .ab-winner {
+      position: relative; overflow: hidden; color: #fff; padding: 72px 0;
+      background:
+        radial-gradient(ellipse at 22% 30%, rgba(232,200,122,0.22), transparent 55%),
+        radial-gradient(ellipse at 85% 85%, rgba(196,154,108,0.16), transparent 50%),
+        linear-gradient(135deg, #1e1007 0%, #3b1f0a 55%, #2a1608 100%);
+      border-top: 1px solid rgba(232,200,122,0.35); border-bottom: 1px solid rgba(232,200,122,0.35);
+    }
+    .ab-winner::before {
+      content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0.55;
+      background-image:
+        radial-gradient(circle, rgba(255,226,150,0.9) 0 1.2px, transparent 1.8px),
+        radial-gradient(circle, rgba(255,226,150,0.6) 0 1px, transparent 1.6px);
+      background-size: 130px 130px, 83px 83px; background-position: 0 0, 41px 57px;
+      -webkit-mask-image: linear-gradient(180deg, transparent, #000 25%, #000 75%, transparent);
+      mask-image: linear-gradient(180deg, transparent, #000 25%, #000 75%, transparent);
+    }
+    .ab-winner .container { position: relative; }
+    .ab-winner-grid { display: grid; grid-template-columns: 340px 1fr; gap: 56px; align-items: center; max-width: 980px; margin: 0 auto; }
+    .ab-seal-wrap { position: relative; width: 100%; max-width: 340px; margin: 0 auto; }
+    .ab-seal {
+      position: relative; width: 100%; border-radius: 22px; overflow: hidden;
+      border: 1px solid rgba(232,200,122,0.5);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.55), 0 0 44px rgba(232,200,122,0.22);
+      background: #1e1007;
+    }
+    .ab-seal img { display: block; width: 100%; height: auto; }
+    .ab-podium {
+      position: relative; width: 88%; margin: 16px auto 0;
+      background: linear-gradient(180deg, #f3dc9c, #c49a52 55%, #8a6226);
+      border-radius: 100px; padding: 8px 14px; text-align: center; color: #2a1608;
+      font-size: 9.5px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.55);
+    }
+    .ab-winner-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; letter-spacing: 0.18em; color: #e8c87a; text-transform: uppercase; margin-bottom: 14px; }
+    .ab-winner-eyebrow::before, .ab-winner-eyebrow::after { content: ''; width: 26px; height: 1px; background: rgba(232,200,122,0.6); }
+    .ab-winner h2 {
+      font-family: var(--font-heading); font-size: clamp(2rem, 4.6vw, 3.1rem); font-weight: 700; line-height: 1.1; margin-bottom: 14px;
+      background: linear-gradient(180deg, #fff3cf 0%, #e8c87a 55%, #c49a52 100%);
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: #e8c87a;
+    }
+    .ab-winner-sub { font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.88); margin-bottom: 16px; }
+    .ab-winner-sub span { display: block; font-size: 11.5px; letter-spacing: 0.1em; color: rgba(255,255,255,0.6); margin-top: 4px; font-weight: 600; }
+    .ab-winner-text { font-size: 15.5px; line-height: 1.8; color: rgba(255,255,255,0.86); margin-bottom: 24px; }
+    .ab-winner-text strong { color: #f3dc9c; }
+    .ab-winner-pts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .ab-winner-pt {
+      background: rgba(255,255,255,0.07); border: 1px solid rgba(232,200,122,0.28); border-radius: 14px;
+      padding: 16px 12px; text-align: center; font-size: 12px; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; line-height: 1.4; color: rgba(255,255,255,0.92);
+    }
+    .ab-winner-pt i {
+      display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; margin: 0 auto 10px;
+      border-radius: 50%; border: 1px solid rgba(232,200,122,0.6); color: #e8c87a; font-size: 16px;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .ab-sec { padding: 52px 0; }
+      .ab-sci { grid-template-columns: 1fr; gap: 30px; }
+      .ab-story { grid-template-columns: 1fr; gap: 32px; }
+      .ab-founder { position: static; max-width: 320px; margin: 0 auto; }
+      .ab-concerns, .ab-ing, .ab-safety, .ab-perks, .ab-team { grid-template-columns: 1fr 1fr; }
+      .ab-videos { grid-template-columns: 1fr 1fr; }
+      .ab-award { grid-template-columns: 1fr; }
+      .ab-winner { padding: 52px 0; }
+      .ab-winner-grid { grid-template-columns: 1fr; gap: 34px; text-align: center; }
+      .ab-seal-wrap { max-width: 300px; }
+      .ab-winner-eyebrow { justify-content: center; }
+      .ab-award-item { border-right: 0; border-bottom: 1px solid rgba(255,255,255,0.14); }
+      .ab-award-item:last-child { border-bottom: 0; }
+    }
+    @media (max-width: 640px) {
+      .ab-hero { padding: 30px 0 26px; }
+      .ab-hero h1.ab-hero-title {
+        font-size: clamp(24px, 8vw, 50px); line-height: 1.08; letter-spacing: 0.01em;
+        margin: 0 auto 12px; text-wrap: balance;
+        filter: drop-shadow(0 2px 10px rgba(0,0,0,0.55));
+      }
+      .ab-hero h1.ab-hero-title br { display: none; }
+      .ab-hero h1.ab-hero-title .hl { display: block; white-space: nowrap; }
+      .ab-hero-sub { font-size: 14.5px; line-height: 1.5; margin: 0 auto 14px; }
+      .ab-chips { gap: 6px; margin-bottom: 16px; }
+      .ab-chips span { font-size: 12px; padding: 6px 12px; }
+      .ab-winner-pts { grid-template-columns: 1fr; }
+      .ab-winner-pt { display: flex; align-items: center; gap: 14px; text-align: left; padding: 12px 16px; }
+      .ab-winner-pt i { margin: 0; flex-shrink: 0; }
+      .ab-stats-grid { grid-template-columns: 1fr 1fr; }
+      .ab-stat:nth-child(2) { border-right: 0; }
+      .ab-stat:nth-child(-n+2) { border-bottom: 1px solid var(--border-light); }
+      .ab-compare, .ab-triple, .ab-steps, .ab-concerns, .ab-ing, .ab-safety, .ab-perks, .ab-team { grid-template-columns: 1fr; }
+      .ab-hero-cta .btn { width: 100%; justify-content: center; }
+      .ab-dist { flex-direction: column; align-items: center; text-align: center; padding: 22px 18px; }
+      .ab-scroll img { width: 200px; }
+      .ab-videos { grid-template-columns: 1fr 1fr; gap: 12px; }
+      body { padding-bottom: 76px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="announcement-bar">
+    <p>🏥 Official NISRAA Website &nbsp;·&nbsp; Formulated by Doctor, Pharmacist &amp; Chemist &nbsp;·&nbsp; Free Shipping &amp; Tonic 50ml (Purchase Above RM100)</p>
+  </div>
+
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="images/logo-nisraa-new.png" alt="NISRAA — Advanced Hair Treatment" class="logo-img on-light" />
+      </a>
+      <nav class="nav-desktop">
+        
+        <a href="about.html" class="nav-link active">About NISRAA</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="reviews.html" class="nav-link">Testimonials</a>
+        <a href="affiliate.html" class="nav-link">Jom Jadi Affiliate</a>
+        <a href="belinisraa.html" class="nav-link">Beli NISRAA</a>
+      </nav>
+      <div class="header-actions">
+        <a href="shop.html" class="btn btn-primary btn-sm">Shop Now</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="nav-mobile" id="mobileNav">
+      
+      <a href="about.html" class="nav-link active">About NISRAA</a>
+      <a href="shop.html" class="nav-link">Shop</a>
+      <a href="reviews.html" class="nav-link">Testimonials</a>
+      <a href="affiliate.html" class="nav-link">Jom Jadi Affiliate</a>
+      <a href="belinisraa.html" class="nav-link">Beli NISRAA</a>
+      <a href="shop.html" class="btn btn-primary mt-1">Shop Now</a>
+    </nav>
+  </header>
+
+  <main>
+
+  <!-- ═════════ 1. HERO — who we are, why trust us, what to do next ═════════ -->
+  <section class="ab-hero">
+    <div class="container">
+      <h1 class="ab-hero-title"><span class="hl"><span class="quote">&ldquo;</span>MORE THAN</span> <span class="hl">HAIR CARE,</span><br><span class="hl">IT&rsquo;S A TREATMENT<span class="quote">&rdquo;</span></span></h1>
+      <p class="ab-hero-sub">NISRAA is a pharmacy-grade bond-repair system, formulated by a doctor, pharmacist &amp; chemist — made to strengthen hair from within, not just coat the surface.</p>
+      <div class="ab-chips">
+        <span><i class="fas fa-certificate"></i> KKM Approved</span>
+        <span><i class="fas fa-moon"></i> Halal-Certified</span>
+        <span><i class="fas fa-leaf"></i> SLS &amp; Paraben Free</span>
+        <span><i class="fas fa-medal"></i> Gold Innovation Award Technology</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key numbers -->
+  <section class="ab-stats" aria-label="NISRAA in numbers">
+    <div class="container ab-stats-grid">
+      <div class="ab-stat"><strong>11+</strong><span>years of pharmacist experience</span></div>
+      <div class="ab-stat"><strong>97%</strong><span>reported visible improvement in a 300-person pilot study</span></div>
+      <div class="ab-stat"><strong>3</strong><span>experts: doctor, pharmacist &amp; chemist</span></div>
+      <div class="ab-stat"><strong>2017</strong><span>Gold Innovation Award for the core technology</span></div>
+    </div>
+  </section>
+
+  <!-- ═════════ AWARD WINNER — Best of Beauty 2026 (redesigned from the Hub poster) ═════════ -->
+  <section class="ab-winner" id="award" aria-labelledby="awardTitle">
+    <div class="container">
+      <div class="ab-winner-grid">
+
+        <div class="ab-seal-wrap">
+          <div class="ab-seal">
+            <img src="images/about/best-of-beauty-2026-seal.png" alt="Best of Beauty 2026 Award Winner, The Highlighter Beauty Awards, powered by KL International Beauty Week" width="275" height="267" loading="lazy" decoding="async" />
+          </div>
+          <div class="ab-podium">Stronger Roots &bull; Healthier Hair &bull; Brighter You</div>
+        </div>
+
+        <div class="ab-winner-copy">
+          <div class="ab-winner-eyebrow">Award Winner</div>
+          <h2 id="awardTitle">NISRAA Wins Best of Beauty 2026</h2>
+          <p class="ab-winner-sub">The Highlighter Beauty Awards<span>Powered by KL International Beauty Week</span></p>
+          <p class="ab-winner-text">We are honoured to announce that <strong>NISRAA has been awarded Best of Beauty 2026</strong> at The Highlighter Beauty Awards, KL International Beauty Week.</p>
+          <div class="ab-winner-pts">
+            <div class="ab-winner-pt"><i class="fas fa-gem" aria-hidden="true"></i><span>Recognised for Innovation</span></div>
+            <div class="ab-winner-pt"><i class="fas fa-flask" aria-hidden="true"></i><span>Trusted Formulation</span></div>
+            <div class="ab-winner-pt"><i class="fas fa-seedling" aria-hidden="true"></i><span>Real Solutions for Healthier Hair</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Sticky section tabs -->
+  <nav class="ab-tabs" aria-label="Page sections">
+    <div class="ab-tabs-inner" id="abTabs">
+      <a href="#why" class="ab-tab active">Why NISRAA</a>
+      <a href="#science" class="ab-tab">The Science</a>
+      <a href="#concerns" class="ab-tab">Who It's For</a>
+      <a href="#story" class="ab-tab">Our Story</a>
+      <a href="#safety" class="ab-tab">Ingredients &amp; Safety</a>
+      <a href="#proof" class="ab-tab">Reviews</a>
+      <a href="#faq" class="ab-tab">FAQ</a>
+    </div>
+  </nav>
+
+  <!-- ═════════ 2. WHY NISRAA — the problem, then the difference ═════════ -->
+  <section class="ab-sec ab-anchor" id="why">
+    <div class="container">
+      <div class="ab-head">
+        <div class="eyebrow-tag">The NISRAA Difference</div>
+        <h2>Why Ordinary Shampoo Often Doesn't Fix the Real Problem</h2>
+        <p>Most shampoos and conditioners only work on the outer layer of the hair. They feel smooth for a day, but don't repair what's happening inside.</p>
+      </div>
+
+      <div class="ab-compare">
+        <div class="ab-cmp old">
+          <h3><i class="fas fa-times-circle"></i> Ordinary Hair Care</h3>
+          <ul>
+            <li><i class="fas fa-times"></i> Works on the <strong>cuticle</strong> (outer layer) only</li>
+            <li><i class="fas fa-times"></i> Temporary softness or cleansing</li>
+            <li><i class="fas fa-times"></i> No structural repair from within</li>
+            <li><i class="fas fa-times"></i> Results fade after washing</li>
+          </ul>
+        </div>
+        <div class="ab-cmp new">
+          <h3><i class="fas fa-check-circle"></i> NISRAA Treatment System</h3>
+          <ul>
+            <li><i class="fas fa-check"></i> Reaches the <strong>cortex</strong> (inner structure)</li>
+            <li><i class="fas fa-check"></i> Helps rebuild natural keratin bonds</li>
+            <li><i class="fas fa-check"></i> Strengthens hair <strong>from within</strong></li>
+            <li><i class="fas fa-check"></i> Built for treatment, not just appearance</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ab-figure">
+        <img src="images/about/compare-normal-vs-nisraa.png" alt="Normal shampoo vs NISRAA bond-building technology: surface cleaning compared with deep cortex repair" loading="lazy" decoding="async" />
+      </div>
+
+      <div class="ab-triple">
+        <div class="ab-card">
+          <div class="ab-card-icon"><i class="fas fa-bullseye"></i></div>
+          <h4>Targets the Root Cause</h4>
+          <p>Addresses DHT, nutrient deficiency and hormonal disruption, the real triggers of hair loss, not just the symptoms.</p>
+        </div>
+        <div class="ab-card">
+          <div class="ab-card-icon"><i class="fas fa-link"></i></div>
+          <h4>Strengthens the Hair Fibre</h4>
+          <p>FiberHance™ technology reinforces broken keratin bonds inside the cortex: less breakage, fuller-looking hair.</p>
+        </div>
+        <div class="ab-card">
+          <div class="ab-card-icon"><i class="fas fa-spa"></i></div>
+          <h4>Supports a Healthy Scalp</h4>
+          <p>Balances pH, nourishes follicles and keeps the scalp clean, the foundation for stronger hair.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════ 3. THE SCIENCE ═════════ -->
+  <section class="ab-sec alt ab-anchor" id="science">
+    <div class="container">
+      <div class="ab-head">
+        <div class="eyebrow-tag">The Science</div>
+        <h2>Powered by FiberHance™ Bond-Building Technology</h2>
+        <p>The patented technology that sets NISRAA apart from ordinary hair care.</p>
+      </div>
+
+      <div class="ab-award">
+        <div class="ab-award-item"><i class="fas fa-medal"></i><div><strong>Gold Innovation Award</strong><span>in-cosmetics 2017 · London</span></div></div>
+        <div class="ab-award-item"><i class="fas fa-trademark"></i><div><strong>Patented Technology</strong><span>Molecular bond-building formula</span></div></div>
+        <div class="ab-award-item"><i class="fas fa-certificate"></i><div><strong>KKM Approved</strong><span>Ministry of Health Malaysia</span></div></div>
+      </div>
+
+      <div class="ab-sci">
+        <div>
+          <h3>What is FiberHance™?</h3>
+          <p>FiberHance™ uses <strong>small molecules that penetrate deep into the hair cortex</strong>, the inner core where hair strength is decided. Ordinary products only coat the surface.</p>
+          <p>Heat, chemical treatment, stress and everyday wear weaken the keratin bonds that give hair its shape and elasticity. FiberHance™ helps <strong>reinforce and rebuild those bonds</strong>, so hair becomes stronger and more resilient over time.</p>
+          <div class="ab-quote-box">"A new and unique bond-building technology that goes beyond the mechanism of regular hair care products, working by creating additional hydrogen and ionic bonds with the hair keratin structure." — Gold Innovation Award citation</div>
+        </div>
+        <div>
+          <div class="ab-figure" style="margin:0;"><img src="images/about/bond-building.png" alt="How FiberHance small molecules penetrate the hair cortex to repair keratin bonds" loading="lazy" decoding="async" /></div>
+          <div class="ab-video">
+            <div class="ab-video-label"><i class="fas fa-play-circle"></i> FiberHance™ Technology Explained</div>
+            <div class="ab-vwrap">
+              <div class="yt-facade" onclick="playYT(this,'z5i4iRhGQQs')" role="button" tabindex="0" aria-label="Play FiberHance technology video">
+                <img src="https://img.youtube.com/vi/z5i4iRhGQQs/hqdefault.jpg" alt="FiberHance Technology video" loading="lazy" />
+                <span class="yt-play-btn"><i class="fas fa-play"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ab-steps">
+        <div class="ab-step"><div class="ab-step-num">STEP 01</div><h4>Penetrates</h4><p>Small molecules bypass the outer cuticle and enter the cortex, where real damage occurs.</p></div>
+        <div class="ab-step"><div class="ab-step-num">STEP 02</div><h4>Repairs</h4><p>Reinforces broken keratin bonds, rebuilding the internal scaffold that gives hair its strength.</p></div>
+        <div class="ab-step"><div class="ab-step-num">STEP 03</div><h4>Strengthens</h4><p>Results build with every use: hair becomes progressively stronger, more elastic and more resilient.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════ 3b. MARKETPLACE PROOF (TikTok Shop + Shopee) — below The Science ═════════ -->
+  <section class="ab-sec ab-anchor" id="marketplace" style="padding-top:48px;padding-bottom:48px;">
+    <div class="container">
+      <a class="ab-plat" href="https://vt.tiktok.com/ZSprqhTte/?page=TikTokShop" target="_blank" rel="noopener" aria-label="Visit NISRAA Farmasi Pakar Rambut on TikTok Shop">
+        <div class="ab-plat-logo tt"><i class="fab fa-tiktok"></i><span>TikTok<small>Shop</small></span></div>
+        <div class="ab-plat-info">
+          <div class="ab-plat-shop">TikTok Shop</div>
+          <h3 class="ab-plat-name">NISRAA Farmasi Pakar Rambut</h3>
+          <div class="ab-plat-stats">
+            <div class="ab-plat-stat"><b>100,000++</b><span>Quantity Sold</span></div>
+            <div class="ab-plat-stat"><b>4.9 <span class="stars"><i class="fas fa-star"></i></span></b><span>Customer Review</span></div>
+          </div>
+        </div>
+        <div class="ab-plat-side">
+          <div class="ab-plat-badge"><i class="fas fa-star"></i> Star Shop</div>
+          <span class="ab-plat-go">Visit Shop <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+      <div class="ab-scroll" tabindex="0" aria-label="TikTok customer testimonials">
+        <img src="images/testimonials/tt-01.png" alt="TikTok Shop review: 3rd purchase, shampoo and conditioner" loading="lazy" />
+        <img src="images/testimonials/tt-02.png" alt="TikTok Shop review: 4th repeat order, treatment shampoo" loading="lazy" />
+        <img src="images/testimonials/tt-03.png" alt="TikTok Shop review: A2 Antifungal set" loading="lazy" />
+        <img src="images/testimonials/tt-04.jpg" alt="TikTok Shop review: 3rd bottle of hair tonic" loading="lazy" />
+        <img src="images/testimonials/tt-05.jpg" alt="TikTok Shop review: hormonal hair loss improving" loading="lazy" />
+        <img src="images/testimonials/tt-06.jpg" alt="TikTok Shop review: repeat after trial set" loading="lazy" />
+        <img src="images/testimonials/tt-07.jpg" alt="TikTok Shop review: hair fall problem for over a year" loading="lazy" />
+        <img src="images/testimonials/tt-08.jpg" alt="TikTok Shop review: S1 combo, baby hair growing" loading="lazy" />
+        <img src="images/testimonials/tt-09.jpg" alt="TikTok Shop review: S2 set, repeat order" loading="lazy" />
+        <img src="images/testimonials/tt-10.jpg" alt="TikTok Shop review: repeat customer, less hair fall" loading="lazy" />
+        <img src="images/testimonials/tt-11.jpg" alt="TikTok Shop review: 3rd bottle, gentle on scalp" loading="lazy" />
+        <img src="images/testimonials/tt-12.jpg" alt="TikTok Shop review: must have for all women" loading="lazy" />
+        <img src="images/testimonials/tt-13.jpg" alt="TikTok Shop review: 3rd repeat order, baby hair growing" loading="lazy" />
+        <img src="images/testimonials/tt-14.jpg" alt="TikTok Shop review: 2nd bottle, less hair fall" loading="lazy" />
+        <img src="images/testimonials/tt-15.jpg" alt="TikTok Shop review: cooling hair tonic, healthier scalp" loading="lazy" />
+        <img src="images/testimonials/tt-16.jpg" alt="TikTok Shop review: follow-up review after 125 days" loading="lazy" />
+        <img src="images/testimonials/tiktok-1.png" alt="TikTok testimonial 1" loading="lazy" />
+        <img src="images/testimonials/tiktok-2.png" alt="TikTok testimonial 2" loading="lazy" />
+        <img src="images/testimonials/tiktok-3.png" alt="TikTok testimonial 3" loading="lazy" />
+        <img src="images/testimonials/tiktok-4.png" alt="TikTok testimonial 4" loading="lazy" />
+        <img src="images/testimonials/tiktok-5.png" alt="TikTok testimonial 5" loading="lazy" />
+        <img src="images/testimonials/tiktok-6.png" alt="TikTok testimonial 6" loading="lazy" />
+      </div>
+
+      <a class="ab-plat" style="margin-top:22px;" href="https://my.shp.ee/SatkpDcs" target="_blank" rel="noopener" aria-label="Visit NISRAA Farmasi Pakar Rambut on Shopee">
+        <div class="ab-plat-logo sp"><i class="fas fa-shopping-bag"></i> Shopee</div>
+        <div class="ab-plat-info">
+          <div class="ab-plat-shop">Shopee Shop</div>
+          <h3 class="ab-plat-name">NISRAA Farmasi Pakar Rambut</h3>
+          <div class="ab-plat-stats">
+            <div class="ab-plat-stat"><b>7,000+</b><span>Quantity Sold</span></div>
+            <div class="ab-plat-stat"><b>5.0 <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></b><span>5 Star Rating</span></div>
+          </div>
+        </div>
+        <div class="ab-plat-side">
+          <span class="ab-plat-go">Visit Shop <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+      <div class="ab-scroll" tabindex="0" aria-label="Shopee customer reviews">
+        <img src="images/testimonials/shopee-1.png" alt="Shopee customer review 1" loading="lazy" />
+        <img src="images/testimonials/shopee-2.png" alt="Shopee customer review 2" loading="lazy" />
+        <img src="images/testimonials/shopee-3.png" alt="Shopee customer review 3" loading="lazy" />
+        <img src="images/testimonials/shopee-4.png" alt="Shopee customer review 4" loading="lazy" />
+        <img src="images/testimonials/shopee-5.png" alt="Shopee customer review 5" loading="lazy" />
+        <img src="images/testimonials/shopee-6.png" alt="Shopee customer review 6" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════ 4. WHO IT'S FOR ═════════ -->
+  <section class="ab-sec alt ab-anchor" id="concerns">
+    <div class="container">
+      <div class="ab-head">
+        <div class="eyebrow-tag">Who Is NISRAA For</div>
+        <h2>Does Any of This Sound Like You?</h2>
+        <p>NISRAA is built around 6 real hair concerns, each with a targeted solution. Suitable for men and women.</p>
+      </div>
+      <div class="ab-hs-grid">
+
+        <div class="ab-hs-card" id="sol-excessive">
+          <div class="ab-hs-img"><img src="images/about/concern-hairloss.png" alt="Excessive hair loss — woman holding brush with hair shedding" loading="lazy" decoding="async" /></div>
+          <div class="ab-hs-title"><div class="ab-concern-icon"><i class="fas fa-wind"></i></div><h3>Excessive Hair Loss</h3></div>
+          <div class="ab-hs-why"><b>Why it happens</b>Chronic stress raises cortisol, disrupting the hair growth cycle. Hormonal imbalance &amp; poor diet weaken follicles further.</div>
+          <div class="ab-hs-body">
+            <div class="ab-hs-label">How NISRAA Helps</div>
+            <ul class="ab-hs-list">
+              <li><i class="fas fa-check"></i><span><strong>Supports root strength</strong> — hair anchors more securely, sheds less prematurely</span></li>
+              <li><i class="fas fa-check"></i><span><strong>Follicle nutrition</strong> — essential nutrients for stronger, healthier regrowth</span></li>
+              <li><i class="fas fa-check"></i><span><strong>FiberHance™</strong> — reduces breakage often mistaken for hair fall</span></li>
+              <li><i class="fas fa-check"></i><span><strong>Scalp balance</strong> — optimal environment for a healthy growth cycle</span></li>
+            </ul>
+            <div class="ab-hs-cta"><a href="reviews.html#cat-hairloss" class="btn btn-outline"><i class="fas fa-star"></i> Testimonials</a></div>
+          </div>
+        </div>
+
+        <div class="ab-hs-card" id="sol-postpartum">
+          <div class="ab-hs-img"><img src="images/about/concern-postpartum.png" alt="Postpartum hair loss — woman holding baby worried about hair shedding" loading="lazy" decoding="async" /></div>
+          <div class="ab-hs-title"><div class="ab-concern-icon"><i class="fas fa-baby"></i></div><h3>Postpartum Hair Loss</h3></div>
+          <div class="ab-hs-why"><b>Why it happens</b>Estrogen drops sharply after birth, pushing more hair into the shedding phase. Breastfeeding also depletes iron, zinc &amp; biotin.</div>
+          <div class="ab-hs-body">
+            <div class="ab-hs-label">How NISRAA Helps</div>
+            <ul class="ab-hs-list">
+              <li><i class="fas fa-check"></i><span><strong>Follicle nutrition</strong> — replenishes key nutrients to weakened hair roots</span></li>
+              <li><i class="fas fa-check"></i><span><strong>FiberHance™</strong> — reinforces fiber, reduces breakage during heavy shedding</span></li>
+              <li><i class="fas fa-check"></i><span><strong>Gentle, non-stripping</strong> — safe and protective for fragile postpartum hair</span></li>
+            </ul>
+            <div class="ab-hs-cta"><a href="reviews.html#cat-postpartum" class="btn btn-outline"><i class="fas fa-star"></i> Testimonials</a></div>
+          </div>
+        </div>
+
+        <div class="ab-hs-card" id="sol-pattern">
+          <div class="ab-hs-img"><img src="images/about/concern-mshape.png" alt="Pattern hair loss — male and female pattern baldness stages illustrated" loading="lazy" decoding="async" /></div>
+          <div class="ab-hs-title"><div class="ab-concern-icon"><i class="fas fa-user"></i></div><h3>M-Shape &amp; Pattern Hair Loss</h3></div>
+          <div class="ab-hs-why"><b>Why it happens</b>The hormone DHT causes follicles to shrink over time, producing progressively thinner and shorter hair until growth stops.</div>
+          <div class="ab-hs-body">
+            <div class="ab-hs-label">Triple Action Approach</div>
+            <ul class="ab-hs-list">
+              <li><i class="fas fa-check"></i><span><strong>Blocks DHT</strong> — natural blockers reduce follicle-shrinking hormone effects</span></li>
+              <li><i class="fas fa-check"></i><span><strong>Revives follicles</strong> — nutrients &ldquo;feed&rdquo; weakened follicles, improving growth</span></li>
+              <li><i class="fas fa-check"></i><span><strong>FiberHance™</strong> — thickens appearance, reduces breakage at thinning areas</span></li>
+            </ul>
+            <div class="ab-hs-cta"><a href="reviews.html#cat-mshape" class="btn btn-outline"><i class="fas fa-star"></i> Testimonials</a></div>
+          </div>
+        </div>
+
+        <div class="ab-hs-card" id="sol-dandruff">
+          <div class="ab-hs-img"><img src="images/about/concern-dandruff.png" alt="Dandruff and flaky scalp — close-up scalp flaking and itch collage" loading="lazy" decoding="async" /></div>
+          <div class="ab-hs-title"><div class="ab-concern-icon"><i class="fas fa-snowflake"></i></div><h3>Dandruff &amp; Flaky Scalp</h3></div>
+          <div class="ab-hs-why"><b>Why it happens</b>An imbalanced scalp microbiome or excess oil causes flaking &amp; itch. Harsh shampoos with sulphates make it worse.</div>
+          <div class="ab-hs-body">
+            <div class="ab-hs-label">How NISRAA Helps</div>
+            <ul class="ab-hs-list">
+              <li><i class="fas fa-check"></i><span><strong>Gentle exfoliation</strong> — unclogs follicles and removes flaky, waxy buildup</span></li>
+              <li><i class="fas fa-check"></i><span><strong>FiberHance™</strong> — protects hair fiber from weakening due to repeated washing</span></li>
+              <li><i class="fas fa-check"></i><span><strong>pH-balanced cleansing</strong> — gentle formula, no scalp over-drying</span></li>
+            </ul>
+            <div class="ab-hs-cta"><a href="reviews.html#cat-dandruff" class="btn btn-outline"><i class="fas fa-star"></i> Testimonials</a></div>
+          </div>
+        </div>
+
+        <div class="ab-hs-card" id="sol-scalp">
+          <div class="ab-hs-img"><img src="images/about/concern-scalp.png" alt="Scalp acne, oily and itchy scalp — close-up irritated scalp" loading="lazy" decoding="async" /></div>
+          <div class="ab-hs-title"><div class="ab-concern-icon"><i class="fas fa-tint"></i></div><h3>Oily, Itchy &amp; Acne-Prone Scalp</h3></div>
+          <div class="ab-hs-why"><b>Why it happens</b>Excess sebum and clogged follicles create a breeding ground for bacteria, causing bumps, itch &amp; inflammation.</div>
+          <div class="ab-hs-body">
+            <div class="ab-hs-label">How NISRAA Helps</div>
+            <ul class="ab-hs-list">
+              <li><i class="fas fa-check"></i><span><strong>Deep pore cleansing</strong> — reduces oil buildup and unclogs scalp pores</span></li>
+              <li><i class="fas fa-check"></i><span><strong>FiberHance™</strong> — shields hair from damage during frequent washing</span></li>
+              <li><i class="fas fa-check"></i><span><strong>Gentle pH-balanced formula</strong> — calms irritation without worsening inflammation</span></li>
+            </ul>
+            <div class="ab-hs-cta"><a href="reviews.html#cat-itchy" class="btn btn-outline"><i class="fas fa-star"></i> Testimonials</a></div>
+          </div>
+        </div>
+
+        <div class="ab-hs-card" id="sol-damage">
+          <div class="ab-hs-img"><img src="images/about/concern-damage.png" alt="Damaged, dry and frizzy hair — women with frizzy damaged hair collage" loading="lazy" decoding="async" /></div>
+          <div class="ab-hs-title"><div class="ab-concern-icon"><i class="fas fa-fire-alt"></i></div><h3>Dry, Damaged &amp; Frizzy Hair</h3></div>
+          <div class="ab-hs-why"><b>Why it happens</b>Heat styling, chemical treatments &amp; SLS-based products strip proteins from the hair cortex, leaving strands brittle and prone to breakage.</div>
+          <div class="ab-hs-body">
+            <div class="ab-hs-label">How NISRAA Helps</div>
+            <ul class="ab-hs-list">
+              <li><i class="fas fa-check"></i><span><strong>Proteins &amp; Amino Acids</strong> — rebuild hair strength and restore elasticity</span></li>
+              <li><i class="fas fa-check"></i><span><strong>Keratin &amp; Biotin</strong> — reinforce structure and prevent future breakage</span></li>
+              <li><i class="fas fa-check"></i><span><strong>FiberHance™</strong> — actively rebuilds broken bonds, improves elasticity &amp; shine</span></li>
+            </ul>
+            <div class="ab-hs-cta"><a href="reviews.html#cat-dryfrizzy" class="btn btn-outline"><i class="fas fa-star"></i> Testimonials</a></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════ 5. OUR STORY (founder) ═════════ -->
+  <section class="ab-sec ab-anchor" id="story">
+    <div class="container">
+      <div class="ab-story">
+        <div class="ab-founder">
+          <div class="ab-founder-card">
+            <img src="images/founder.jpg" alt="Nazatul Shima Binti Jin Samsudin, Trichology Pharmacist and founder of NISRAA" loading="lazy" />
+            <div class="ab-founder-plate"><strong>Nazatul Shima Binti Jin Samsudin</strong><span>Founder · Trichology Pharmacist</span></div>
+          </div>
+          <div class="ab-creds">
+            <div class="ab-cred"><i class="fas fa-graduation-cap"></i><span>Bachelor of Pharmacy, University of Malaya</span></div>
+            <div class="ab-cred"><i class="fas fa-certificate"></i><span>Certified Halal Pharmapreneur, UKM</span></div>
+            <div class="ab-cred"><i class="fas fa-hospital"></i><span>11+ years across hospitals, clinics &amp; pharmacies</span></div>
+            <div class="ab-cred"><i class="fas fa-microscope"></i><span>Online Trichology education, London</span></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="eyebrow-tag">Our Story</div>
+          <h2>A Pharmacist Who Couldn't Solve Her Own Hair Loss</h2>
+          <div class="ab-timeline">
+            <div class="ab-beat">
+              <span class="ab-beat-tag">The Turning Point</span>
+              <h4>4 years of postpartum hair loss, with no real answer</h4>
+              <p>After childbirth, our founder lost hair for more than four years. Despite 11+ years in pharmacy, nothing worked: not pharmacy products, supplements, salon treatments or professional services. If even a pharmacist couldn't solve it, what about everyone else?</p>
+            </div>
+            <div class="ab-beat">
+              <span class="ab-beat-tag">The Discovery</span>
+              <h4>Going deeper than the surface</h4>
+              <p>She studied Trichology through an international programme based in London and learned that most hair loss isn't only surface damage. It's structural breakdown inside the hair fibre. The cortex needed to be treated, not just the cuticle.</p>
+            </div>
+            <div class="ab-beat">
+              <span class="ab-beat-tag">The Breakthrough</span>
+              <h4>Bond-building technology that worked</h4>
+              <p>She found FiberHance™, validated by Durham University and recognised with a Gold Innovation Award. After applying this approach herself, her four-year hair loss finally stabilised.</p>
+            </div>
+            <div class="ab-beat">
+              <span class="ab-beat-tag">The Mission</span>
+              <h4>Tested on 300 people before launch</h4>
+              <p>She worked with a doctor and a cosmetic chemist to develop NISRAA through rigorous R&amp;D. In a pilot study of 300 participants, 97% reported visible improvement. Only then was NISRAA launched.</p>
+            </div>
+          </div>
+          <div class="ab-pull">
+            <p>"I was a pharmacist who couldn't solve my own hair loss. That humbling experience pushed me to go further than conventional solutions, and create something that actually works."</p>
+            <cite>— NISRAA Founder, Pharmacist &amp; Trichology Practitioner</cite>
+          </div>
+        </div>
+      </div>
+
+      <div class="ab-team">
+        <div class="ab-team-card"><i class="fas fa-user-md"></i><h4>Medical Doctor</h4><p>Clinical insight on hair and scalp health</p></div>
+        <div class="ab-team-card"><i class="fas fa-pills"></i><h4>Pharmacist</h4><p>Trichology-trained founder, 11+ years experience</p></div>
+        <div class="ab-team-card"><i class="fas fa-atom"></i><h4>Cosmetic Chemist</h4><p>Ingredient selection and formulation precision</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════ 7. INGREDIENTS & SAFETY ═════════ -->
+  <section class="ab-sec alt ab-anchor" id="safety">
+    <div class="container">
+      <div class="ab-head">
+        <div class="eyebrow-tag">Ingredients &amp; Safety</div>
+        <h2>Thoughtfully Selected. Certified Safe.</h2>
+        <p>Research-based ingredients, and none of the harsh ones.</p>
+      </div>
+
+      <div class="ab-ing">
+        <div class="ab-card"><div class="ab-card-icon"><i class="fas fa-link"></i></div><h4>FiberHance™ Bond-Building</h4><p>Patented technology that supports repair of the internal keratin bonds.</p></div>
+        <div class="ab-card"><div class="ab-card-icon"><i class="fas fa-leaf"></i></div><h4>Plant Extracts</h4><p>Rosemary, peppermint, ginger, aloe vera, ginseng, green tea, gotu kola, onion bulb and more for scalp and hair health.</p></div>
+        <div class="ab-card"><div class="ab-card-icon"><i class="fas fa-dna"></i></div><h4>Proteins &amp; Amino Acids</h4><p>Hydrolysed protein and essential amino acids restore structure and reduce breakage.</p></div>
+        <div class="ab-card"><div class="ab-card-icon"><i class="fas fa-tablets"></i></div><h4>Vitamins &amp; Biotin</h4><p>Biotin and vitamins B3, B5 and B6 strengthen follicles and support the scalp.</p></div>
+        <div class="ab-card"><div class="ab-card-icon"><i class="fas fa-tint"></i></div><h4>Scalp Treatment Agents</h4><p>Remove build-up and dandruff, control oil and rebalance the scalp.</p></div>
+        <div class="ab-card"><div class="ab-card-icon"><i class="fas fa-ban"></i></div><h4>What We Leave Out</h4><p>No SLS / SLES / ALS, parabens, silicones or harsh chemicals.</p></div>
+      </div>
+
+      <div class="ab-safety">
+        <div class="ab-safe"><i class="fas fa-certificate"></i><div><h4>KKM Approved</h4><p>Approved by the Ministry of Health Malaysia.</p></div></div>
+        <div class="ab-safe"><i class="fas fa-moon"></i><div><h4>Halal-Certified</h4><p>Halal-certified ingredients and manufacturing facility.</p></div></div>
+        <div class="ab-safe"><i class="fas fa-heart"></i><div><h4>Gentle for Daily Use</h4><p>pH-balanced and suitable for sensitive scalps.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════ 6. SOCIAL PROOF (moved below Ingredients & Safety) ═════════ -->
+  <section class="ab-sec ab-anchor" id="proof">
+    <div class="container">
+      <div class="ab-head">
+        <div class="eyebrow-tag">Real Customer Proof</div>
+        <h2>See What Customers and Experts Say</h2>
+        <p>Watch the launch, hear from our founder, and read real reviews before you order.</p>
+      </div>
+
+      <div class="ab-videos">
+        <div class="ab-vcard"><div class="ab-video-label"><i class="fas fa-play-circle"></i> Official Launch</div>
+          <div class="ab-vwrap tall"><div class="yt-facade" onclick="playYT(this,'64B9qwo-TJo')" role="button" tabindex="0" aria-label="Play launch video"><img src="https://img.youtube.com/vi/64B9qwo-TJo/hqdefault.jpg" alt="NISRAA official launch video" loading="lazy" /><span class="yt-play-btn"><i class="fas fa-play"></i></span></div></div></div>
+        <div class="ab-vcard"><div class="ab-video-label"><i class="fas fa-user-md"></i> Founder on Hair Loss</div>
+          <div class="ab-vwrap tall"><div class="yt-facade" onclick="playYT(this,'1b6-lZy90pA')" role="button" tabindex="0" aria-label="Play founder video"><img src="https://img.youtube.com/vi/1b6-lZy90pA/hqdefault.jpg" alt="Founder talks about hair loss" loading="lazy" /><span class="yt-play-btn"><i class="fas fa-play"></i></span></div></div></div>
+        <div class="ab-vcard"><div class="ab-video-label"><i class="fas fa-star"></i> Influencer Review</div>
+          <div class="ab-vwrap tall"><div class="yt-facade" onclick="playYT(this,'nOaMLLwp58M')" role="button" tabindex="0" aria-label="Play influencer review"><img src="https://img.youtube.com/vi/nOaMLLwp58M/hqdefault.jpg" alt="Influencer review of NISRAA" loading="lazy" /><span class="yt-play-btn"><i class="fas fa-play"></i></span></div></div></div>
+        <div class="ab-vcard"><div class="ab-video-label"><i class="fas fa-heart"></i> Customer Testimonial</div>
+          <div class="ab-vwrap tall"><div class="yt-facade" onclick="playYT(this,'DEjsK7pjhoQ')" role="button" tabindex="0" aria-label="Play customer testimonial"><img src="https://img.youtube.com/vi/DEjsK7pjhoQ/hqdefault.jpg" alt="Customer testimonial" loading="lazy" /><span class="yt-play-btn"><i class="fas fa-play"></i></span></div></div></div>
+      </div>
+
+      <div class="ab-proof-links">
+        <a href="https://my.shp.ee/AhV6HKEr" target="_blank" rel="noopener" class="btn btn-outline"><i class="fas fa-star"></i> All Shopee Reviews</a>
+        <a href="https://www.tiktok.com/@nisraapharmaceutics" target="_blank" rel="noopener" class="btn btn-outline"><i class="fab fa-tiktok"></i> Our TikTok</a>
+        <a href="reviews.html" class="btn btn-outline">More Testimonials by Concern</a>
+      </div>
+      <p class="ab-foot">Results may vary by individual. Visible improvement typically needs 2–3 months of consistent use.</p>
+    </div>
+  </section>
+
+  <!-- ═════════ 8. WHY BUY DIRECT + DISTRIBUTOR ═════════ -->
+  <section class="ab-sec alt">
+    <div class="container">
+      <div class="ab-head">
+        <div class="eyebrow-tag">Order Direct</div>
+        <h2>Why Buy from the Official Website</h2>
+      </div>
+      <div class="ab-perks">
+        <div class="ab-perk gold"><span class="ab-perk-badge">MOST WORTH IT</span><i class="fas fa-gift"></i><h4>Free 50ml Tonic</h4><p>Receive a <strong>free NISRAA Strengthening Tonic 50ml (worth RM35)</strong> with purchases above RM100, exclusive to website orders.</p></div>
+        <div class="ab-perk"><i class="fas fa-truck-fast"></i><h4>Free Shipping</h4><p>Enjoy <strong>free shipping for purchases above RM100 (West Malaysia) and RM150 (Sabah &amp; Sarawak)</strong> on your website order.</p></div>
+        <div class="ab-perk"><i class="fas fa-percentage"></i><h4>Better Value</h4><p>Direct website pricing and offers not always available on social platforms or third-party sellers.</p></div>
+        <div class="ab-perk"><i class="fas fa-headset"></i><h4>Real People, Real Help</h4><p>Not sure which set suits you? Our team replies on WhatsApp and will help you choose.</p></div>
+      </div>
+
+      <div class="ab-dist">
+        <div class="ab-dist-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div>
+          <small>Official Distributor</small>
+          <h3>FARMASI FALAH DENAI ALAM</h3>
+          <p>No 9, Jalan Elektron U16/D, Denai Alam, 40160 Shah Alam</p>
+          <a href="tel:+60147592082"><i class="fas fa-phone"></i> 014-7592082</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════════ 9. FAQ ═════════ -->
+  <section class="ab-sec white ab-anchor" id="faq">
+    <div class="container">
+      <div class="ab-head">
+        <div class="eyebrow-tag">FAQ</div>
+        <h2>Questions Before You Order?</h2>
+        <p>Quick answers on choosing, using and trusting NISRAA.</p>
+      </div>
+
+      <div class="ab-faq-wrap">
+
+        <!-- CATEGORY 1: ABOUT NISRAA -->
+        <div class="ab-faq-group">
+          <p class="ab-sub">About NISRAA</p>
+          <div class="faq-list">
+
+            <div class="faq-item" data-faq>
+              <button class="faq-question">1. What makes NISRAA different from other shampoos? <i class="fas fa-plus faq-icon"></i></button>
+              <div class="faq-answer">
+                <p>NISRAA is not just another shampoo — it is a pharmacy-grade bond repair system designed to restore hair from within.</p>
+                <p>Unlike conventional shampoos that only cleanse and condition the outer layer (cuticle), NISRAA uses advanced bond-building technology with low molecular penetration to reach the inner hair structure (cortex). This helps reinforce natural keratin bonds responsible for hair strength, elasticity, and resilience.</p>
+                <p>The result is not temporary smoothness — but real structural repair and long-term hair recovery.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" data-faq>
+              <button class="faq-question">2. Is NISRAA just a cosmetic shampoo? <i class="fas fa-plus faq-icon"></i></button>
+              <div class="faq-answer">
+                <p>No. NISRAA is developed as a treatment-based hair care system, not a surface-level cosmetic product.</p>
+                <p>Most shampoos focus on appearance (shine, softness), but NISRAA focuses on hair biology and structure, helping to repair damage at a deeper level. It is formulated by a doctor, pharmacist, and chemist, ensuring a more evidence-based and functional approach to hair care.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" data-faq>
+              <button class="faq-question">3. I've tried many shampoos but saw no results. Why? How is NISRAA different? <i class="fas fa-plus faq-icon"></i></button>
+              <div class="faq-answer">
+                <p>Most shampoos fail because they only work on the surface of the hair, without repairing internal damage. Hair issues like breakage, thinning, and dryness often originate from weakened keratin bonds inside the cortex. Without addressing this, results are temporary.</p>
+                <p>NISRAA works differently by targeting internal hair structure repair, strengthening hair bonds and supporting scalp health for healthier hair growth.</p>
+                <p>This is why results are typically more progressive and long-lasting, rather than temporary.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" data-faq>
+              <button class="faq-question">4. Who formulated NISRAA? <i class="fas fa-plus faq-icon"></i></button>
+              <div class="faq-answer">
+                <p>NISRAA is formulated through a collaboration of a doctor, pharmacist, and chemist.</p>
+                <p>This multidisciplinary approach ensures scientifically selected ingredients and higher quality standards compared to typical cosmetic brands.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" data-faq>
+              <button class="faq-question">5. Is NISRAA halal and approved by KKM? <i class="fas fa-plus faq-icon"></i></button>
+              <div class="faq-answer">
+                <p>Yes. NISRAA is approved by the Ministry of Health Malaysia (KKM), manufactured in halal-certified facilities, and uses halal-certified ingredients.</p>
+                <p>This ensures compliance with both safety and ethical standards.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" data-faq>
+              <button class="faq-question">6. What hair concerns is NISRAA suitable for? <i class="fas fa-plus faq-icon"></i></button>
+              <div class="faq-answer">
+                <p>NISRAA is designed to support multiple hair and scalp concerns, including hair fall, hair thinning, damaged hair, postpartum hair shedding, dandruff, itchy scalp, dry, frizzy, chemically treated hair, hair damage from heat styling, and hair loss related to stress or hormonal changes.</p>
+                <p>It is suitable for both men and women.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CATEGORY 2: PRODUCT USAGE & SUITABILITY -->
+        <div class="ab-faq-group">
+          <p class="ab-sub">Product Usage &amp; Suitability</p>
+          <div class="faq-list">
+
+            <div class="faq-item" data-faq>
+              <button class="faq-question">7. Which product should I start with? <i class="fas fa-plus faq-icon"></i></button>
+              <div class="faq-answer">
+                <p>For new users with sensitive scalp or eczema: Start with the Trial Set to assess suitability.</p>
+                <p>For optimal results: The Full Treatment Set is recommended as it provides a complete routine for deeper repair.</p>
+                <p>Hair recovery takes time — using the full system consistently delivers better, faster, and more sustainable results. It is also more cost-effective for long-term use (up to 3 months).</p>
+              </div>
+            </div>
+
+            <div class="faq-item" data-faq>
+              <button class="faq-question">8. How to use NISRAA for best results? <i class="fas fa-plus faq-icon"></i></button>
+              <div class="faq-answer">
+                <p>For optimal results, use NISRAA as a complete treatment system:</p>
+                <span class="fa-label">🧴 Shampoo</span>
+                <p>Apply on wet hair and scalp. Leave for 2 minutes to allow the active technology to work. Rinse thoroughly. Use every other day.</p>
+                <span class="fa-label">🧴 Conditioner</span>
+                <p>Apply after shampoo on damp hair. Leave for 2 minutes to enhance moisture and repair. Rinse thoroughly. Use after every shampoo.</p>
+                <span class="fa-label">💧 Strengthening Tonic</span>
+                <p>Apply directly to scalp (dry or slightly damp hair). Massage gently for 5 minutes to stimulate scalp and enhance absorption. No need to rinse. Use once daily, preferably at night.</p>
+                <span class="fa-note">Consistency is key — visible improvement typically requires at least 2–3 months of continuous use.</span>
+              </div>
+            </div>
+
+            <div class="faq-item" data-faq>
+              <button class="faq-question">9. Is NISRAA suitable for postpartum hair loss? <i class="fas fa-plus faq-icon"></i></button>
+              <div class="faq-answer">
+                <p>Yes. Postpartum hair loss is commonly caused by a sudden drop in estrogen levels after delivery, combined with nutrient depletion during pregnancy and breastfeeding.</p>
+                <p>NISRAA is formulated to support this recovery phase with key ingredients such as Biotin, Niacinamide, botanical extracts to strengthen hair follicles and improve nutrient supply to the hair root. NISRAA also contains scalp treatment agents which help to support scalp health.</p>
+                <p>In addition, NISRAA's bond-building technology works at the inner hair structure to repair and rebuild keratin bonds, helping to improve hair strength and resilience during the recovery process.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" data-faq>
+              <button class="faq-question">10. Is NISRAA safe for pregnant and breastfeeding mothers? <i class="fas fa-plus faq-icon"></i></button>
+              <div class="faq-answer">
+                <p>Yes, NISRAA is suitable for both pregnant and breastfeeding mothers.</p>
+                <p>The formulation is free from SLS/SLES, parabens, silicones, and harsh chemicals, making it gentle for regular use and suitable for use during pregnancy.</p>
+                <p>During breastfeeding, the body prioritizes nutrients for milk production, which may leave hair follicles undernourished and more prone to weakening or miniaturization. NISRAA helps support this condition by providing essential nutrients and maintaining a healthy scalp environment needed for stronger hair growth.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" data-faq>
+              <button class="faq-question">11. Can children use NISRAA? <i class="fas fa-plus faq-icon"></i></button>
+              <div class="faq-answer">
+                <p>Shampoo &amp; Conditioner: Suitable for 3 years old and above.</p>
+                <p>Strengthening Tonic: Suitable for 12 years old and above.</p>
+                <p>The formulations are mild and designed to be safe when used appropriately for age.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" data-faq>
+              <button class="faq-question">12. Is NISRAA gentle for daily use? <i class="fas fa-plus faq-icon"></i></button>
+              <div class="faq-answer">
+                <p>Yes. NISRAA is pH-balanced and formulated without harsh surfactants or irritants. It is free from SLS / SLES / ALS, Parabens, Silicones, and any harsh chemicals.</p>
+                <p>This makes it suitable for regular use, even for sensitive scalp conditions.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CATEGORY 3: TECHNOLOGY & INGREDIENTS -->
+        <div class="ab-faq-group">
+          <p class="ab-sub">Technology &amp; Ingredients</p>
+          <div class="faq-list">
+
+            <div class="faq-item" data-faq>
+              <button class="faq-question">13. What is bond-building technology? <i class="fas fa-plus faq-icon"></i></button>
+              <div class="faq-answer">
+                <p>Bond-building technology is an advanced innovation in hair care designed to repair internal keratin bonds within the hair structure. Instead of coating the hair, it penetrates into the cortex, rebuilds broken bonds and strengthens hair from the inside.</p>
+                <p>This technology used in NISRAA received the Gold Innovation Award at in-cosmetics 2017 (London), highlighting its scientific credibility.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" data-faq>
+              <button class="faq-question">14. What key ingredients are used in NISRAA? <i class="fas fa-plus faq-icon"></i></button>
+              <div class="faq-answer">
+                <p>NISRAA combines advanced technology with functional ingredients, including Bond-building actives (for internal repair), Botanical extracts, Scalp treatment agents (to remove buildup and maintain scalp balance), Hydrolyzed proteins &amp; amino acids (to strengthen hair structure), and Vitamins (Biotin, B3, B5, B6).</p>
+                <p>All ingredients are carefully selected by the formulation team for performance and safety.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" data-faq>
+              <button class="faq-question">15. What ingredients does NISRAA avoid? <i class="fas fa-plus faq-icon"></i></button>
+              <div class="faq-answer">
+                <p>NISRAA is formulated without harsh or damaging ingredients, including SLS / SLES / ALS, Parabens, Silicones, and any harsh chemicals.</p>
+                <p>This helps reduce scalp irritation and prevents long-term buildup.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CATEGORY 4: ORDERING & WEBSITE BENEFITS -->
+        <div class="ab-faq-group">
+          <p class="ab-sub">Ordering &amp; Website Benefits</p>
+          <div class="faq-list">
+
+            <div class="faq-item" data-faq>
+              <button class="faq-question">16. What do I get when I order from the official website? <i class="fas fa-plus faq-icon"></i></button>
+              <div class="faq-answer">
+                <p>When you place an order above RM100 on the official NISRAA website, you get <strong>free shipping</strong> and a <strong>free NISRAA Strengthening Tonic 50ml (worth RM35)</strong>.</p>
+                <p>No code is needed. Simply order through the website and the benefits are included with your order.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" data-faq>
+              <button class="faq-question">17. Can I get the free shipping and free gift from Shopee or TikTok purchases? <i class="fas fa-plus faq-icon"></i></button>
+              <div class="faq-answer">
+                <p>No. Free shipping and the free Tonic 50ml gift are exclusive to orders above RM100 made through the official NISRAA website.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CATEGORY 5: AFFILIATE / PARTNER PROGRAM -->
+        <div class="ab-faq-group">
+          <p class="ab-sub">Affiliate / Partner Program</p>
+          <div class="faq-list">
+
+            <div class="faq-item" data-faq>
+              <button class="faq-question">19. Can I earn income with NISRAA? <i class="fas fa-plus faq-icon"></i></button>
+              <div class="faq-answer">
+                <p>Yes. You can join the NISRAA Affiliate Program and earn commission on sales and monthly performance bonuses. You will receive a unique referral link to track your earnings.</p>
+              </div>
+            </div>
+
+            <div class="faq-item" data-faq>
+              <button class="faq-question">20. How does affiliate tracking work? <i class="fas fa-plus faq-icon"></i></button>
+              <div class="faq-answer">
+                <p>NISRAA uses link-based tracking.</p>
+                <p>When a customer clicks your referral link, the sale is attributed to you. Even repeat purchases through your link are credited. This ensures no lost commissions over time.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <p class="ab-faq-help">Still have a question? <a href="https://wa.me/60147592082?text=Hi%20NISRAA!%20I%20have%20a%20question." target="_blank" rel="noopener">Chat with us on WhatsApp</a></p>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo footer-logo"><img src="images/logo-nisraa-new.png" alt="NISRAA — Advanced Hair Treatment" class="logo-img footer-logo-img" /></a>
+        <p class="footer-tagline">Premium treatment-based hair care formulated by doctor, pharmacist, and chemist.</p>
+        <div class="footer-certifications">
+          <span class="cert-tag"><i class="fas fa-certificate"></i> KKM Approved</span>
+          <span class="cert-tag"><i class="fas fa-moon"></i> Halal-Certified</span>
+          <span class="cert-tag"><i class="fas fa-leaf"></i> SLS-Free</span>
+        </div>
+      </div>
+      <div class="footer-nav-group">
+        <h5>Shop</h5>
+        <a href="shop.html#full-treatment-set">Full Treatment Set</a>
+        <a href="shop.html#trial-set-card">Trial Set</a>
+        <a href="shop.html#tonic">Tonic</a>
+      </div>
+      <div class="footer-nav-group">
+        <h5>About NISRAA</h5>
+        <a href="#science">The Science</a>
+        <a href="#story">Our Story</a>
+        <a href="#safety">Ingredients &amp; Safety</a>
+        <a href="#faq">FAQ</a>
+        <a href="reviews.html">Testimonials</a>
+      </div>
+      <div class="footer-nav-group">
+        <h5>Follow Us</h5>
+        <a href="https://my.shp.ee/AhV6HKEr" target="_blank" rel="noopener"><i class="fas fa-star"></i> Shopee</a>
+        <a href="https://www.tiktok.com/@nisraapharmaceutics" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i> TikTok</a>
+        <a href="https://vt.tiktok.com/ZSH4KBJXu/" target="_blank" rel="noopener"><i class="fas fa-fire"></i> Viral TikTok</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2025 NISRAA. All rights reserved.<br>NISRAA PHARMACEUTICS &middot; No. Pendaftaran: 202503124744 (AS0495409-K)</p>
+        <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-sticky-bar">
+    <a href="shop.html" class="sticky-btn primary"><i class="fas fa-shopping-bag"></i><span>Shop Now</span></a>
+    <a href="#proof" class="sticky-btn secondary"><i class="fas fa-star"></i><span>Reviews</span></a>
+    <a href="#faq" class="sticky-btn secondary"><i class="fas fa-question-circle"></i><span>FAQ</span></a>
+  </div>
+
+  <a href="https://wa.me/60147592082?text=Hi%20NISRAA!%20I%27d%20like%20to%20ask%20about%20your%20products." target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat with NISRAA on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Chat with us</span>
+  </a>
+
+  <script src="js/main.js" defer></script>
+<script src="js/popup.js" defer></script>
+  
+  <script>
+    /* In-page YouTube player (thumbnail first, iframe on tap) */
+    function playYT(facade, videoId) {
+      var wrapper = facade.parentElement;
+      var iframe = document.createElement('iframe');
+      iframe.setAttribute('src', 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0');
+      iframe.setAttribute('frameborder', '0');
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+      iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin'); /* fixes YouTube Error 153 */
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border:0;';
+      wrapper.replaceChild(iframe, facade);
+    }
+    document.addEventListener('keydown', function (e) {
+      if ((e.key === 'Enter' || e.key === ' ') && e.target.classList && e.target.classList.contains('yt-facade')) {
+        e.preventDefault(); e.target.click();
+      }
+    });
+
+    (function () {
+      /* Keep the sticky tab bar directly under the sticky header */
+      var header = document.getElementById('header');
+      function setHdr() {
+        if (header) document.documentElement.style.setProperty('--hdr', header.offsetHeight + 'px');
+      }
+      setHdr();
+      window.addEventListener('resize', setHdr);
+      window.addEventListener('load', setHdr);
+
+      /* Highlight the tab of the section currently in view */
+      var tabs = Array.prototype.slice.call(document.querySelectorAll('.ab-tab'));
+      var map = {};
+      tabs.forEach(function (t) { map[t.getAttribute('href').slice(1)] = t; });
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            if (en.isIntersecting && map[en.target.id]) {
+              tabs.forEach(function (t) { t.classList.remove('active'); });
+              var tab = map[en.target.id];
+              tab.classList.add('active');
+              var bar = document.getElementById('abTabs');
+              if (bar && bar.scrollWidth > bar.clientWidth) {
+                bar.scrollTo({ left: tab.offsetLeft - 24, behavior: 'smooth' });
+              }
+            }
+          });
+        }, { rootMargin: '-35% 0px -55% 0px' });
+        Object.keys(map).forEach(function (id) {
+          var el = document.getElementById(id);
+          if (el) io.observe(el);
+        });
+      }
+    })();
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/sw.js')
+          .then(function (reg) { console.log('[NISRAA SW] Registered:', reg.scope); })
+          .catch(function (err) { console.warn('[NISRAA SW] Failed:', err); });
+      });
+    }
+  </script>
+</body>
+</html>

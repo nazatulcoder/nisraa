@@ -1,0 +1,1973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop — NISRAA Premium Hair Care</title>
+  <meta name="description" content="Shop NISRAA treatment-based hair care. Choose from Trial Set, Full Treatment Set, and Strengthening Tonic." />
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#6C4323" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="NISRAA" />
+  <link rel="apple-touch-icon" href="/images/icon-192.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Shop — NISRAA Premium Hair Care" />
+  <meta property="og:description" content="Shop NISRAA treatment-based hair care. KKM Approved & Halal Certified." />
+  <meta property="og:image" content="https://www.genspark.ai/api/files/s/0uY8anNk" />
+  <meta property="og:url" content="https://www.nisraa.com/shop.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- DNS Prefetch & Preconnect -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+  <link rel="dns-prefetch" href="//www.genspark.ai" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <!-- Preload critical CSS -->
+  <link rel="preload" href="css/style.css" as="style" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome async (non-blocking) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" /></noscript>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ── Shop Page Override Styles ── */
+
+    /* ════════════════════════════════════════════
+       JULY SPECIAL — PAGE-TOP MEGA BANNER
+       ════════════════════════════════════════════ */
+    .july-promo-banner {
+      position: relative;
+      overflow: hidden;
+      background: #000;
+      padding: 0;
+      border-top: 3px solid #FFD700;
+      border-bottom: 3px solid #FFD700;
+    }
+    .july-promo-banner::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg,
+        #0a0500 0%,
+        #1f0d00 25%,
+        #0a0500 50%,
+        #1f0d00 75%,
+        #0a0500 100%);
+      background-size: 400% 400%;
+      animation: bannerGradient 8s ease infinite;
+      z-index: 0;
+    }
+    @keyframes bannerGradient {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .july-promo-banner::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -150%; width: 80%; height: 100%;
+      background: linear-gradient(105deg,
+        transparent 30%,
+        rgba(255,215,0,0.28) 50%,
+        transparent 70%);
+      animation: bannerShimmer 3.5s ease-in-out infinite;
+      z-index: 1;
+      pointer-events: none;
+    }
+    @keyframes bannerShimmer {
+      0%   { left: -150%; }
+      100% { left: 200%; }
+    }
+    .july-promo-inner {
+      position: relative; z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 30px 20px 30px;
+      box-sizing: border-box;
+    }
+    .july-promo-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: linear-gradient(90deg, #FFD700, #FFF176, #FFD700);
+      background-size: 200% auto;
+      animation: goldShine 2.5s linear infinite;
+      color: #000;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      padding: 7px 16px;
+      border-radius: 100px;
+      text-transform: uppercase;
+      text-align: center;
+      max-width: 90%;
+      box-shadow: 0 0 16px rgba(255,215,0,0.4);
+    }
+    @keyframes goldShine {
+      0%   { background-position: 0% center; }
+      100% { background-position: 200% center; }
+    }
+    .july-promo-headline {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(1.2rem, 4.4vw, 2.3rem);
+      font-weight: 800;
+      color: #FFD700;
+      letter-spacing: 0.005em;
+      line-height: 1.2;
+      text-align: center;
+      text-transform: uppercase;
+      width: 100%;
+      max-width: 100%;
+      overflow-wrap: break-word;
+      text-wrap: balance;
+      text-shadow:
+        0 2px 0 rgba(0,0,0,0.85),
+        0 0 22px rgba(255,215,0,0.35);
+    }
+    .july-promo-headline .gold-word {
+      color: #FFF176;
+      -webkit-text-fill-color: #FFF176;
+      text-shadow:
+        0 2px 0 rgba(0,0,0,0.85),
+        0 0 26px rgba(255,215,0,0.5);
+    }
+    .july-promo-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(12.5px, 3.3vw, 15px);
+      color: #e9c84a;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      text-align: center;
+      line-height: 1.55;
+      max-width: 460px;
+      text-wrap: balance;
+    }
+    .july-promo-pills {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      width: 100%;
+      max-width: 330px;
+      margin-top: 2px;
+    }
+    @media (min-width: 700px) {
+      .july-promo-pills { grid-template-columns: repeat(4, auto); max-width: none; width: auto; gap: 10px; }
+    }
+    .july-pill {
+      background: rgba(255,215,0,0.12);
+      border: 1.5px solid rgba(255,215,0,0.55);
+      color: #FFD700;
+      font-family: 'Inter', sans-serif;
+      font-size: 12.5px;
+      font-weight: 700;
+      padding: 8px 14px;
+      border-radius: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      letter-spacing: 0.03em;
+      backdrop-filter: blur(8px);
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .july-pill i { font-size: 12px; color: #FFD700; flex-shrink: 0; }
+    .pulse-pill {
+      background: rgba(255,215,0,0.2);
+      border-color: #FFD700;
+      color: #FFF176;
+      animation: pillGlow 2s ease-in-out infinite;
+    }
+    @keyframes pillGlow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(255,215,0,0.6); }
+      50%       { box-shadow: 0 0 0 10px rgba(255,215,0,0); }
+    }
+    .july-promo-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: linear-gradient(90deg, #FFD700, #FFF176, #FFD700);
+      background-size: 200% auto;
+      animation: goldShine 2.5s linear infinite, ctaPulse 2s ease-in-out infinite;
+      color: #000;
+      font-family: 'Inter', sans-serif;
+      font-size: 13.5px;
+      font-weight: 800;
+      padding: 13px 26px;
+      border-radius: 100px;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-top: 4px;
+      width: 100%;
+      max-width: 330px;
+      box-sizing: border-box;
+      white-space: nowrap;
+      text-align: center;
+      transition: transform 0.2s;
+      box-shadow: 0 0 0 0 rgba(255,215,0,0.7), 0 4px 20px rgba(0,0,0,0.5);
+    }
+    .july-promo-cta:hover { transform: scale(1.03); }
+    @keyframes ctaPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(255,215,0,0.55), 0 4px 16px rgba(0,0,0,0.5); }
+      50%       { box-shadow: 0 0 0 10px rgba(255,215,0,0), 0 4px 16px rgba(0,0,0,0.5); }
+    }
+    .july-promo-fire {
+      display: inline-block;
+      animation: fireWobble 1s ease-in-out infinite alternate;
+    }
+    @keyframes fireWobble {
+      from { transform: scale(1) rotate(-8deg); }
+      to   { transform: scale(1.2) rotate(8deg); }
+    }
+
+    /* ════════════════════════════════════════════
+       30 SET GRID
+       ════════════════════════════════════════════ */
+    .sets-section {
+      background: #f5ede3;
+      padding: 64px 0 72px;
+    }
+    .sets-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .sets-header h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .sets-header p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+    .free-ship-banner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      max-width: 640px;
+      margin: 0 auto 36px;
+      padding: 16px 24px;
+      background: linear-gradient(135deg, #6C4323, #8a5a31);
+      color: #fff;
+      border-radius: 16px;
+      border: 2px solid #C49A6C;
+      box-shadow: 0 6px 20px rgba(108,67,35,0.25);
+      text-align: center;
+    }
+    .free-ship-banner > i { font-size: 30px; color: #f3d9b5; flex-shrink: 0; }
+    .free-ship-banner strong { display: block; font-size: 19px; letter-spacing: 0.5px; line-height: 1.3; text-align: center; text-wrap: balance; }
+    .free-ship-banner span { display: block; font-size: 13.5px; opacity: 0.9; margin-top: 2px; }
+    @media (max-width: 520px) {
+      /* Phone: icon + text flow as ONE centered block (flex made the wrapped text sit left of centre) */
+      .free-ship-banner { display: block; text-align: center; padding: 14px 16px; margin-bottom: 28px; }
+      .free-ship-banner > i { display: inline-block; font-size: 24px; margin-right: 8px; vertical-align: middle; }
+      .free-ship-banner > div { display: inline; }
+      .free-ship-banner strong { display: inline; font-size: 16px; line-height: 1.4; }
+      .free-ship-banner span { font-size: 12.5px; }
+    }
+    .set-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 800px)  { .set-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; } }
+
+    .set-card {
+      background: #fff;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(196,154,108,0.2);
+      box-shadow: 0 2px 12px rgba(44,26,14,0.06);
+      display: flex;
+      flex-direction: column;
+      scroll-margin-top: 110px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .set-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(44,26,14,0.13);
+    }
+    .set-card:target { outline: 3px solid var(--accent); outline-offset: 2px; }
+    /* IMAGE-ONLY MODE: info (set, items, harga) is already printed on each image.
+       Text below is kept in the HTML but hidden. Delete this one rule to show it again. */
+    .set-code, .set-name, .set-items, .set-prices { display: none !important; }
+    .set-body { padding: 12px !important; }
+    .set-btn { padding: 12px 10px !important; }
+    .set-img {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      background: #f5ede3;
+      overflow: hidden;
+    }
+    .set-img img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .set-body {
+      padding: 16px 18px 18px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .set-code {
+      align-self: flex-start;
+      background: var(--primary);
+      color: #fff;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      padding: 3px 11px;
+      border-radius: 100px;
+      margin-bottom: 8px;
+    }
+    .set-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.22rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.2;
+      margin: 0 0 6px;
+    }
+    .set-items {
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      margin: 0 0 14px;
+      flex: 1;
+    }
+    .set-prices {
+      display: flex;
+      gap: 10px;
+      align-items: flex-end;
+      justify-content: space-between;
+      padding-top: 12px;
+      border-top: 1px dashed #e4d3bf;
+      margin-bottom: 14px;
+    }
+    .set-prices .lbl {
+      display: block;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 2px;
+    }
+    .set-orig { font-size: 14px; color: var(--text-light); text-decoration: line-through; }
+    .set-promo { text-align: right; }
+    .set-promo strong {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #C84B00;
+      line-height: 1;
+    }
+    .set-btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      box-sizing: border-box;
+      background: var(--primary);
+      color: #fff;
+      border: 2px solid var(--primary);
+      transition: all 0.2s;
+    }
+    .set-btn:hover { background: var(--primary-dark); border-color: var(--primary-dark); }
+    @media (max-width: 800px) {
+      .set-body { padding: 12px 12px 14px; }
+      .set-name { font-size: 1.05rem; }
+      .set-items { font-size: 11.5px; margin-bottom: 10px; }
+      .set-prices { flex-direction: column; align-items: stretch; gap: 6px; margin-bottom: 12px; }
+      .set-prices > div { display: flex; justify-content: space-between; align-items: baseline; gap: 6px; }
+      .set-prices .lbl { display: inline; margin: 0; font-size: 10.5px; }
+      .set-promo { text-align: left; }
+      .set-promo strong { font-size: 1.45rem; }
+      .set-btn { padding: 11px 10px; font-size: 13px; }
+    }
+
+    /* ════════════════════════════════════════════
+       COMBINED REVIEWS
+       ════════════════════════════════════════════ */
+    .reviews-section {
+      background: var(--bg);
+      padding: 64px 0 72px;
+    }
+    .reviews-head {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .reviews-head h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .reviews-head .rv-note {
+      font-size: 12px; color: #999; font-style: italic; margin-bottom: 18px;
+    }
+    .reviews-links {
+      display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;
+    }
+    .review-toggle-btn {
+      background: none; border: 1px solid #d4a96a;
+      border-radius: 100px; cursor: pointer;
+      color: var(--primary); font-size: 12px; font-weight: 600;
+      padding: 7px 16px; transition: all 0.2s; font-family: inherit;
+    }
+    .review-toggle-btn:hover { background: var(--primary); color: #fff; }
+    .rv-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      align-items: start;
+    }
+    @media (max-width: 960px) { .rv-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .rv-grid { grid-template-columns: 1fr; } }
+    .review-card-inner {
+      background: #fff;
+      border: 1px solid #ecddd0;
+      border-radius: 12px;
+      padding: 16px 18px;
+    }
+    .review-card-inner.rv-hidden { display: none; }
+    .review-header {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 8px;
+    }
+    .review-avatar {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--primary); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 700; flex-shrink: 0;
+    }
+    .review-meta { flex: 1; min-width: 0; }
+    .review-name { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.2; display: block; word-break: break-word; }
+    .review-stars { color: #f5a623; font-size: 12px; margin-top: 1px; display: block; }
+    .review-text {
+      font-size: 13px; line-height: 1.65; color: #555; margin: 0;
+      display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;
+    }
+    .review-text.expanded { display: block; -webkit-line-clamp: unset; }
+    .review-read-more {
+      background: none; border: none; cursor: pointer;
+      color: var(--primary); font-size: 13px; font-weight: 600;
+      padding: 10px 0 8px; min-height: 36px; display: inline-block; font-family: inherit;
+    }
+    .review-read-more:hover { text-decoration: underline; }
+    .rv-more-wrap { text-align: center; margin-top: 28px; }
+    .rv-more-wrap .review-toggle-btn { font-size: 14px; padding: 12px 28px; background: var(--primary); color: #fff; border-color: var(--primary); }
+    .rv-more-wrap .review-toggle-btn:hover { background: var(--primary-dark); }
+
+    /* ── CHECKOUT CTA BANNER ── */
+    .checkout-banner {
+      background: linear-gradient(135deg, #2A1508, #4A2510);
+      padding: 60px 24px;
+      text-align: center;
+    }
+    .checkout-banner h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .checkout-banner p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 28px;
+      max-width: 480px;
+      margin-left: auto; margin-right: auto;
+    }
+    .checkout-banner-btns {
+      display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;
+    }
+    .checkout-banner-btns .btn-cart {
+      background: var(--accent);
+      color: var(--primary-dark);
+      padding: 15px 32px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex; align-items: center; gap: 8px;
+      transition: background 0.2s;
+    }
+    .checkout-banner-btns .btn-cart:hover { background: #d4aa7a; }
+    .checkout-banner-btns .btn-wa {
+      background: #25d366;
+      color: #fff;
+      padding: 15px 32px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex; align-items: center; gap: 8px;
+      transition: background 0.2s;
+    }
+    .checkout-banner-btns .btn-wa:hover { background: #1ebe5d; }
+    .checkout-banner-note {
+      margin-top: 18px;
+      font-size: 12.5px;
+      color: rgba(255,255,255,0.4);
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+    }
+
+    /* ── BCL Payment Modal ── */
+    #bclOverlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      background: rgba(0,0,0,0.65);
+      overflow-y: auto;
+    }
+    #bclModal {
+      width: 100%;
+      min-height: 100vh;
+      min-height: 100dvh;
+      background: #fff;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+    }
+    @media (min-width: 600px) {
+      #bclOverlay {
+        display: none;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 32px 16px;
+      }
+      #bclModal {
+        border-radius: 20px;
+        width: min(560px, 100%);
+        margin: 0 auto;
+        min-height: auto;
+      }
+    }
+    #bcl-payment-form {
+      width: 100% !important;
+      min-width: 0 !important;
+      box-sizing: border-box !important;
+    }
+    #bcl-payment-form iframe {
+      display: block !important;
+      width: 100% !important;
+      min-width: 0 !important;
+      border: none !important;
+    }
+
+
+  </style>
+<style>
+    /* ════════════════════════════════════════════
+       SHOP CART (floating button + drawer) — separate from BCL block
+       ════════════════════════════════════════════ */
+    .nc-fab {
+      position: fixed;
+      right: 20px;
+      bottom: calc(154px + env(safe-area-inset-bottom));
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      border: 2px solid var(--accent);
+      font-size: 22px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(108,67,35,0.45);
+      z-index: 1100;
+      transition: transform 0.2s;
+    }
+    .nc-fab:hover { transform: scale(1.08); }
+    .nc-fab.nc-bump { animation: ncBump 0.4s ease; }
+    @keyframes ncBump { 0%,100% { transform: scale(1); } 50% { transform: scale(1.25); } }
+    .nc-fab-count {
+      position: absolute; top: -6px; right: -6px;
+      min-width: 22px; height: 22px; padding: 0 5px;
+      background: #C84B00; color: #fff;
+      border-radius: 11px; border: 2px solid #fff;
+      font-size: 12px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      box-sizing: border-box;
+    }
+    .nc-fab-count[hidden] { display: none; }
+
+    .nc-overlay {
+      position: fixed; inset: 0;
+      background: rgba(44,26,14,0.55);
+      z-index: 10000;
+      display: none;
+    }
+    .nc-overlay.nc-open { display: block; }
+    .nc-drawer {
+      position: absolute; top: 0; right: 0; bottom: 0;
+      width: min(400px, 100%);
+      background: #fff;
+      display: flex; flex-direction: column;
+      box-shadow: -8px 0 30px rgba(0,0,0,0.2);
+    }
+    .nc-head {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 18px;
+      border-bottom: 1px solid #eadccb;
+      background: #f5ede3;
+    }
+    .nc-head h3 {
+      margin: 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem; color: var(--primary);
+    }
+    .nc-close {
+      background: none; border: 0; cursor: pointer;
+      font-size: 26px; line-height: 1; color: var(--primary);
+      padding: 4px 8px;
+    }
+    .nc-ship {
+      margin: 0;
+      padding: 9px 18px;
+      background: var(--primary); color: #fff;
+      font-size: 12.5px; text-align: center;
+    }
+    .nc-ship i { margin-right: 6px; color: #f3d9b5; }
+    .nc-list { flex: 1; overflow-y: auto; padding: 8px 18px; }
+    .nc-empty { text-align: center; color: var(--text-secondary); padding: 48px 10px; font-size: 14px; line-height: 1.7; }
+    .nc-empty i { display: block; font-size: 34px; color: var(--accent); margin-bottom: 10px; }
+    .nc-item {
+      display: flex; gap: 12px; align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid #f0e5d6;
+    }
+    .nc-item img {
+      width: 64px; height: 64px; object-fit: cover;
+      border-radius: 10px; flex-shrink: 0; background: #f5ede3;
+    }
+    .nc-info { flex: 1; min-width: 0; }
+    .nc-code {
+      display: inline-block;
+      background: var(--primary); color: #fff;
+      font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em;
+      padding: 2px 9px; border-radius: 100px; margin-bottom: 4px;
+    }
+    .nc-name { font-size: 13px; color: var(--text-secondary); line-height: 1.4; }
+    .nc-qty { display: flex; align-items: center; gap: 4px; margin-top: 8px; }
+    .nc-qty button {
+      width: 28px; height: 28px; border-radius: 50%;
+      border: 1px solid var(--accent); background: #fff; color: var(--primary);
+      font-size: 16px; line-height: 1; cursor: pointer;
+    }
+    .nc-qty button:hover { background: #f5ede3; }
+    .nc-qty span { min-width: 28px; text-align: center; font-weight: 600; font-size: 14px; }
+    .nc-remove {
+      background: none; border: 0; cursor: pointer;
+      color: #b94a3a; font-size: 15px; padding: 8px; align-self: flex-start;
+    }
+    .nc-foot { padding: 14px 18px calc(16px + env(safe-area-inset-bottom)); border-top: 1px solid #eadccb; background: #fff; }
+    .nc-price { margin-left: auto; padding-left: 8px; font-weight: 700; font-size: 14px; color: var(--primary); white-space: nowrap; text-align: right; }
+    .nc-price small { display: block; font-weight: 500; font-size: 10.5px; color: var(--text-light); }
+    .nc-total { display: flex; justify-content: space-between; align-items: baseline; margin: 0 0 8px; padding-bottom: 10px; border-bottom: 1px dashed #eadccb; }
+    .nc-total span { font-size: 14px; font-weight: 600; color: var(--text-secondary); }
+    .nc-total strong { font-size: 22px; font-weight: 800; color: var(--primary); }
+    .nc-total[hidden] { display: none; }
+    .nc-note { font-size: 11.5px; color: var(--text-light); text-align: center; margin: 0 0 10px; line-height: 1.5; }
+    .nc-pay {
+      display: block; width: 100%;
+      padding: 14px; border-radius: 12px;
+      background: var(--primary); color: #fff;
+      border: 2px solid var(--primary);
+      font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer;
+    }
+    .nc-pay:hover { background: var(--primary-dark); border-color: var(--primary-dark); }
+    .nc-pay[disabled] { opacity: 0.45; cursor: not-allowed; }
+    .nc-clear {
+      display: block; margin: 10px auto 0;
+      background: none; border: 0; cursor: pointer;
+      color: var(--text-light); font-size: 12px; text-decoration: underline; font-family: inherit;
+    }
+    .nc-toast {
+      position: fixed; left: 50%; bottom: calc(100px + env(safe-area-inset-bottom));
+      transform: translate(-50%, 20px);
+      background: #2c1a0e; color: #fff;
+      padding: 10px 18px; border-radius: 100px;
+      font-size: 13px; z-index: 10001;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.25s, transform 0.25s;
+      max-width: 90vw; text-align: center;
+    }
+    .nc-toast.nc-show { opacity: 1; transform: translate(-50%, 0); }
+    .set-btn.nc-added { background: #3f7d4e !important; border-color: #3f7d4e !important; color: #fff !important; }
+    /* Two buttons per card: Add to Cart (outline) + Checkout (filled) */
+    .set-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .set-actions .set-btn { padding: 12px 6px !important; font-size: 13.5px; white-space: nowrap; }
+    .set-actions .set-btn i { margin-right: 4px; }
+    .set-btn-add { background: #fff; color: var(--primary); }
+    .set-btn-add:hover { background: #f5ede3; color: var(--primary); border-color: var(--primary); }
+    @media (max-width: 1100px) {
+      .set-actions { grid-template-columns: 1fr; gap: 8px; }
+    }
+    @media (min-width: 769px) {
+      .nc-fab { bottom: 156px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="announcement-bar">
+    <p>🏥 Official NISRAA Website &nbsp;·&nbsp; Formulated by Doctor, Pharmacist &amp; Chemist &nbsp;·&nbsp; Free Shipping &amp; Tonic 50ml (Purchase Above RM100)</p>
+    <button onclick="this.parentElement.style.display='none'" aria-label="Close" style="background:none;border:none;color:inherit;cursor:pointer;font-size:20px;min-width:44px;min-height:44px;padding:0 8px;opacity:0.7;">&times;</button>
+  </div>
+
+  <header class="header scrolled" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="images/logo-nisraa-new.png" alt="NISRAA — Advanced Hair Treatment" class="logo-img on-light" />
+      </a>
+      <nav class="nav-desktop">
+        
+        <a href="about.html" class="nav-link">About NISRAA</a>
+        
+        <a href="shop.html" class="nav-link active">Shop</a>
+        <a href="reviews.html" class="nav-link">Testimonials</a>
+        
+        
+        <a href="affiliate.html" class="nav-link">Jom Jadi Affiliate</a>
+        <a href="belinisraa.html" class="nav-link">Beli NISRAA</a>
+      </nav>
+      <div class="header-actions">
+        
+        <a href="shop.html" class="btn btn-primary btn-sm"><i class="fas fa-lock"></i> Shop Now</a>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="nav-mobile" id="mobileNav">
+      
+      <a href="about.html" class="nav-link">About NISRAA</a>
+      
+      <a href="shop.html" class="nav-link">Shop</a>
+      <a href="reviews.html" class="nav-link">Testimonials</a>
+      
+      
+      <a href="affiliate.html" class="nav-link">Jom Jadi Affiliate</a>
+      <a href="belinisraa.html" class="nav-link">Beli NISRAA</a>
+      
+    </nav>
+  </header>
+
+  <!-- ============================================================ -->
+  <!-- FOMO BAR -->
+  <!-- ============================================================ -->
+  <div class="fomo-bar" id="fomo-bar">
+    <span class="fomo-pulse"></span>
+    <span class="fomo-text"><i class="fas fa-fire"></i> Only <strong id="fomo-slots">9</strong> promo slots left today — <strong>SHOP NOW!</strong></span>
+    <a href="#sets" class="fomo-cta">Grab Yours <i class="fas fa-arrow-right"></i></a>
+  </div>
+
+  <!-- ── JULY PROMO MEGA BANNER ── -->
+  <div class="july-promo-banner" id="july-promo-banner">
+    <div class="july-promo-inner">
+
+      <!-- MAIN HEADLINE -->
+      <div class="july-promo-headline">
+        <span class="gold-word">UNBEATABLE</span> PROMO PRICES —<br>LIMITED STOCK ONLY!
+      </div>
+
+      <!-- SUB LINE -->
+      <div class="july-promo-sub">
+        Exclusive prices available on this website only · While stocks last
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════
+       30 NISRAA SETS
+       (card ids full-treatment-set / trial-set-card / tonic-shampoo-set / tonic
+        are kept so links from other pages still land on a set)
+  ═══════════════════════════════════════════════ -->
+  <section class="sets-section" id="sets">
+    <div class="container">
+      <div class="free-ship-banner" role="note">
+        <i class="fas fa-truck-fast" aria-hidden="true"></i>
+        <div>
+          <strong>FREE SHIPPING for purchases above RM100 (West Malaysia) and RM150 (Sabah &amp; Sarawak)</strong>
+        </div>
+      </div>
+
+      <div class="set-grid">
+
+        <article class="set-card" id="trial-set-card" data-set="T1">
+          <div class="set-img"><img src="images/shop/set-01.png" alt="T1 Trial Set — Shampoo 80ml, Conditioner 80ml, Tonic 40ml" loading="lazy" decoding="async" /></div>
+          <div class="set-body">
+            <span class="set-code">T1</span>
+            <h3 class="set-name">Trial Set</h3>
+            <p class="set-items">Shampoo 80ml + Conditioner 80ml + Tonic 40ml</p>
+            <div class="set-prices">
+              <div><span class="lbl">Original Price</span><span class="set-orig">RM99.00</span></div>
+              <div class="set-promo"><span class="lbl">Promo Price</span><strong>RM49.90</strong></div>
+            </div>
+            <div class="set-actions">
+      <button class="set-btn set-btn-add" type="button" data-add-to-cart><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      <button class="set-btn set-btn-buy" type="button" data-checkout><i class="fas fa-lock"></i> Checkout</button>
+    </div>
+          </div>
+        </article>
+
+        <article class="set-card" data-set="T2">
+          <div class="set-img"><img src="images/shop/set-02.png" alt="T2 Trial Set + Hair Oil — Shampoo 80ml, Conditioner 80ml, Tonic 40ml, Hair Oil 40ml" loading="lazy" decoding="async" /></div>
+          <div class="set-body">
+            <span class="set-code">T2</span>
+            <h3 class="set-name">Trial Set + Hair Oil</h3>
+            <p class="set-items">Shampoo 80ml + Conditioner 80ml + Tonic 40ml + Hair Oil 40ml</p>
+            <div class="set-prices">
+              <div><span class="lbl">Original Price</span><span class="set-orig">RM119.80</span></div>
+              <div class="set-promo"><span class="lbl">Promo Price</span><strong>RM59.90</strong></div>
+            </div>
+            <div class="set-actions">
+      <button class="set-btn set-btn-add" type="button" data-add-to-cart><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      <button class="set-btn set-btn-buy" type="button" data-checkout><i class="fas fa-lock"></i> Checkout</button>
+    </div>
+          </div>
+        </article>
+
+        <article class="set-card" id="full-treatment-set" data-set="S1">
+          <div class="set-img"><img src="images/shop/set-03.png" alt="S1 Shampoo + Conditioner + Tonic 70ml — Shampoo 250ml, Conditioner 250ml, Tonic 70ml" loading="lazy" decoding="async" /></div>
+          <div class="set-body">
+            <span class="set-code">S1</span>
+            <h3 class="set-name">Shampoo + Conditioner + Tonic 70ml</h3>
+            <p class="set-items">Shampoo 250ml + Conditioner 250ml + Tonic 70ml</p>
+            <div class="set-prices">
+              <div><span class="lbl">Original Price</span><span class="set-orig">RM211.80</span></div>
+              <div class="set-promo"><span class="lbl">Promo Price</span><strong>RM105.90</strong></div>
+            </div>
+            <div class="set-actions">
+      <button class="set-btn set-btn-add" type="button" data-add-to-cart><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      <button class="set-btn set-btn-buy" type="button" data-checkout><i class="fas fa-lock"></i> Checkout</button>
+    </div>
+          </div>
+        </article>
+
+        <article class="set-card" data-set="S2">
+          <div class="set-img"><img src="images/shop/set-04.png" alt="S2 Shampoo + Conditioner + Tonic 150ml — Shampoo 250ml, Conditioner 250ml, Tonic 150ml" loading="lazy" decoding="async" /></div>
+          <div class="set-body">
+            <span class="set-code">S2</span>
+            <h3 class="set-name">Shampoo + Conditioner + Tonic 150ml</h3>
+            <p class="set-items">Shampoo 250ml + Conditioner 250ml + Tonic 150ml</p>
+            <div class="set-prices">
+              <div><span class="lbl">Original Price</span><span class="set-orig">RM259.80</span></div>
+              <div class="set-promo"><span class="lbl">Promo Price</span><strong>RM129.90</strong></div>
+            </div>
+            <div class="set-actions">
+      <button class="set-btn set-btn-add" type="button" data-add-to-cart><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      <button class="set-btn set-btn-buy" type="button" data-checkout><i class="fas fa-lock"></i> Checkout</button>
+    </div>
+          </div>
+        </article>
+
+        <article class="set-card" data-set="S3">
+          <div class="set-img"><img src="images/shop/set-05.png" alt="S3 Shampoo + Conditioner + Tonic 70ml + Hair Oil — Shampoo 250ml, Conditioner 250ml, Tonic 70ml, Hair Oil 100ml" loading="lazy" decoding="async" /></div>
+          <div class="set-body">
+            <span class="set-code">S3</span>
+            <h3 class="set-name">Shampoo + Conditioner + Tonic 70ml + Hair Oil</h3>
+            <p class="set-items">Shampoo 250ml + Conditioner 250ml + Tonic 70ml + Hair Oil 100ml</p>
+            <div class="set-prices">
+              <div><span class="lbl">Original Price</span><span class="set-orig">RM249.80</span></div>
+              <div class="set-promo"><span class="lbl">Promo Price</span><strong>RM124.90</strong></div>
+            </div>
+            <div class="set-actions">
+      <button class="set-btn set-btn-add" type="button" data-add-to-cart><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      <button class="set-btn set-btn-buy" type="button" data-checkout><i class="fas fa-lock"></i> Checkout</button>
+    </div>
+          </div>
+        </article>
+
+        <article class="set-card" data-set="S4">
+          <div class="set-img"><img src="images/shop/set-06.png" alt="S4 Shampoo + Conditioner + Tonic 150ml + Hair Oil — Shampoo 250ml, Conditioner 250ml, Tonic 150ml, Hair Oil 100ml" loading="lazy" decoding="async" /></div>
+          <div class="set-body">
+            <span class="set-code">S4</span>
+            <h3 class="set-name">Shampoo + Conditioner + Tonic 150ml + Hair Oil</h3>
+            <p class="set-items">Shampoo 250ml + Conditioner 250ml + Tonic 150ml + Hair Oil 100ml</p>
+            <div class="set-prices">
+              <div><span class="lbl">Original Price</span><span class="set-orig">RM305.80</span></div>
+              <div class="set-promo"><span class="lbl">Promo Price</span><strong>RM152.90</strong></div>
+            </div>
+            <div class="set-actions">
+      <button class="set-btn set-btn-add" type="button" data-add-to-cart><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      <button class="set-btn set-btn-buy" type="button" data-checkout><i class="fas fa-lock"></i> Checkout</button>
+    </div>
+          </div>
+        </article>
+
+        <article class="set-card" data-set="S5">
+          <div class="set-img"><img src="images/shop/set-07.png" alt="S5 Shampoo + Tonic 150ml + Hair Oil — Shampoo 250ml, Tonic 150ml, Hair Oil 100ml" loading="lazy" decoding="async" /></div>
+          <div class="set-body">
+            <span class="set-code">S5</span>
+            <h3 class="set-name">Shampoo + Tonic 150ml + Hair Oil</h3>
+            <p class="set-items">Shampoo 250ml + Tonic 150ml + Hair Oil 100ml</p>
+            <div class="set-prices">
+              <div><span class="lbl">Original Price</span><span class="set-orig">RM267.00</span></div>
+              <div class="set-promo"><span class="lbl">Promo Price</span><strong>RM133.90</strong></div>
+            </div>
+            <div class="set-actions">
+      <button class="set-btn set-btn-add" type="button" data-add-to-cart><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      <button class="set-btn set-btn-buy" type="button" data-checkout><i class="fas fa-lock"></i> Checkout</button>
+    </div>
+          </div>
+        </article>
+
+        <article class="set-card" id="tonic-shampoo-set" data-set="M1">
+          <div class="set-img"><img src="images/shop/set-08.png" alt="M1 Shampoo + Tonic 150ml — Shampoo 250ml, Tonic 150ml" loading="lazy" decoding="async" /></div>
+          <div class="set-body">
+            <span class="set-code">M1</span>
+            <h3 class="set-name">Shampoo + Tonic 150ml</h3>
+            <p class="set-items">Shampoo 250ml + Tonic 150ml</p>
+            <div class="set-prices">
+              <div><span class="lbl">Original Price</span><span class="set-orig">RM219.00</span></div>
+              <div class="set-promo"><span class="lbl">Promo Price</span><strong>RM99.80</strong></div>
+            </div>
+            <div class="set-actions">
+      <button class="set-btn set-btn-add" type="button" data-add-to-cart><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      <button class="set-btn set-btn-buy" type="button" data-checkout><i class="fas fa-lock"></i> Checkout</button>
+    </div>
+          </div>
+        </article>
+
+        <article class="set-card" data-set="M2">
+          <div class="set-img"><img src="images/shop/set-09.png" alt="M2 Intensive Booster Tonic 50ml" loading="lazy" decoding="async" /></div>
+          <div class="set-body">
+            <span class="set-code">M2</span>
+            <h3 class="set-name">Intensive Booster Tonic</h3>
+            <p class="set-items">Intensive Booster Tonic 50ml</p>
+            <div class="set-prices">
+              <div><span class="lbl">Original Price</span><span class="set-orig">RM219.00</span></div>
+              <div class="set-promo"><span class="lbl">Promo Price</span><strong>RM99.80</strong></div>
+            </div>
+            <div class="set-actions">
+      <button class="set-btn set-btn-add" type="button" data-add-to-cart><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      <button class="set-btn set-btn-buy" type="button" data-checkout><i class="fas fa-lock"></i> Checkout</button>
+    </div>
+          </div>
+        </article>
+
+        <article class="set-card" data-set="M3">
+          <div class="set-img"><img src="images/shop/set-10.png" alt="M3 Intensive Booster Tonic 50ml, Strengthening Tonic 150ml, Shampoo 250ml" loading="lazy" decoding="async" /></div>
+          <div class="set-body">
+            <span class="set-code">M3</span>
+            <h3 class="set-name">Intensive Booster + Strengthening Tonic + Shampoo</h3>
+            <p class="set-items">Intensive Booster Tonic 50ml + Strengthening Tonic 150ml + Shampoo 250ml</p>
+            <div class="set-prices">
+              <div><span class="lbl">Original Price</span><span class="set-orig">RM369.00</span></div>
+              <div class="set-promo"><span class="lbl">Promo Price</span><strong>RM174.90</strong></div>
+            </div>
+            <div class="set-actions">
+      <button class="set-btn set-btn-add" type="button" data-add-to-cart><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      <button class="set-btn set-btn-buy" type="button" data-checkout><i class="fas fa-lock"></i> Checkout</button>
+    </div>
+          </div>
+        </article>
+
+        <article class="set-card" data-set="M4">
+          <div class="set-img"><img src="images/shop/set-11.png" alt="M4 Intensive Booster Tonic 50ml + Shampoo 250ml" loading="lazy" decoding="async" /></div>
+          <div class="set-body">
+            <span class="set-code">M4</span>
+            <h3 class="set-name">Intensive Booster Tonic + Shampoo</h3>
+            <p class="set-items">Intensive Booster Tonic 50ml + Shampoo 250ml</p>
+            <div class="set-prices">
+              <div><span class="lbl">Original Price</span><span class="set-orig">RM292.00</span></div>
+              <div class="set-promo"><span class="lbl">Promo Price</span><strong>RM145.90</strong></div>
+            </div>
+            <div class="set-actions">
+      <button class="set-btn set-btn-add" type="button" data-add-to-cart><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      <button class="set-btn set-btn-buy" type="button" data-checkout><i class="fas fa-lock"></i> Checkout</button>
+    </div>
+          </div>
+        </article>
+
+        <article class="set-card" data-set="M5">
+          <div class="set-img"><img src="images/shop/set-29.png" alt="M5 Shampoo 250ml + Conditioner 250ml + Strengthening Tonic 150ml + Intensive Booster Tonic 50ml" loading="lazy" decoding="async" /></div>
+          <div class="set-body">
+            <span class="set-code">M5</span>
+            <h3 class="set-name">Shampoo + Conditioner + Tonic 150ml + Booster</h3>
+            <p class="set-items">Shampoo 250ml + Conditioner 250ml + Strengthening Tonic 150ml + Intensive Booster Tonic 50ml</p>
+            <div class="set-prices">
+              <div><span class="lbl">Original Price</span><span class="set-orig">RM399.00</span></div>
+              <div class="set-promo"><span class="lbl">Promo Price</span><strong>RM215.90</strong></div>
+            </div>
+            <div class="set-actions">
+      <button class="set-btn set-btn-add" type="button" data-add-to-cart><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      <button class="set-btn set-btn-buy" type="button" data-checkout><i class="fas fa-lock"></i> Checkout</button>
+    </div>
+          </div>
+        </article>
+
+        <article class="set-card" data-set="L1">
+          <div class="set-img"><img src="images/shop/set-12.png" alt="L1 Shampoo 250ml" loading="lazy" decoding="async" /></div>
+          <div class="set-body">
+            <span class="set-code">L1</span>
+            <h3 class="set-name">Shampoo 250ml</h3>
+            <p class="set-items">Shampoo 250ml</p>
+            <div class="set-prices">
+              <div><span class="lbl">Original Price</span><span class="set-orig">RM99.90</span></div>
+              <div class="set-promo"><span class="lbl">Promo Price</span><strong>RM49.90</strong></div>
+            </div>
+            <div class="set-actions">
+      <button class="set-btn set-btn-add" type="button" data-add-to-cart><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      <button class="set-btn set-btn-buy" type="button" data-checkout><i class="fas fa-lock"></i> Checkout</button>
+    </div>
+          </div>
+        </article>
+
+        <article class="set-card" data-set="L2">
+          <div class="set-img"><img src="images/shop/set-13.png" alt="L2 Conditioner 250ml" loading="lazy" decoding="async" /></div>
+          <div class="set-body">
+            <span class="set-code">L2</span>
+            <h3 class="set-name">Conditioner 250ml</h3>
+            <p class="set-items">Conditioner 250ml</p>
+            <div class="set-prices">
+              <div><span class="lbl">Original Price</span><span class="set-orig">RM99.90</span></div>
+              <div class="set-promo"><span class="lbl">Promo Price</span><strong>RM49.90</strong></div>
+            </div>
+            <div class="set-actions">
+      <button class="set-btn set-btn-add" type="button" data-add-to-cart><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      <button class="set-btn set-btn-buy" type="button" data-checkout><i class="fas fa-lock"></i> Checkout</button>
+    </div>
+          </div>
+        </article>
+
+        <article class="set-card" data-set="L3">
+          <div class="set-img"><img src="images/shop/set-14.png" alt="L3 Tonic 70ml" loading="lazy" decoding="async" /></div>
+          <div class="set-body">
+            <span class="set-code">L3</span>
+            <h3 class="set-name">Tonic 70ml</h3>
+            <p class="set-items">Tonic 70ml</p>
+            <div class="set-prices">
+              <div><span class="lbl">Original Price</span><span class="set-orig">RM69.00</span></div>
+              <div class="set-promo"><span class="lbl">Promo Price</span><strong>RM39.00</strong></div>
+            </div>
+            <div class="set-actions">
+      <button class="set-btn set-btn-add" type="button" data-add-to-cart><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      <button class="set-btn set-btn-buy" type="button" data-checkout><i class="fas fa-lock"></i> Checkout</button>
+    </div>
+          </div>
+        </article>
+
+        <article class="set-card" id="tonic" data-set="L4">
+          <div class="set-img"><img src="images/shop/set-15.png" alt="L4 Tonic 150ml" loading="lazy" decoding="async" /></div>
+          <div class="set-body">
+            <span class="set-code">L4</span>
+            <h3 class="set-name">Tonic 150ml</h3>
+            <p class="set-items">Tonic 150ml</p>
+            <div class="set-prices">
+              <div><span class="lbl">Original Price</span><span class="set-orig">RM129.00</span></div>
+              <div class="set-promo"><span class="lbl">Promo Price</span><strong>RM65.00</strong></div>
+            </div>
+            <div class="set-actions">
+      <button class="set-btn set-btn-add" type="button" data-add-to-cart><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      <button class="set-btn set-btn-buy" type="button" data-checkout><i class="fas fa-lock"></i> Checkout</button>
+    </div>
+          </div>
+        </article>
+
+        <article class="set-card" data-set="L5">
+          <div class="set-img"><img src="images/shop/set-16.png" alt="L5 Hair Oil 100ml" loading="lazy" decoding="async" /></div>
+          <div class="set-body">
+            <span class="set-code">L5</span>
+            <h3 class="set-name">Hair Oil 100ml</h3>
+            <p class="set-items">Hair Oil 100ml</p>
+            <div class="set-prices">
+              <div><span class="lbl">Original Price</span><span class="set-orig">RM52.90</span></div>
+              <div class="set-promo"><span class="lbl">Promo Price</span><strong>RM26.00</strong></div>
+            </div>
+            <div class="set-actions">
+      <button class="set-btn set-btn-add" type="button" data-add-to-cart><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      <button class="set-btn set-btn-buy" type="button" data-checkout><i class="fas fa-lock"></i> Checkout</button>
+    </div>
+          </div>
+        </article>
+
+        <article class="set-card" data-set="L6">
+          <div class="set-img"><img src="images/shop/set-17.png" alt="L6 Shampoo 250ml + Conditioner 250ml" loading="lazy" decoding="async" /></div>
+          <div class="set-body">
+            <span class="set-code">L6</span>
+            <h3 class="set-name">Shampoo + Conditioner</h3>
+            <p class="set-items">Shampoo 250ml + Conditioner 250ml</p>
+            <div class="set-prices">
+              <div><span class="lbl">Original Price</span><span class="set-orig">RM179.00</span></div>
+              <div class="set-promo"><span class="lbl">Promo Price</span><strong>RM88.00</strong></div>
+            </div>
+            <div class="set-actions">
+      <button class="set-btn set-btn-add" type="button" data-add-to-cart><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      <button class="set-btn set-btn-buy" type="button" data-checkout><i class="fas fa-lock"></i> Checkout</button>
+    </div>
+          </div>
+        </article>
+
+        <article class="set-card" data-set="B1">
+          <div class="set-img"><img src="images/shop/set-18.png" alt="B1 Shampoo 500ml" loading="lazy" decoding="async" /></div>
+          <div class="set-body">
+            <span class="set-code">B1</span>
+            <h3 class="set-name">Shampoo 500ml</h3>
+            <p class="set-items">Shampoo 500ml</p>
+            <div class="set-prices">
+              <div><span class="lbl">Original Price</span><span class="set-orig">RM159.00</span></div>
+              <div class="set-promo"><span class="lbl">Promo Price</span><strong>RM79.00</strong></div>
+            </div>
+            <div class="set-actions">
+      <button class="set-btn set-btn-add" type="button" data-add-to-cart><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      <button class="set-btn set-btn-buy" type="button" data-checkout><i class="fas fa-lock"></i> Checkout</button>
+    </div>
+          </div>
+        </article>
+
+        <article class="set-card" data-set="B2">
+          <div class="set-img"><img src="images/shop/set-19.png" alt="B2 Conditioner 500ml" loading="lazy" decoding="async" /></div>
+          <div class="set-body">
+            <span class="set-code">B2</span>
+            <h3 class="set-name">Conditioner 500ml</h3>
+            <p class="set-items">Conditioner 500ml</p>
+            <div class="set-prices">
+              <div><span class="lbl">Original Price</span><span class="set-orig">RM159.00</span></div>
+              <div class="set-promo"><span class="lbl">Promo Price</span><strong>RM79.00</strong></div>
+            </div>
+            <div class="set-actions">
+      <button class="set-btn set-btn-add" type="button" data-add-to-cart><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      <button class="set-btn set-btn-buy" type="button" data-checkout><i class="fas fa-lock"></i> Checkout</button>
+    </div>
+          </div>
+        </article>
+
+        <article class="set-card" data-set="B3">
+          <div class="set-img"><img src="images/shop/set-20.png" alt="B3 Tonic 300ml" loading="lazy" decoding="async" /></div>
+          <div class="set-body">
+            <span class="set-code">B3</span>
+            <h3 class="set-name">Tonic 300ml</h3>
+            <p class="set-items">Tonic 300ml</p>
+            <div class="set-prices">
+              <div><span class="lbl">Original Price</span><span class="set-orig">RM179.00</span></div>
+              <div class="set-promo"><span class="lbl">Promo Price</span><strong>RM89.00</strong></div>
+            </div>
+            <div class="set-actions">
+      <button class="set-btn set-btn-add" type="button" data-add-to-cart><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      <button class="set-btn set-btn-buy" type="button" data-checkout><i class="fas fa-lock"></i> Checkout</button>
+    </div>
+          </div>
+        </article>
+
+        <article class="set-card" data-set="B4">
+          <div class="set-img"><img src="images/shop/set-21.png" alt="B4 Shampoo 500ml + Conditioner 500ml" loading="lazy" decoding="async" /></div>
+          <div class="set-body">
+            <span class="set-code">B4</span>
+            <h3 class="set-name">Shampoo 500ml + Conditioner 500ml</h3>
+            <p class="set-items">Shampoo 500ml + Conditioner 500ml</p>
+            <div class="set-prices">
+              <div><span class="lbl">Original Price</span><span class="set-orig">RM299.90</span></div>
+              <div class="set-promo"><span class="lbl">Promo Price</span><strong>RM149.00</strong></div>
+            </div>
+            <div class="set-actions">
+      <button class="set-btn set-btn-add" type="button" data-add-to-cart><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      <button class="set-btn set-btn-buy" type="button" data-checkout><i class="fas fa-lock"></i> Checkout</button>
+    </div>
+          </div>
+        </article>
+
+        <article class="set-card" data-set="B5">
+          <div class="set-img"><img src="images/shop/set-22.png" alt="B5 Tonic 150ml + Shampoo 500ml" loading="lazy" decoding="async" /></div>
+          <div class="set-body">
+            <span class="set-code">B5</span>
+            <h3 class="set-name">Tonic 150ml + Shampoo 500ml</h3>
+            <p class="set-items">Tonic 150ml + Shampoo 500ml</p>
+            <div class="set-prices">
+              <div><span class="lbl">Original Price</span><span class="set-orig">RM399.00</span></div>
+              <div class="set-promo"><span class="lbl">Promo Price</span><strong>RM155.00</strong></div>
+            </div>
+            <div class="set-actions">
+      <button class="set-btn set-btn-add" type="button" data-add-to-cart><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      <button class="set-btn set-btn-buy" type="button" data-checkout><i class="fas fa-lock"></i> Checkout</button>
+    </div>
+          </div>
+        </article>
+
+        <article class="set-card" data-set="B6">
+          <div class="set-img"><img src="images/shop/set-23.png" alt="B6 Tonic 300ml + Shampoo 500ml + Conditioner 500ml" loading="lazy" decoding="async" /></div>
+          <div class="set-body">
+            <span class="set-code">B6</span>
+            <h3 class="set-name">Tonic 300ml + Shampoo 500ml + Conditioner 500ml</h3>
+            <p class="set-items">Tonic 300ml + Shampoo 500ml + Conditioner 500ml</p>
+            <div class="set-prices">
+              <div><span class="lbl">Original Price</span><span class="set-orig">RM439.00</span></div>
+              <div class="set-promo"><span class="lbl">Promo Price</span><strong>RM219.00</strong></div>
+            </div>
+            <div class="set-actions">
+      <button class="set-btn set-btn-add" type="button" data-add-to-cart><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      <button class="set-btn set-btn-buy" type="button" data-checkout><i class="fas fa-lock"></i> Checkout</button>
+    </div>
+          </div>
+        </article>
+
+        <article class="set-card" data-set="A1">
+          <div class="set-img"><img src="images/shop/set-24.png" alt="A1 Antifungal (Ketoconazole 2%) + NISRAA Shampoo 80ml, Conditioner 80ml, Tonic 40ml" loading="lazy" decoding="async" /></div>
+          <div class="set-body">
+            <span class="set-code">A1</span>
+            <h3 class="set-name">Antifungal + Trial Set</h3>
+            <p class="set-items">Antifungal (Ketoconazole 2%) + NISRAA Shampoo 80ml + Conditioner 80ml + Tonic 40ml</p>
+            <div class="set-prices">
+              <div><span class="lbl">Original Price</span><span class="set-orig">RM165.90</span></div>
+              <div class="set-promo"><span class="lbl">Promo Price</span><strong>RM79.90</strong></div>
+            </div>
+            <div class="set-actions">
+      <button class="set-btn set-btn-add" type="button" data-add-to-cart><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      <button class="set-btn set-btn-buy" type="button" data-checkout><i class="fas fa-lock"></i> Checkout</button>
+    </div>
+          </div>
+        </article>
+
+        <article class="set-card" data-set="A2">
+          <div class="set-img"><img src="images/shop/set-25.png" alt="A2 Ketazon Shampoo (Ketoconazole 2%) + Shampoo 250ml, Conditioner 250ml, Strengthening Tonic 80ml" loading="lazy" decoding="async" /></div>
+          <div class="set-body">
+            <span class="set-code">A2</span>
+            <h3 class="set-name">Ketazon Shampoo + Shampoo + Conditioner + Tonic 80ml</h3>
+            <p class="set-items">Ketazon Shampoo (Ketoconazole 2%) + Shampoo 250ml + Conditioner 250ml + Strengthening Tonic 80ml</p>
+            <div class="set-prices">
+              <div><span class="lbl">Original Price</span><span class="set-orig">RM272.90</span></div>
+              <div class="set-promo"><span class="lbl">Promo Price</span><strong>RM135.90</strong></div>
+            </div>
+            <div class="set-actions">
+      <button class="set-btn set-btn-add" type="button" data-add-to-cart><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      <button class="set-btn set-btn-buy" type="button" data-checkout><i class="fas fa-lock"></i> Checkout</button>
+    </div>
+          </div>
+        </article>
+
+        <article class="set-card" data-set="A3">
+          <div class="set-img"><img src="images/shop/set-26.png" alt="A3 Antifungal (Ketoconazole 2%) + Treatment Shampoo 250ml + Strengthening Tonic 150ml" loading="lazy" decoding="async" /></div>
+          <div class="set-body">
+            <span class="set-code">A3</span>
+            <h3 class="set-name">Antifungal + Treatment Shampoo + Tonic 150ml</h3>
+            <p class="set-items">Antifungal (Ketoconazole 2%) + Treatment Shampoo 250ml + Strengthening Tonic 150ml</p>
+            <div class="set-prices">
+              <div><span class="lbl">Original Price</span><span class="set-orig">RM252.90</span></div>
+              <div class="set-promo"><span class="lbl">Promo Price</span><strong>RM125.90</strong></div>
+            </div>
+            <div class="set-actions">
+      <button class="set-btn set-btn-add" type="button" data-add-to-cart><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      <button class="set-btn set-btn-buy" type="button" data-checkout><i class="fas fa-lock"></i> Checkout</button>
+    </div>
+          </div>
+        </article>
+
+        <article class="set-card" data-set="A4">
+          <div class="set-img"><img src="images/shop/set-27.png" alt="A4 Antifungal + Shampoo 250ml + Conditioner 250ml + Strengthening Tonic 150ml" loading="lazy" decoding="async" /></div>
+          <div class="set-body">
+            <span class="set-code">A4</span>
+            <h3 class="set-name">Antifungal + Shampoo + Conditioner + Tonic 150ml</h3>
+            <p class="set-items">Antifungal + Shampoo 250ml + Conditioner 250ml + Strengthening Tonic 150ml</p>
+            <div class="set-prices">
+              <div><span class="lbl">Original Price</span><span class="set-orig">RM359.00</span></div>
+              <div class="set-promo"><span class="lbl">Promo Price</span><strong>RM179.90</strong></div>
+            </div>
+            <div class="set-actions">
+      <button class="set-btn set-btn-add" type="button" data-add-to-cart><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      <button class="set-btn set-btn-buy" type="button" data-checkout><i class="fas fa-lock"></i> Checkout</button>
+    </div>
+          </div>
+        </article>
+
+        <article class="set-card" data-set="A5">
+          <div class="set-img"><img src="images/shop/set-28.png" alt="A5 Antifungal + Shampoo 250ml + Conditioner 250ml + Strengthening Tonic 150ml + Hair Oil 100ml" loading="lazy" decoding="async" /></div>
+          <div class="set-body">
+            <span class="set-code">A5</span>
+            <h3 class="set-name">Antifungal + Shampoo + Conditioner + Tonic 150ml + Hair Oil</h3>
+            <p class="set-items">Antifungal + Shampoo 250ml + Conditioner 250ml + Strengthening Tonic 150ml + Hair Oil 100ml</p>
+            <div class="set-prices">
+              <div><span class="lbl">Original Price</span><span class="set-orig">RM397.00</span></div>
+              <div class="set-promo"><span class="lbl">Promo Price</span><strong>RM198.90</strong></div>
+            </div>
+            <div class="set-actions">
+      <button class="set-btn set-btn-add" type="button" data-add-to-cart><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      <button class="set-btn set-btn-buy" type="button" data-checkout><i class="fas fa-lock"></i> Checkout</button>
+    </div>
+          </div>
+        </article>
+
+        <article class="set-card" data-set="SM1">
+          <div class="set-img"><img src="images/shop/set-30.png" alt="SM1 Sandalwood Scalp Massager (two shapes available)" loading="lazy" decoding="async" /></div>
+          <div class="set-body">
+            <span class="set-code">SM1</span>
+            <h3 class="set-name">Sandalwood Scalp Massager</h3>
+            <p class="set-items">Sandalwood Scalp Massager</p>
+            <div class="set-prices">
+              <div><span class="lbl">Original Price</span><span class="set-orig">RM13.90</span></div>
+              <div class="set-promo"><span class="lbl">Promo Price</span><strong>RM7.90</strong></div>
+            </div>
+            <div class="set-actions">
+      <button class="set-btn set-btn-add" type="button" data-add-to-cart><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      <button class="set-btn set-btn-buy" type="button" data-checkout><i class="fas fa-lock"></i> Checkout</button>
+    </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       ALL REVIEWS — COMBINED IN ONE SECTION
+  ═══════════════════════════════════════════════ -->
+  <section class="reviews-section" id="reviews">
+    <div class="container">
+      <div class="reviews-head">
+        <h2><i class="fas fa-star" style="color:#f5a623;font-size:0.7em;"></i> Customer Reviews</h2>
+        <p class="rv-note">*e-commerce reviews</p>
+        <div class="reviews-links">
+          <a href="https://my.shp.ee/AhV6HKEr" target="_blank" rel="noopener" class="review-toggle-btn" style="text-decoration:none;"><i class="fas fa-star" style="font-size:10px;"></i> SHOPEE REVIEW</a>
+          <a href="https://vt.tiktok.com/ZS9NCNffjgLfD-240Co/" target="_blank" rel="noopener" class="review-toggle-btn" style="text-decoration:none;background:#010101;color:#fff;border-color:#010101;"><i class="fab fa-tiktok" style="font-size:10px;"></i> TIKTOK REVIEW</a>
+        </div>
+      </div>
+
+      <div class="rv-grid" id="rv-grid">
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">N</div><div class="review-meta"><span class="review-name">n**a</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Repeat customer. Baru guna 2 bulan, M shape dah hilang, dah mula nampak rata kt depan dahi. Berkesan sangat, tak pernah dapat result mcm ni 😭 Akan selalu support!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">N</div><div class="review-meta"><span class="review-name">N**a **</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Sumpah best giler guna NISRAA ni. Rambut dari gugur beratus helai jadi 4-5 helai je. Pastu kelemumur yg degil selama ni pun dah hilang. Sy dah repeat purchase 3 kali 😘 Repeat sbb result dia mcm produk magic, sangat membantu yg ada masalah rambut!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">O</div><div class="review-meta"><span class="review-name">o**g</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Repeat after trial set. Omg so good!! Nampak perubahan, rambut saya luruh banyak now makin kurang. Ada tempat yg botak, nampak anak² rambut mula naik lepas pakai tonik. Very recommended!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">U</div><div class="review-meta"><span class="review-name">u**4</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Alami keguguran rambut yg kronik sbb masalah hormon. Alhamdulillah mungkin sbb konsisten guna, seawal 2 minggu yg pertama dah nampak kesan positif. Rambut gugur perlahan² berkurangan, syampu ni kuatkan akar rambut. Sangat berkesan!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">💞</div><div class="review-meta"><span class="review-name">💞**4</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Repeat purchase sbb puas hati dgn hasilnye. Dulu rambut banyak gugur, kelemumur pun berkeping-keping. Alhamdulillah, gugur n kelemumur dah banyak kurang. Lurve sangat NISRAA ni! 😘</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">D</div><div class="review-meta"><span class="review-name">D**N</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Product benefit: rambut nampak sihat, kurang gugur and baby hair pun mula tumbuh. By the way conditioner di tiptop walaupun kena kulit kepala, kepala tak kering. Tq seller!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">~</div><div class="review-meta"><span class="review-name">~**~</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Product yg sgt bagus dan trusted! Seminggu pakai pun dah boleh nampak perubahan, kurang rambut gugur, rambut jadi lembut sangat. Alhamdulillah dipertemukan product sebaik ni! 💗</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">$</div><div class="review-meta"><span class="review-name">$**!</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Alhamdulillah.. Repeat kali ke2.. Rambut kurang kelemumur, lembut, rambut kurang gugur.. Sy harap kualiti kena kekalkan.. Love it ❤️</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">F</div><div class="review-meta"><span class="review-name">fadilahbintihanafi</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Honest review here.. Bagi saya set penjagaan rambut NISRAA sangat berkesan untuk mengurangkan masalah rambut gugur. Saya guna ketiga-tiga (oil, shampoo &amp; conditioner). Hasilnya, memang nampak makin kurang rambut gugur. Thank you Farmasi Al Falah hasilkan product berkualiti!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">E</div><div class="review-meta"><span class="review-name">ellyazlin</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">After bersalin mmg rambut i gugur teruk. Finally jumpa! Kepala rasa segar sangat, sejuk je and wangi. Rambut i lembut and kulit kepala berminyak pun dah kurang. Husb i pun dah kurang gugur and lebih shiny. Highly recommended! Dalam 1 minggu dah nampak kesan.</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">A</div><div class="review-meta"><span class="review-name">alsyspnn</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Honest review — rambut saya dah tak gugur langsung, dah tak berminyak and kelemumur pun hilang. Dah macam-macam produk saya cuba tapi NISRAA ni paling the best! Korang yang tengok review ni beli tau rugi gila tak beli!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">A</div><div class="review-meta"><span class="review-name">Alieya Zalieya</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Feedback jujur.. pemakaian 1 bulan, dari beratus helai gugur jadi 2-3 helai je. Anak rambut dah macam buah rambutan tumbuh! Memang nampak perbezaan yang sangat ketara. Sangat puas hati dengan produk NISRAA!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">E</div><div class="review-meta"><span class="review-name">e**i s**n</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Alhamdulillah, rekomen sgt, masalah rambut gugur lebih setahun, dah cuba pelbagai brand, produk NISRAA ni sgt sesuai dan berkesan. Tak risau rambut gugur lepas mandi, bau wangi dan rambut lembut/mudah diurus walaupun seharian!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">L</div><div class="review-meta"><span class="review-name">L**🌻**S**b</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">1st time pakai dah rasa best kat kulit kepala. Tunggu 1-2 hari, kulit kepala tak rasa gatal. Masa cuci rambut gugur tak banyak. Pakai kali ke-2 pun sama, rambut kurang gugur, rambut jadi lembut. Sangat recommended!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">P</div><div class="review-meta"><span class="review-name">P**m**i</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Fast delivery ✅. Good packaging ✅. Very detailed explanation of products ✅. All questions answered ✅. Lots of free gifts ✅. Thank you so much for all the above 👍</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">D</div><div class="review-meta"><span class="review-name">d**h</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Alhamdulillah, memang best pakai produk ni. Bau dia wangi yang lembut, ala-ala kat salon gitu padahal kat rumah. Rambut lembut dan kulit kepala dah kurang gatal ❤️</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">A</div><div class="review-meta"><span class="review-name">a**k</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Alhamdulillah 1st guna 1 set full mmg berkesan dgn masalah rambut sy kelemumur n berminyak. Ikut step diberi memang berkesan!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">A</div><div class="review-meta"><span class="review-name">a***a</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Akak dah botak teruk tau kat bahagian atas dahi tu, lega tengok rambut dah start naik. Alhamdulillah nampak perubahan dah. Berbulan-bulan hadap takde rambut, sekarang boleh lega dah! Terima kasih NISRAA!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">S</div><div class="review-meta"><span class="review-name">sitiummirah109</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Dah pakai 2 minggu. Alhamdulillah nampak ketara kurang gugurnya. Saya yang rambut gugur teruk seminggu pun dah nampak perubahan yang sangat ketara. Memang berkesan produk ni!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">A</div><div class="review-meta"><span class="review-name">abulkhusyairi</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Wife saya ada masalah keguguran rambut selepas bersalin. Selepas guna NISRAA ni Alhamdulillah rambut makin sihat, lembut dan yang paling penting wangi. Anak saya pula rambut kerinting, lepas guna makin senang nak urus. Saya bagi 10 bintang!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">H</div><div class="review-meta"><span class="review-name">hilyahhaurah</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">3 hari tak basuh pon still wangi, sesuai untuk orang yang malas nak cuci rambut HAHAHA. Rambut lembut lepas pakai, lepastu dia tak rasa kering tau lepas bilas. Conditioner tu senang gila bilas. Produk NISRAA memang best!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">W</div><div class="review-meta"><span class="review-name">wannuby</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">This NISRAA set is amazing! I've been struggling with dry scalp, hair loss and frizz for ages. After using the set for a few weeks, I've noticed a huge difference. My hair feels so much softer. My scalp doesn't itch anymore. The frizz is completely gone. Highly recommend!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">A</div><div class="review-meta"><span class="review-name">alianatasha27_</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Try weh best gila, seminggu mmg nmpk perubahan, kelemumur kurang rambut gugur pon makin berkurang. Tak menyesal try sebab memang dah banyak produk guna tapi memang tak jalan. Mak lurveeee ini product!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">A</div><div class="review-meta"><span class="review-name">a*****e</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Dah almost sebulan guna dan saya nampak perubahan sebab kelemumur dah kurang sangat, rambut dah tak kering. Hair oil pun sangat membantu untuk rawat rambut dan kulit kepala. Bau produk-produk NISRAA pun okay sangat. Memang sangat berpuas hati!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">F</div><div class="review-meta"><span class="review-name">fadly</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Sy beli untuk wife. Sebelum ni macam-macam jenis produk guna, tak jadi. Baru guna 1 bulan dah banyak berubah. Rambut gugur berkurang, rambut lebih sihat dan lembut. Memang berbaloi beli produk NISRAA ni!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">F</div><div class="review-meta"><span class="review-name">fatimahkan_</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">So far 2 minggu lebih dh guna, mmg berkesan sgt. Rambut dh makin kurang gugur and rambut jdi lembut je, wangi pn wangi. Recommend utk sesiapa yg ada masalah rambut gugur. Texture conditioner dia tak cair dan tak pekat sgt, sgt membantu untuk jenis rambut rosak. Lurve sgt!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">A</div><div class="review-meta"><span class="review-name">a*****3</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Lurveee sangat! Sejak mula guna NISRAA, banyak perubahan positif. Dulu, rambut penuh kelemumur dan kulit kepala berminyak, tapi sekarang semua tu dah hilang. Rambut pun kurang gugur! Hair oil dia pun terbaik! Anak rambut tumbuh dengan cantik. Best sangat, sangat worth it!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">M</div><div class="review-meta"><span class="review-name">melur</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Best do'oh product ni! Dulu rambut penuh kelemumur dan kulit kepala berminyak, tapi sekarang semua tu dah takde, kulit kepala pun rasa fresh and rambut pun kurang gugur. Sangat berpuas hati!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">N</div><div class="review-meta"><span class="review-name">nurulhabibah97</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Sangat terbaikkk rambut makin lembutt dan rambut saya makin kurang gugur. Loveeee! Memang berkesan produk NISRAA ni untuk semua jenis masalah rambut!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">U</div><div class="review-meta"><span class="review-name">user***</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Bagusss sgt! Saya dah guna produk ni lebih 2 bulan dan memang nampak kesan yang sangat ketara! Rambut gugur dah almost hilang, rambut dah tak kering lagi, rasa lembut je. Terima kasih kepada doktor, pharmacist dan chemist yang buat formulation ni. Alhamdulillah lurvee sgt!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">F</div><div class="review-meta"><span class="review-name">f*****r</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Products hair care memang ON TOP, very demure, very mindful, very refreshing! Thanks to doctor and pharmacist sebab launching kan this product. I think the price affordable untuk yg ada masalah rambut. Sangat berbaloi!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">K</div><div class="review-meta"><span class="review-name">KIMJAJA2324</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Sy dh try NISRAA haircare set nie.. love sgt! Sblm nie kulit kepala sy berkepping-kepping kelemumur. Bile lepas rambut je macam salji. Rambut pn kalau sikat msti segumpal gugur. Alhamdulillah sekarang semua dah berubah!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">K</div><div class="review-meta"><span class="review-name">K**t</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Dah guna seminggu dan nampak perubahan positif! Rambut makin sihat, warna rambut pun nampak lebih baik. Sangat gembira jumpa produk NISRAA ni!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">R</div><div class="review-meta"><span class="review-name">r**a</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Harituh purchase set full ni, so far gentle, boleh pakai selang sehari. Sangat recommended untuk orang yang dah lama ada masalah rambut!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">Z</div><div class="review-meta"><span class="review-name">Z**</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Very good product, nice scent, less hair fall after just 2 weeks. My hair feels soft and looks healthier. Highly recommended to everyone!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">🍁</div><div class="review-meta"><span class="review-name">🍁**🍁</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Works wonders for scalp psoriasis — 90% clear from flakes after consistent use. Sangat berkesan, tak pernah jumpa produk sebaik ni!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">N</div><div class="review-meta"><span class="review-name">n**r</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Rambut gugur kurang drastik lepas 2 minggu pakai. Memang nampak perubahan yang sangat jelas. Akan terus guna dan recommend kepada semua orang!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">A</div><div class="review-meta"><span class="review-name">a**r</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Best sangat! Dah sebulan guna, tak ada isu. Rambut lembut, bau wangi tahan lama, dan gugur dah kurang sangat. Sangat berbaloi beli set penuh ni!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">N</div><div class="review-meta"><span class="review-name">N**a**</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Repeat kali ke-3. Besttt syampu ever! Rambut makin kuat dan tak gugur banyak macam sebelum ni. Cuba dan rasai perbezaannya sendiri!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">S</div><div class="review-meta"><span class="review-name">s**i</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Rambut makin kurang gugur, anak rambut makin banyak tumbuh. Yang pasti kena buat konsisten, selang sehari memang berkesan!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">🔥</div><div class="review-meta"><span class="review-name">🔥**🔥</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Ni repeat order dan akan terus guna shampoo ni sebab memang berkesan untuk masalah psoriasis kulit kepala. Alhamdulillah!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">D</div><div class="review-meta"><span class="review-name">d**9</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Omggg finally jumpa produk yg betul-betul membantu masalah rambut gugur sy, sekali penggunaan dah nampak kesannya! Sangat recommended for those yg ada masalah rambut gugur.</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">M</div><div class="review-meta"><span class="review-name">M**i</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Hari tu lepas pregnant rambut gugur teruk. Sy cuba pakai NISRAA ni tak sangka berkesan. Rambut gugur kurang sangat. Bau pun lembut dan menyenangkan!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">I</div><div class="review-meta"><span class="review-name">I**n</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Very convenient to have the full set. Hair fall and dandruff improved within just 3 days. Highly recommended for everyone with hair issues!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">L</div><div class="review-meta"><span class="review-name">l**a</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Try sekali dah rasa beza! Wangi natural, rambut rasa ringan dan bersih lepas cuci. Lepas seminggu, rambut gugur makin kurang. Recommended sangat!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">P</div><div class="review-meta"><span class="review-name">P**Q</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Produk sgt2 bagus. Sebelum ni rambut ada gatal-gatal. Lepas pakai NISRAA alhamdulillah hilang gatal-gatal tu. Terima kasih NISRAA!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">F</div><div class="review-meta"><span class="review-name">faninaishak</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Dah try pakai, rambut jadi lembut, kelemumur kurang. Texture okay, tak banyak buih. Sangat okay dan berkesan untuk rambut dan kulit kepala!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">N</div><div class="review-meta"><span class="review-name">n**t</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Review selepas 2 minggu pemakaian. Semua produk bau sangat wangi, very pleasant. Sebelum ni rambut nampak serabai, tapi bila pakai NISRAA ni rambut lembut dan tersusun!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">A</div><div class="review-meta"><span class="review-name">A**L</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Product benefit: Produk bagus dan berkualiti, rambut lembut dan kurang gugur. Scent: Wangi. Memang sangat berbaloi beli set penuh NISRAA!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">Z</div><div class="review-meta"><span class="review-name">Z** ⭐</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Thanks for the free gifts and fast delivery! Service terbaik! After 2 times of washing, my hair feels soft and scalp is less itchy. Scent very nice. Will continue using!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">N</div><div class="review-meta"><span class="review-name">n*****k</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">My honest review — tonic, conditioner, oil semua bagus. Rambut lembut, rapi, tidak gatal, tidak gugur, bau wangi, service cepat. Terima kasih free gift! Sangat berbaloi!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">L</div><div class="review-meta"><span class="review-name">l*****a</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">NISRAA products best, packaging secure, bau wangi, rambut lembut, kurang gugur dalam 2 hari, banyak freebies. Highly recommended untuk semua orang!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">A</div><div class="review-meta"><span class="review-name">amyamri</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Delivery laju, banyak free gift, highly recommended! Sekali penggunaan dah ada perubahan, rambut lebih lembut, bau wangi. Sangat puas hati dengan NISRAA!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">C</div><div class="review-meta"><span class="review-name">chocomuffin10</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Start pakai dari bulan 8. Tolong lah beli sebab dah kurang gugur, tak tipu tengok drain tak penuh! Even tak de SLS/SLES best sangat. Done racun korang!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">A</div><div class="review-meta"><span class="review-name">asyiqinsyamimi19</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Overall, NISRAA ni memang bagi good effect for me. Sebab baru seminggu pakai rambut gugur kurang dah. Bile sikat ada dalam 5-6 helai je. Bau NISRAA tu paling bestt! InshaAllah nanti nak grab lagi!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">A</div><div class="review-meta"><span class="review-name">A**a</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Nak bagitau sgt terbaik product nie baru 2 hari pkai.. hari pertama dah nmpak kesan dandruff hilang skrg nk tgok result rambut gugur pla.. 😉</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">S</div><div class="review-meta"><span class="review-name">S**S</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Syampu dan conditioner bau wangi yang just nice. Beli sebab tertarik dengan new technology yang boleh merawat rambut. Packaging comey, sesuai untuk travel. Saya suka 😍</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">T</div><div class="review-meta"><span class="review-name">T**7</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Alhamdulillah baru nak masuk 2 minggu pakai.. nampak perubahan.. gugur makin kurang.. harap2 dah ok rambut ni nanti. Pakai dah macam banyak product tak jalan, ni insyaAllah nampak perubahan!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">_</div><div class="review-meta"><span class="review-name">_**_</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Alhamdulillah. Puas hati. Very2 recommended pada kawan2 yg ada masalah rambut. Dh lah produk best, conditioner pun best. Bau wangi.. Terus lembut rambut... X cari lain dah....</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">E</div><div class="review-meta"><span class="review-name">e**r</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">This is my second purchase. Say no more to hair fall and no dandruff. 😍 The best product in the market and the pharmacist explains clearly on the technology and about our hair. Sangat berkesan!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">N</div><div class="review-meta"><span class="review-name">N**a</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Recommended, repeat sbb best sgt rambut makin sihat dan kurang gugur. Akan terus guna produk NISRAA ni!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">M</div><div class="review-meta"><span class="review-name">M**i M**a</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Hari tu lepas pregnant rambut gugur teruk. Sy cuba pakai NISRAA ni tak sangka berkesan. Rambut gugur kurang sgt. Da la bau lembut. Saya beli yang pek kecik ni utk travel sbb xnak pakai produk hotel.</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">L</div><div class="review-meta"><span class="review-name">l**5</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Bau yang lembut. Dapat free gift hair mask dan hair mist semasa promo dengan harga istimewa. Sangat berbaloi. Siap ada extra freegift untuk travel. Pasti akan repeat jika serasi!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">H</div><div class="review-meta"><span class="review-name">H**l</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Bau wangi, rambut jadi lembut berhari-hari. Untuk masalah gugur belum tau lagi sbb baru try 2 kali. Penghantaran laju. Produk terbaik tiada SLS. Kawan saya cakap memang tak cari lain dah!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">C</div><div class="review-meta"><span class="review-name">C**</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Repeat 4 2nd bottle. Rambut kurang gugur. Alhamdulillah! Akan terus guna NISRAA ni.</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">I</div><div class="review-meta"><span class="review-name">i**a</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Product ni bagus. Saya guna dalam masa sebulan dah nampak anak rambut mula tumbuh. Sangat berpuas hati!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">K</div><div class="review-meta"><span class="review-name">k**n</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Saya dah repeat byk kali. Memang tak tukar lain dah. Produk NISRAA terbaik!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">M</div><div class="review-meta"><span class="review-name">m**n</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Dah repeat kali kedua, mmg menjadi, rambut rasa tebal. Sangat recommend kepada yang ada masalah rambut nipis dan gugur!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">A</div><div class="review-meta"><span class="review-name">A**N</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Bau dia best. Bau premium. Selepas cuci rambut rasa lembut. Puas hati. Tak sabar nak tengok result rambut botak selepas 7, 14 dan 30 hari. Nanti dapat result update lagi sekali.</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">F</div><div class="review-meta"><span class="review-name">F**1</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Rambut menjadi lembut, kelemumur sudah hampir hilang. Alhamdulillah! Sangat berpuas hati dengan NISRAA ni!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">K</div><div class="review-meta"><span class="review-name">Kopi'0</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Recommend sangat! Rambut sy memang dah tumbuh anak-anak rambut. Alhamdulillah. Dah cuba macam-macam produk sis, dengan NISRAA ni Alhamdulillah, asalkan konsisten pakai memang berkesan!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">H</div><div class="review-meta"><span class="review-name">h*****i</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Sangat berkesan untuk mereka yang lepas beranak, rambut gugur, hormon tak stable. Ni sangat membantu! Texture wangi dan lembut! Rambut dah kurang gugur. Boleh ons lagi produk NISRAA ni, sangat berbaloi!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">N</div><div class="review-meta"><span class="review-name">nuratiqahsamri</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Saya guna NISRAA untuk rambut ni, dulu rambut gugur teruk. Kelemumur berkuping pun cepat hilang, berkesan! Bagus jugak untuk kelemumur kepala yang degil, kerak-kerak kepala pun boleh hilang. Best sangat, boleh guna seisi keluarga tanpa bahan kimia, bau pun wangi tau. Cuba laa....</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">M</div><div class="review-meta"><span class="review-name">Mumy YusufFateh</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Sy kelemumur teruk dan gugur rambut teruk. Dah guna 2 minggu, jujur cakap kelemumur hilang ye. Rambut pun kurang gugur. Memang betul-betul berkesan kat kulit kepala. Sangat berpuas hati!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">F</div><div class="review-meta"><span class="review-name">Fazlinina</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Dah seminggu pakai, best giler. Rambut serius dah kurang gugur dan kelemumur pun dah kurang. Ikut instructions dia memang berkesan. Sangat recommend untuk sesiapa yang ada masalah rambut gugur!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">A</div><div class="review-meta"><span class="review-name">adyizkandaromar</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Wife baru start pakai, tengah monitor perkembangan dia. Dia tengok rambut sy makin terurus dan rambut gugur sgt sikit, terus dia tanya macam mana nak pakai. Rambut sy jenis panjang sampai bahu dan dulu rambut macam dawai je. Sekarang dah lembut. Memang berkesan!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">A</div><div class="review-meta"><span class="review-name">asrinajwa_</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">First time cuba NISRAA ni rambut naik banyak, kurang gugur, rasa fresh, tak kepam, banyak perubahan selepas sebulan. Sangat recommend untuk sesiapa yang nak start NISRAA routine!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">A</div><div class="review-meta"><span class="review-name">Andrea</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Kawan saya suggest NISRAA and turns out it really works! Kurangkan rambut gugur dan kelemumur. And paling best sekali rambut jadi extra extra lembut shinyyy! Sangat recommend untuk semua orang yang ada masalah rambut.</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">I</div><div class="review-meta"><span class="review-name">ira</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Honestly sangat best rambut yg kusut terus lembut and tak gugur. Lepastu hair oil dia wangi! Sangat recommended to everyone yg ada masalah rambut gugur, kusut and ada kelemumur. You should try!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">A</div><div class="review-meta"><span class="review-name">aqish.04</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Bestt shampoo tu, bau wangi sangat, lepas pakai rambut jadi lembut, kelemumur pon berkurang ye, dah tak gatal-gatal sangat kulit kepala, masih gugur cuma tak banyak macam dulu. Products hair care, conditioner, hair oil semua best!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">N</div><div class="review-meta"><span class="review-name">nazirasamsudin</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Effectiveness: Bagus sgt berkesan! Texture: lembut dan wangi. Formulation by professionals, tak ada SLS/SLES, rambut gugur berkurang, rambut lembut. Memang sangat berbaloi beli NISRAA ni!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">F</div><div class="review-meta"><span class="review-name">faziraazmeera</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Saya nak berkongsi pengalaman menggunakan set NISRAA ini yang memang sangat berkesan! Bau wangi, rambut jadi lembut, kelemumur berkurang dan rambut gugur pun berkurang. Conditioner pun bagus sangat! Sangat recommend untuk semua orang!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">B</div><div class="review-meta"><span class="review-name">bella_khind</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">NISRAA ni tak mcm produk biasa! Guna je dah lembut sangat rambut. Apatah lagi dah pakai conditioner dgn minyak rambut. Rambut makin lembut, wangi sangat. Suami pun tanya pakai produk apa. Sangat recommended!</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">S</div><div class="review-meta"><span class="review-name">s*****2</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Alhamdulillah shampoo ok terbaik! Bila pakai mmg rambut rasa lembut, rambut gugur makin kurang! Terima kasih seller! Sangat recommended ya set shampoo ni.</p></div>
+        <div class="review-card-inner"><div class="review-header"><div class="review-avatar">F</div><div class="review-meta"><span class="review-name">f*****a</span><span class="review-stars">★★★★★</span></div></div><p class="review-text">Best pakai shampoo ni rambut pun dah kurang gugur and kulit kepala dah tak berminyak. Love dooh! Inlove teruks dengan NISRAA shampoo ni!</p></div>
+      </div>
+
+      <div class="rv-more-wrap">
+        <button class="review-toggle-btn" id="rv-toggle" type="button" aria-expanded="false">Read All Reviews</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CHECKOUT CTA BANNER ── -->
+  <section class="checkout-banner" id="order-form">
+    <h2>Ready to Start Your NISRAA Routine?</h2>
+    <p>Review your selections, confirm your details, and checkout securely — or order directly via WhatsApp.</p>
+    <div class="checkout-banner-btns">
+      <button onclick="openBCL()" class="btn-cart">
+        <i class="fas fa-lock"></i> Checkout Now
+      </button>
+      <a href="https://wa.me/60147592082?text=Hi%20NISRAA!%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener" class="btn-wa">
+        <i class="fab fa-whatsapp"></i> Order via WhatsApp
+      </a>
+    </div>
+    <p class="checkout-banner-note">
+      <i class="fas fa-shield-alt" style="color:var(--accent);"></i>
+      Secure checkout · Official pricing · Free shipping &amp; Tonic 50ml above RM100
+    </p>
+    <!-- Hidden legacy refs -->
+    <div id="nisraa-order-form" style="display:none;"><div id="order-success-panel" style="display:none;"><div id="progress-reveal"><div class="loyalty-bar-wrap"><div class="loyalty-bar-fill" id="loyalty-bar-fill"></div></div><p id="loyalty-msg-text"></p></div></div></div>
+  </section>
+
+  <!-- REASSURANCE BAR -->
+  <section class="section-alt" style="padding: 40px 0;">
+    <div class="container">
+      <div class="website-summary-banner">
+        <p>
+          <strong>Why buy from the official website?</strong><br>
+          Better pricing, official order tracking, free shipping &amp; Tonic 50ml (purchase above RM100) and a smoother repeat-purchase experience — all in one place.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo footer-logo">
+          <img src="images/logo-nisraa-new.png" alt="NISRAA — Advanced Hair Treatment" class="logo-img footer-logo-img" />
+        </a>
+        <p class="footer-tagline">Premium treatment-based hair care formulated by doctor, pharmacist, and chemist.</p>
+        <p class="footer-sub">Official website benefits: better value, easier repeat orders, and free shipping &amp; Tonic 50ml above RM100.</p>
+        <div class="footer-certifications">
+          <span class="cert-tag"><i class="fas fa-certificate"></i> KKM Approved</span>
+          <span class="cert-tag"><i class="fas fa-moon"></i> Halal-Certified</span>
+          <span class="cert-tag"><i class="fas fa-leaf"></i> SLS-Free</span>
+        </div>
+      </div>
+      <div class="footer-nav-group">
+        <h5>Shop</h5>
+        <a href="#full-treatment-set">Full Treatment Set</a>
+        <a href="#tonic-shampoo-set">Tonic + Shampoo Set</a>
+        <a href="#trial-set-card">Trial Set</a>
+        <a href="#tonic">Strengthening Tonic</a>
+        <a href="shop.html">Shop Now</a>
+      </div>
+      <div class="footer-nav-group">
+        <h5>Brand</h5>
+        <a href="about.html#why">Why NISRAA</a>
+        <a href="reviews.html">Reviews</a>
+        
+        <a href="affiliate.html">Jom Jadi Affiliate</a>
+      </div>
+      <div class="footer-nav-group">
+        <h5>Follow Us</h5>
+        <a href="https://my.shp.ee/AhV6HKEr" target="_blank" rel="noopener"><i class="fas fa-star"></i> Shopee</a>
+        <a href="https://www.tiktok.com/@nisraapharmaceutics" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i> TikTok</a>
+        <a href="https://vt.tiktok.com/ZSH4KBJXu/" target="_blank" rel="noopener"><i class="fas fa-fire"></i> Viral Post</a>
+        <a href="https://drive.google.com/drive/folders/1MJteb5J8KAR2_KckLn8v6SOLLcdW9v7a?usp=sharing" target="_blank" rel="noopener"><i class="fas fa-video"></i> Live Testimonials</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2025 NISRAA. All rights reserved.<br>NISRAA PHARMACEUTICS &middot; No. Pendaftaran: 202503124744 (AS0495409-K)</p>
+        <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-sticky-bar" role="navigation" aria-label="Quick actions">
+    <a href="shop.html" class="sticky-btn primary"><i class="fas fa-lock"></i><span>Shop Now</span></a>
+    <a href="reviews.html" class="sticky-btn secondary"><i class="fas fa-star"></i><span>Reviews</span></a>
+  </div>
+
+  <a href="https://wa.me/60147592082?text=Hi%20NISRAA!%20I%27d%20like%20to%20ask%20about%20your%20products." target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat with NISRAA on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Chat with us</span>
+  </a>
+
+
+
+  <!-- ═══ SHOP CART (floating button + drawer). Sits OUTSIDE the BCL block. ═══ -->
+  <button type="button" class="nc-fab" id="ncFab" aria-label="Open cart">
+    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+    <span class="nc-fab-count" id="ncCount" hidden>0</span>
+  </button>
+
+  <div class="nc-overlay" id="ncOverlay" aria-hidden="true">
+    <aside class="nc-drawer" role="dialog" aria-modal="true" aria-label="Your cart">
+      <div class="nc-head">
+        <h3>Your Cart</h3>
+        <button type="button" class="nc-close" id="ncClose" aria-label="Close">&times;</button>
+      </div>
+      <p class="nc-ship"><i class="fas fa-truck-fast" aria-hidden="true"></i>FREE SHIPPING above RM100 (West Malaysia) / RM150 (Sabah &amp; Sarawak)</p>
+      <div class="nc-list" id="ncList"></div>
+      <div class="nc-foot">
+        <div class="nc-total" id="ncTotal" hidden><span id="ncTotalLbl">Total</span><strong id="ncTotalAmt">RM0.00</strong></div>
+        <p class="nc-note">Final total (including delivery) is confirmed in the payment form. You can still change quantities there.</p>
+        <button type="button" class="nc-pay" id="ncPay"><i class="fas fa-lock" aria-hidden="true"></i> Proceed to Checkout</button>
+        <button type="button" class="nc-clear" id="ncClear">Clear cart</button>
+      </div>
+    </aside>
+  </div>
+  <div class="nc-toast" id="ncToast" role="status" aria-live="polite"></div>
+
+  <script>
+  (function () {
+    /* Set code -> BCL item ID (form: nisraawebsite) */
+    var IDS = {
+      T1:26320, T2:26321, S1:29064, S2:29423, S3:29424, S4:29425, S5:26322,
+      M1:26351, M2:26352, M3:26353, M4:29125, M5:43889,
+      L1:29126, L2:29127, L3:43785, L4:43786, L5:43787, L6:43788,
+      B1:43789, B2:43790, B3:43791, B4:43792, B5:43793, B6:43794,
+      A1:43795, A2:43796, A3:43797, A4:43798, A5:43799,
+      SM1:43909
+    };
+    var KEY = 'nisraa_shop_cart_v1';
+    var MAX_QTY = 10;
+    var lastQs = null;
+
+    var fab = document.getElementById('ncFab');
+    var count = document.getElementById('ncCount');
+    var overlay = document.getElementById('ncOverlay');
+    var list = document.getElementById('ncList');
+    var pay = document.getElementById('ncPay');
+    var toast = document.getElementById('ncToast');
+    var toastTimer;
+
+    function load() {
+      try {
+        var raw = JSON.parse(localStorage.getItem(KEY) || '{}');
+        var clean = {};
+        Object.keys(raw).forEach(function (c) {
+          var q = parseInt(raw[c], 10);
+          if (IDS[c] && q > 0) clean[c] = Math.min(q, MAX_QTY);
+        });
+        return clean;
+      } catch (e) { return {}; }
+    }
+    var cart = load();
+    function save() { try { localStorage.setItem(KEY, JSON.stringify(cart)); } catch (e) {} }
+
+    function cardInfo(code) {
+      var card = document.querySelector('.set-card[data-set="' + code + '"]');
+      if (!card) return { img: '', name: code, price: 0 };
+      var pr = card.querySelector('.set-promo strong');
+      var price = pr ? parseFloat(pr.textContent.replace(/[^0-9.]/g, '')) || 0 : 0;
+      var img = card.querySelector('.set-img img');
+      var nm = card.querySelector('.set-name');
+      var items = card.querySelector('.set-items');
+      return {
+        price: price,
+        img: img ? img.getAttribute('src') : '',
+        name: (nm ? nm.textContent.trim() : '') + (items ? ' — ' + items.textContent.trim() : '')
+      };
+    }
+
+    function total() {
+      return Object.keys(cart).reduce(function (s, c) { return s + cart[c]; }, 0);
+    }
+
+    function money(v) { return 'RM' + v.toFixed(2); }
+
+    function showToast(msg) {
+      toast.textContent = msg;
+      toast.classList.add('nc-show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(function () { toast.classList.remove('nc-show'); }, 1800);
+    }
+
+    function render() {
+      var n = total();
+      count.textContent = n;
+      count.hidden = n === 0;
+      pay.disabled = n === 0;
+      list.textContent = '';
+      var codes = Object.keys(cart);
+      var sum = 0;
+      codes.forEach(function (c) { sum += cardInfo(c).price * cart[c]; });
+      var totEl = document.getElementById('ncTotal');
+      totEl.hidden = !codes.length;
+      document.getElementById('ncTotalAmt').textContent = money(sum);
+      document.getElementById('ncTotalLbl').textContent = 'Total (' + n + (n === 1 ? ' set)' : ' sets)');
+      if (!codes.length) {
+        var e = document.createElement('div');
+        e.className = 'nc-empty';
+        e.innerHTML = '<i class="fas fa-shopping-basket" aria-hidden="true"></i>Your cart is empty.<br>Tap <strong>Add to Cart</strong> on the set you like.';
+        list.appendChild(e);
+        return;
+      }
+      codes.forEach(function (code) {
+        var info = cardInfo(code);
+        var row = document.createElement('div');
+        row.className = 'nc-item';
+
+        var img = document.createElement('img');
+        img.src = info.img; img.alt = code; img.loading = 'lazy';
+
+        var box = document.createElement('div');
+        box.className = 'nc-info';
+        var badge = document.createElement('span');
+        badge.className = 'nc-code'; badge.textContent = code;
+        var nm = document.createElement('div');
+        nm.className = 'nc-name'; nm.textContent = info.name.replace(/^ — /, '');
+        var qty = document.createElement('div');
+        qty.className = 'nc-qty';
+        var minus = document.createElement('button');
+        minus.type = 'button'; minus.textContent = '−'; minus.setAttribute('aria-label', 'Decrease ' + code);
+        minus.addEventListener('click', function () { change(code, -1); });
+        var num = document.createElement('span');
+        num.textContent = cart[code];
+        var plus = document.createElement('button');
+        plus.type = 'button'; plus.textContent = '+'; plus.setAttribute('aria-label', 'Increase ' + code);
+        plus.addEventListener('click', function () { change(code, 1); });
+        qty.appendChild(minus); qty.appendChild(num); qty.appendChild(plus);
+        if (info.price) {
+          var pz = document.createElement('div');
+          pz.className = 'nc-price';
+          pz.textContent = money(info.price * cart[code]);
+          if (cart[code] > 1) {
+            var sm = document.createElement('small');
+            sm.textContent = cart[code] + ' × ' + money(info.price);
+            pz.appendChild(sm);
+          }
+          qty.appendChild(pz);
+        }
+        box.appendChild(badge); box.appendChild(nm); box.appendChild(qty);
+
+        var rm = document.createElement('button');
+        rm.type = 'button'; rm.className = 'nc-remove';
+        rm.setAttribute('aria-label', 'Remove ' + code);
+        rm.innerHTML = '<i class="fas fa-trash-alt" aria-hidden="true"></i>';
+        rm.addEventListener('click', function () { delete cart[code]; save(); render(); });
+
+        row.appendChild(img); row.appendChild(box); row.appendChild(rm);
+        list.appendChild(row);
+      });
+    }
+
+    function change(code, d) {
+      var q = (cart[code] || 0) + d;
+      if (q <= 0) delete cart[code];
+      else cart[code] = Math.min(q, MAX_QTY);
+      save(); render();
+    }
+
+    function openCart() {
+      render();
+      overlay.classList.add('nc-open');
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeCart() {
+      overlay.classList.remove('nc-open');
+      overlay.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    function addToCart(code, btn) {
+      if (!IDS[code]) return;
+      cart[code] = Math.min((cart[code] || 0) + 1, MAX_QTY);
+      save(); render();
+      fab.classList.remove('nc-bump'); void fab.offsetWidth; fab.classList.add('nc-bump');
+      showToast(code + ' added to cart (' + total() + (total() === 1 ? ' set)' : ' sets)'));
+      if (btn) {
+        var old = btn.innerHTML;
+        btn.classList.add('nc-added');
+        btn.innerHTML = '<i class="fas fa-check"></i> Added to Cart';
+        setTimeout(function () { btn.classList.remove('nc-added'); btn.innerHTML = old; }, 1200);
+      }
+    }
+
+    function buildQs() {
+      return Object.keys(cart).map(function (c) { return 'qty_' + IDS[c] + '=' + cart[c]; }).join('&');
+    }
+
+    function checkout(onlyCode) {
+      var qs;
+      if (typeof onlyCode === 'string') {
+        /* Direct checkout: only this set, qty 1 (cart is left untouched) */
+        if (!IDS[onlyCode]) return;
+        qs = 'qty_' + IDS[onlyCode] + '=1';
+      } else {
+        if (!total()) return;
+        qs = buildQs();
+      }
+      var holder = document.getElementById('bcl-payment-form');
+      var frame = document.getElementById('bcl-iframe') || (holder && holder.querySelector('iframe'));
+      if (frame && holder && lastQs !== qs) {
+        frame.src = holder.getAttribute('data-url') + '?embed=true&' + qs;
+        lastQs = qs;
+      } else if (!frame) {
+        /* Fallback: reload with items in the URL; the BCL embed script forwards them. */
+        location.href = location.pathname + '?' + qs + '#bcl-open';
+        return;
+      }
+      closeCart();
+      if (typeof openBCL === 'function') openBCL();
+    }
+
+    document.querySelectorAll('.set-card [data-add-to-cart]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var card = b.closest('.set-card');
+        addToCart(card && card.getAttribute('data-set'), b);
+      });
+    });
+    document.querySelectorAll('.set-card [data-checkout]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var card = b.closest('.set-card');
+        checkout(card && card.getAttribute('data-set'));
+      });
+    });
+    fab.addEventListener('click', openCart);
+    document.getElementById('ncClose').addEventListener('click', closeCart);
+    overlay.addEventListener('click', function (e) { if (e.target === overlay) closeCart(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeCart(); });
+    pay.addEventListener('click', function () { checkout(); });
+    document.getElementById('ncClear').addEventListener('click', function () { cart = {}; save(); render(); });
+
+    /* Fallback arrival (?qty_...#bcl-open): open the form straight away */
+    if (location.hash === '#bcl-open' && /[?&]qty_/.test(location.search)) {
+      window.addEventListener('load', function () {
+        setTimeout(function () { if (typeof openBCL === 'function') openBCL(); }, 600);
+      });
+    }
+
+    render();
+  })();
+  </script>
+
+  <script>
+    /* No "install app" prompt: customers should buy on the website. Blocks the browser's own install banner. */
+    window.addEventListener('beforeinstallprompt', function (e) { e.preventDefault(); });
+  </script>
+
+  <script src="js/main.js" defer></script>
+<script src="js/popup.js" defer></script>
+
+  <script>
+    /* ── COMBINED REVIEWS: show first 9, "View All" reveals the rest; "Read more" only where text is clipped ── */
+    (function () {
+      var grid = document.getElementById('rv-grid');
+      if (!grid) return;
+      var cards = Array.prototype.slice.call(grid.querySelectorAll('.review-card-inner'));
+      var btn = document.getElementById('rv-toggle');
+      var total = document.getElementById('rv-total');
+      var LIMIT = 9;
+      var open = false;
+      if (total) total.textContent = cards.length;
+
+      function addReadMore() {
+        cards.forEach(function (card) {
+          if (card.getAttribute('data-rm')) return;
+          var p = card.querySelector('.review-text');
+          if (!p || p.clientHeight === 0) return;          // hidden card — check later
+          card.setAttribute('data-rm', '1');
+          if (p.scrollHeight > p.clientHeight + 1) {
+            var b = document.createElement('button');
+            b.type = 'button';
+            b.className = 'review-read-more';
+            b.textContent = 'Read more';
+            b.addEventListener('click', function () {
+              var ex = p.classList.toggle('expanded');
+              b.textContent = ex ? 'Read less' : 'Read more';
+            });
+            card.appendChild(b);
+          }
+        });
+      }
+
+      function render() {
+        cards.forEach(function (c, i) { c.classList.toggle('rv-hidden', !open && i >= LIMIT); });
+        btn.textContent = open ? 'Show Less' : 'Read All Reviews';
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        addReadMore();
+      }
+
+      btn.addEventListener('click', function () {
+        open = !open;
+        render();
+        if (!open) document.getElementById('reviews').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+
+      render();
+      window.addEventListener('load', addReadMore);
+    })();
+  </script>
+
+  <!-- ══════════════════════════════════
+       BCL BAYAR CASH PAYMENT MODAL
+  ══════════════════════════════════ -->
+  <div id="bclOverlay">
+    <div id="bclModal">
+
+      <!-- Header -->
+      <div style="position:sticky;top:0;background:#fff;z-index:10;padding:18px 20px 14px;border-bottom:1px solid #f0ebe3;display:flex;align-items:center;justify-content:space-between;">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="width:38px;height:38px;min-width:38px;background:linear-gradient(135deg,#6C4323,#a0622a);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;">
+            <i class="fas fa-lock"></i>
+          </div>
+          <div>
+            <p style="margin:0;font-size:14px;font-weight:700;color:#2c1a0e;">Secure Checkout</p>
+            <p style="margin:0;font-size:11px;color:#999;">Powered by BCL Bayar Cash</p>
+          </div>
+        </div>
+        <button onclick="closeBCL()" style="width:32px;height:32px;border-radius:50%;background:#f5f0ea;border:none;cursor:pointer;font-size:20px;color:#6b5a47;display:flex;align-items:center;justify-content:center;" aria-label="Close">&times;</button>
+      </div>
+
+      <!-- BCL Form -->
+      <div style="padding:16px 20px 20px;box-sizing:border-box;width:100%;">
+        <div id="bcl-payment-form" data-url="https://nisraapharmaceutics.bcl.my/embed/form/nisraawebsite" style="width:100%;min-width:0;box-sizing:border-box;"></div>
+      </div>
+
+      <p style="text-align:center;font-size:11px;color:#aaa;padding:0 20px 24px;"><i class="fas fa-shield-alt" style="color:#6C4323;"></i> Your payment is encrypted &amp; processed securely</p>
+    </div>
+  </div>
+
+  <script src="https://bcl.my/js/bc-encrypted-payment-embed.js"></script>
+  <script>
+    function openBCL() {
+      var o = document.getElementById('bclOverlay');
+      var isMobile = window.innerWidth < 600;
+      if (isMobile) {
+        o.style.display = 'block';
+        o.style.alignItems = '';
+        o.style.justifyContent = '';
+        o.style.padding = '0';
+      } else {
+        o.style.display = 'flex';
+        o.style.alignItems = 'flex-start';
+        o.style.justifyContent = 'center';
+        o.style.padding = '32px 16px';
+      }
+      document.body.style.overflow = 'hidden';
+      o.scrollTop = 0;
+    }
+
+    function closeBCL() {
+      document.getElementById('bclOverlay').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('bclOverlay').addEventListener('click', function(e) {
+      if (e.target === this) closeBCL();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeBCL();
+    });
+  </script>
+
+  <!-- ══════════════════════════════════
+       CHECKOUT NOTICE — shown each time the BCL form opens.
+       Separate from the BCL block: it only WATCHES #bclOverlay, it does not change openBCL()/closeBCL().
+  ══════════════════════════════════ -->
+  <style>
+    #bclNotice { display: none; position: fixed; inset: 0; z-index: 100001; background: rgba(26,18,12,0.72); align-items: center; justify-content: center; padding: 20px; box-sizing: border-box; }
+    #bclNotice.is-open { display: flex; }
+    #bclNotice .bn-box { position: relative; width: min(420px, 100%); max-height: calc(100vh - 40px); overflow-y: auto; background: #fff; border-radius: 20px; padding: 28px 24px 22px; text-align: center; box-shadow: 0 24px 60px rgba(0,0,0,0.4); box-sizing: border-box; }
+    #bclNotice .bn-icon { width: 56px; height: 56px; margin: 0 auto 14px; border-radius: 50%; background: linear-gradient(135deg,#6C4323,#a0622a); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 24px; }
+    #bclNotice h3 { margin: 0 0 14px; font-size: 18px; line-height: 1.35; color: #2c1a0e; font-weight: 800; }
+    #bclNotice p { margin: 0 0 12px; font-size: 15px; line-height: 1.55; color: #5a4738; }
+    #bclNotice ul { list-style: none; margin: 0 0 14px; padding: 12px 14px; background: #f8f1e6; border-radius: 12px; text-align: left; font-size: 14.5px; color: #3b2a1c; }
+    #bclNotice li { padding: 3px 0; display: flex; gap: 8px; align-items: baseline; }
+    #bclNotice li i { color: #6C4323; font-size: 12px; flex-shrink: 0; }
+    #bclNotice .bn-eng { display: inline-block; margin: 0 0 18px; padding: 8px 14px; background: #fff3cd; border: 1px solid #f0d78a; border-radius: 10px; font-size: 14.5px; font-weight: 700; color: #6b4a00; }
+    #bclNotice .bn-btn { width: 100%; min-height: 48px; border: 0; border-radius: 12px; background: #6C4323; color: #fff; font-size: 16px; font-weight: 700; cursor: pointer; }
+    #bclNotice .bn-btn:hover { background: #573419; }
+  </style>
+  <div id="bclNotice" role="dialog" aria-modal="true" aria-labelledby="bclNoticeTitle">
+    <div class="bn-box">
+      <div class="bn-icon"><i class="fas fa-gift"></i></div>
+      <h3 id="bclNoticeTitle">Enjoy Free Shipping and Free Tonic 50ml for purchase above RM100 (WM) and RM150 (EM).</h3>
+      <p>Please <strong>scroll all the way down</strong> to the bottom of the form to fill in the details of the person ordering:</p>
+      <ul>
+        <li><i class="fas fa-check"></i> Full name &amp; phone number</li>
+        <li><i class="fas fa-check"></i> Full delivery address (street, postcode, city, state)</li>
+      </ul>
+      <button type="button" class="bn-btn" id="bclNoticeOk" style="margin-top:4px;">OK, got it</button>
+    </div>
+  </div>
+  <script>
+    (function () {
+      var overlay = document.getElementById('bclOverlay');
+      var notice = document.getElementById('bclNotice');
+      var ok = document.getElementById('bclNoticeOk');
+      if (!overlay || !notice || !ok) return;
+      var wasOpen = false;
+      function isOpen() { return window.getComputedStyle(overlay).display !== 'none'; }
+      function showNotice() { notice.classList.add('is-open'); try { ok.focus(); } catch (e) {} }
+      function hideNotice() { notice.classList.remove('is-open'); }
+      new MutationObserver(function () {
+        var now = isOpen();
+        if (now && !wasOpen) showNotice();
+        if (!now) hideNotice();
+        wasOpen = now;
+      }).observe(overlay, { attributes: true, attributeFilter: ['style'] });
+      ok.addEventListener('click', hideNotice);
+      notice.addEventListener('click', function (e) { if (e.target === notice) hideNotice(); });
+      /* Esc closes only this notice first (without also closing the checkout behind it) */
+      window.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && notice.classList.contains('is-open')) {
+          e.stopImmediatePropagation(); e.preventDefault(); hideNotice();
+        }
+      }, true);
+    })();
+  </script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js')
+          .then(reg => console.log('[NISRAA SW] Registered:', reg.scope))
+          .catch(err => console.warn('[NISRAA SW] Failed:', err));
+      });
+    }
+  </script>
+</body>
+</html>
